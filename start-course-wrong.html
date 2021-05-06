@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Course</title>
+    <title>Start Course - quiz/correct</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/bootstrap-select.css">
@@ -158,13 +158,46 @@
                             <div class="startcourse__step">
                                 <div class="startcourse__stephead">
                                     <div class="borderwrap">
-                                        <p class="grtitle">Overview</p>
-                                        <p class="gritemname">1. Course Objectives</p>
+                                        <p class="grtitle">Understanding the Disease</p>
+                                        <p class="gritemname">1. Stages of Parkinson’s</p>
                                     </div>
                                     <div class="mobsidebarlink">More Modules</div>
                                 </div>
                                 <div class="startcourse__stepbody">
                                     <div class="descr">
+                                        <p class="title">Parkinson’s Disease</p>
+                                        <p>
+                                            Parkinson's disease (PD) is a neurodegenerative disorder that affects
+                                            predominantly dopamine-producing (“dopaminergic”) neurons in a specific area
+                                            of the brain called substantia nigra.
+                                        </p>
+                                    </div>
+
+                                    <div class="pagination-section">
+                                        <div class="pagination-section__content">
+                                            <img src="img/coursesteppic.jpg" alt="image">
+                                        </div>
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="disabled"><a href="#"><img src="img/tofirst.svg"
+                                                            alt="first page"></a></li>
+                                                <li class="disabled"><a href="#"><img src="img/pagprev-arrow.svg"
+                                                            alt="prev"></a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><span>...</span></li>
+                                                <li><a href="#">9</a></li>
+                                                <li><a href="#">10</a></li>
+                                                <li><a href="#"><img src="img/pagnext-arrow.svg" alt="next"></a></li>
+                                                <li><a href="#"><img src="img/tolast.svg" alt="last page"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="descr">
+                                        <p class="title">Quiz 1.</p>
                                         <p>
                                             It is a long established fact that a reader will be distracted by the
                                             readable content of a page when looking at its layout. The point of using
@@ -173,36 +206,53 @@
                                             English.
                                         </p>
                                     </div>
-                                    <div class="startcourse_videosect">
-                                        <video controls playsinline poster="img/test.png" id="player">
-                                            <!-- Video files -->
-                                            <source src="video/video.mp4" type="video/mp4">
-                                            <!-- Captions are optional -->
-                                            <!-- <track> need for "CC" controll button -->
-                                            <!-- <track kind="captions" label="English" srclang="en"
-                                                src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                                default> -->
 
-                                        </video>
-
-                                        <!-- <div class="actions">
-                                            <button type="button" class="btn js-play">Play</button>
-                                            <button type="button" class="btn js-pause">Pause</button>
-                                            <button type="button" class="btn js-stop">Stop</button>
-                                            <button type="button" class="btn js-rewind">Rewind</button>
-                                            <button type="button" class="btn js-forward">Forward</button>
-                                        </div> -->
+                                    <div class="questionsection">
+                                        <div class="questionsection__topsect">
+                                            <p class="question">Q1. This is the question sample</p>
+                                            <div class="answerbox">
+                                                <div class="answervariant">
+                                                    <input type="radio" name="question1" id="q1">
+                                                    <label for="q1">Answer for the question</label>
+                                                </div>
+                                                <div class="answervariant">
+                                                    <input type="radio" name="question1" id="q2" checked>
+                                                    <label for="q2">This is the answer</label>
+                                                </div>
+                                                <div class="answervariant">
+                                                    <input type="radio" name="question1" id="q3">
+                                                    <label for="q3">Answer for the question</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="questionsection__bottsect wrongans">
+                                            <button class="question__submit">Submit</button>
+                                            <div class="alert error">
+                                                <p>If you take two wrong answer you will need to re-learn this module
+                                                    again.</p>
+                                                <div class="alertclose"><img src="img/alert-close.svg" alt="close">
+                                                </div>
+                                            </div>
+                                            <div class="correctans">
+                                                <img src="img/closecircle.svg" alt="wrong">
+                                                <p class="title">Please try again</p>
+                                                <p class="descrcorrect">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Consequatur amet labore.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="startcourse__stepbodybtns step1">
+
+                                    <div class="startcourse__stepbodybtns">
                                         <div class="stepbodybtnsleft">
                                             <button class="greenbtn">
-                                                Next
                                                 <svg width="25" height="26" viewBox="0 0 25 26" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M12.4999 21.3337L13.9687 19.8649L8.15617 14.042L20.8333 14.042L20.8333 11.9587L8.15617 11.9587L13.9791 6.14616L12.4999 4.66699L4.16659 13.0003L12.4999 21.3337Z"
                                                         fill="white" />
                                                 </svg>
+                                                Prev
                                             </button>
                                         </div>
                                         <div class="stepbodybtnsright">
@@ -210,7 +260,7 @@
                                                 title="You can save and continue the course next time">
                                                 <span data-toggle="modal" data-target="#saved-success">Save</span>
                                             </button>
-                                            <button class="greenbtn">
+                                            <button class="greenbtn" disabled>
                                                 Next
                                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">

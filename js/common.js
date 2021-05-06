@@ -27,12 +27,13 @@ $(document).ready(function () {
     // Courses slider
 
     $('.coursessl').slick({
-        slidesToShow: 5,
+        slidesToShow: 3.5,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
         infinite: false,
-        infinite: true,
+        // centerPadding: '120px',
+        // centerMode: true,
         // autoplay: true,
         // autoplaySpeed: 2000,
         responsive: [
@@ -46,7 +47,7 @@ $(document).ready(function () {
                 breakpoint: 1025,
                 settings: {
                     arrows: false,
-                    slidesToShow: 4.5,
+                    slidesToShow: 4,
                 }
             },
             {
@@ -54,6 +55,14 @@ $(document).ready(function () {
                 settings: {
                     arrows: false,
                     variableWidth: true,
+                    slidesToShow: 3,
+
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    variableWidth: true
 
                 }
             }
@@ -152,7 +161,6 @@ $(document).ready(function () {
         }
     });
 
-
     // course burger - sidebar
     $('.startcourse__sbgroup .title').click(function () {
         $(this).toggleClass('rotatearrow');
@@ -193,8 +201,21 @@ $(document).ready(function () {
     }
 
 
+    // questions
 
 
+    // $('.answerbox input').change(function () {
+    //     if ($('.answerbox input').is(':checked')) {
+    //         $(this).parents('.startcourse__stepbody').find('.stepbodybtnsright .greenbtn').prop('disabled', false)
+    //     }
+    // });
+
+
+    // close alert - start-course-wrong.html
+
+    $('.alertclose').click(function () {
+        $(this).parent('.alert').fadeOut();
+    });
 
 
 });

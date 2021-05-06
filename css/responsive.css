@@ -118,7 +118,7 @@
 
 @media(min-width:1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1230px;
     }
 }
 
@@ -216,11 +216,73 @@
         margin-bottom: 53px;
     }
 
+    .coursesslider__course {
+        height: 300px;
+    }
 
+    .courslists__itemdescr .descr p {
+        font-size: 16px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
 
+    .courslists__itemdescr .bottsect .orangebtn,
+    .courslists__itemdescr .bottsect .greenbtn {
+        display: none;
+    }
 
+    .courslists__itemdescr .bottsect .date {
+        max-width: 100%;
+    }
 
+    .courslists__itemdescr {
+        padding-top: 30px;
+    }
 
+    .courslists__itemdescr .title a {
+        display: block;
+    }
+
+    .courslists__itemdescr .title {
+        width: calc(100% - 110px);
+    }
+
+    .courslists__itemdescr .bottsect .date {
+        padding-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .coursesslider {
+        overflow: hidden;
+    }
+
+    .coursessl:after {
+        display: none;
+    }
+
+    .slick-list {
+        padding-right: 0 !important;
+    }
+
+    .duebox__info .duetext {
+        font-size: 12px;
+    }
+
+    .correctans img {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .correctans .descrcorrect {
+        margin: 0;
+    }
+
+    .correctans {
+        padding-bottom: 5px;
+    }
 
 
 
@@ -246,6 +308,10 @@
         -moz-border-radius: 7px;
         -ms-border-radius: 7px;
         -o-border-radius: 7px;
+    }
+
+    .correctans .title {
+        font-size: 18px;
     }
 
     .greenbtn,
@@ -446,10 +512,6 @@
 
     .coursfilter__searchbox {
         margin-bottom: 30px;
-    }
-
-    .coursfilter__filtbox {
-        margin-bottom: 40px;
     }
 
     .courslists__body {
@@ -906,7 +968,7 @@
 
     .coursesslider__course .descrbox .title {
         padding: 0 12px;
-        font-size: 16px;
+        font-size: 18px;
         overflow: hidden;
         height: 40px;
     }
@@ -1051,6 +1113,63 @@
         padding: 15px 30px 30px;
     }
 
+    .picpostection__authorblock .authorpic {
+        height: 53px;
+    }
+
+    .picpostection__authorblock .name {
+        font-size: 12px;
+        font-family: Avenir heavy;
+    }
+
+    .picpostection__authorblock .proffession {
+        font-size: 12px;
+    }
+
+    .coursesslider__course .picbox {
+        height: 135px;
+    }
+
+    .coursesslider__course .descrbox {
+        padding-top: 12px;
+    }
+
+    .duebox {
+        padding-left: 12px;
+    }
+
+    .managecourse-link {
+        display: none;
+    }
+
+    .courslists__itemdescr .title a {
+        font-size: 18px;
+    }
+
+    .courslists__itemdescr .title {
+        width: 100%;
+    }
+
+    .courslists__itemdescr .subtitle {
+        font-size: 14px;
+    }
+
+    .courslists__header h3 {
+        min-width: 188px;
+    }
+
+    .coursebody__descriptionbox {
+        margin-bottom: 40px;
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1063,7 +1182,21 @@
         font-size: 26px;
     }
 
-    .infosect .descr p {
+    .courslists__itemdescr .descr p,
+    .courslists__itemdescr .bottsect .date {
+        font-size: 14px;
+    }
+
+    .courslists__header h3 {
+        font-size: 20px;
+    }
+
+    .coursebody__descriptionbox p {
+        font-size: 14px;
+    }
+
+    .infosect .descr p,
+    .coursebody__descriptionbox p.title {
         font-size: 18px;
     }
 
@@ -1210,6 +1343,15 @@
         display: none;
     }
 
+    .pagination-section .pagination {
+        margin-bottom: 20px;
+    }
+
+    .questionsection__topsect,
+    .questionsection__bottsect {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
 
 
@@ -1295,11 +1437,27 @@
         margin-left: 10px;
     }
 
+    .stepbodybtnsleft {
+        max-width: 33%;
+        flex: 0 0 33%;
+    }
 
+    .stepbodybtnsright {
+        max-width: 66%;
+        flex: 0 0 66%;
+    }
 
+    .startcourse__stepbodybtns .greenbtn {
+        margin-left: 10px;
+    }
 
+    .stepbodybtnsleft {
+        padding-right: 10px;
+    }
 
-
+    .startcourse__stepbodybtns .stepbodybtnsleft .greenbtn {
+        margin-left: 0;
+    }
 
 
 
@@ -1474,28 +1632,28 @@
     }
 
     .coursesslider .slick-slide {
-        width: 170px;
+        width: 235px;
     }
 
     .coursesslider__course .picbox {
-        height: 82px;
+        height: 130px;
     }
 
     .coursesslider__course .descrbox .title {
-        font-size: 12px;
-        line-height: 130%;
+        font-size: 18px;
+        line-height: 120%;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
         min-height: initial;
-        height: 30px;
-        margin-bottom: 6px;
+        height: 40px;
+        margin-bottom: 20px;
     }
 
     .coursesslider__course {
-        height: 222px;
+        height: 300px;
     }
 
     .duebox {
@@ -1503,21 +1661,21 @@
     }
 
     .duebox__perc {
-        width: 51px;
-        height: 51px;
-        max-width: 51px;
+        width: 75px;
+        height: 75px;
+        max-width: 75px;
     }
 
     .duebox__info {
-        max-width: calc(100% - 51px);
+        max-width: calc(100% - 75px);
         padding-top: 8px;
     }
 
     .duebox__info .duetext {
-        height: 20px;
-        padding-left: 6px;
-        font-size: 12px;
-        margin-bottom: 3px;
+        height: 29px;
+        padding-left: 15px;
+        font-size: 16px;
+        margin-bottom: 5px;
     }
 
     .duebox {
@@ -1559,15 +1717,15 @@
     }
 
     .status-label {
-        width: 72px;
-        height: 23px;
+        width: 100px;
+        height: 26px;
         top: 6px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 130%;
     }
 
     .courslists__itemdescr {
-        padding: 8px 12px 5px 12px;
+        padding: 36px 12px 5px 12px;
     }
 
     .courslists__itempic {
@@ -1582,14 +1740,14 @@
     }
 
     .courslists__itemdescr .title {
-        width: calc(100% - 57px);
-        font-size: 14px;
+        width: 100%;
+        font-size: 16px;
         line-height: 130%;
     }
 
     .courslists__itemdescr .subtitle {
-        font-size: 12px;
-        margin-bottom: 12px;
+        font-size: 14px;
+        margin-bottom: 16px;
     }
 
     .duration-label {
@@ -1612,6 +1770,7 @@
     .courslists__itemdescr .descr {
         height: auto;
         margin-bottom: 6px;
+        display: none;
     }
 
     .yourduedate.phone {
@@ -1654,7 +1813,7 @@
     }
 
     .coursehead {
-        padding: 40px 0 17px;
+        padding: 12px 0 17px;
     }
 
     .coursehead__wrap {
@@ -1886,12 +2045,87 @@
         font-size: 12px;
     }
 
-
-
     .coursesslider h4 {
         font-size: 18px;
         line-height: 120%;
     }
+
+    .courslists__itempic {
+        min-height: 125px;
+    }
+
+    .backlink {
+        display: inline-block;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-size: 12px;
+        line-height: 130%;
+        font-family: Avenir heavy;
+        display: inline-flex;
+        align-items: center;
+        margin-left: -25px;
+        margin-bottom: 12px;
+    }
+
+    .backlink img {
+        margin-right: 4px;
+    }
+
+    .startcourse__btnsect a {
+        height: 32px;
+        min-width: 157px;
+        font-size: 12px;
+    }
+
+    .startcourse__stephead .gritemname {
+        color: #000;
+    }
+
+    .startcourse__stepbodybtns.step1 .stepbodybtnsright {
+        max-width: 100%;
+        flex: 0 0 100%;
+        justify-content: space-between;
+    }
+
+    .tooltip.show {
+        z-index: 9;
+    }
+
+    .startcourse__stepbodybtns .savebtn span {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .coursebody.final {
+        padding-top: 0;
+    }
+
+    .finalpic {
+        margin-top: 25px;
+    }
+
+    .certificatebtns .greenbtn {
+        width: 110px;
+        margin: 0 10px;
+    }
+
+    .coursebody.final .coursebody__coursedescription {
+        margin-bottom: 0;
+    }
+
+    .totop button {
+        bottom: 30px;
+    }
+
+
+
+
+
+
+
 
     h1,
     .titleh1 {
@@ -1906,11 +2140,13 @@
         font-size: 20px;
     }
 
-    h2 {
+    h2,
+    h3 {
         font-size: 18px;
     }
 
-    h5 {
+    h5,
+    .courslists__itemdescr .title a {
         font-size: 16px;
     }
 
@@ -1976,6 +2212,9 @@
         margin-left: -15px;
     }
 
+    .backlink {
+        margin-left: 0;
+    }
 
 
 

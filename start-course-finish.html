@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Course</title>
+    <title>Start Course - Finish</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/bootstrap-select.css">
@@ -53,7 +53,7 @@
                                         <img src="img/sidebar-trig.svg" alt="arrow">
                                     </p>
                                     <ul class="startcourse__sblist">
-                                        <li class="active">
+                                        <li>
                                             <a href="#">
                                                 1. Course objective
                                                 <span>15 mins</span>
@@ -142,7 +142,7 @@
                                                 <span>1h 30 mins</span>
                                             </a>
                                         </li>
-                                        <li>
+                                        <li class="active">
                                             <a href="#">
                                                 4. Delayed Gastric Emptying (Gastroparesis)
                                                 <span>45 mins</span>
@@ -158,51 +158,45 @@
                             <div class="startcourse__step">
                                 <div class="startcourse__stephead">
                                     <div class="borderwrap">
-                                        <p class="grtitle">Overview</p>
-                                        <p class="gritemname">1. Course Objectives</p>
+                                        <p class="grtitle">Non - Medical Interventions</p>
+                                        <p class="gritemname">4. Delayed Gastric Emptying (Gastroparesis)</p>
                                     </div>
                                     <div class="mobsidebarlink">More Modules</div>
                                 </div>
                                 <div class="startcourse__stepbody">
-                                    <div class="descr">
-                                        <p>
-                                            It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-                                            opposed to using 'Content here, content here', making it look like readable
-                                            English.
-                                        </p>
+                                    <div class="pagination-section">
+                                        <div class="pagination-section__content">
+                                            <img src="img/coursesteppic.jpg" alt="image">
+                                        </div>
+                                        <div class="pagination">
+                                            <ul>
+                                                <li class="disabled"><a href="#"><img src="img/tofirst.svg"
+                                                            alt="first page"></a></li>
+                                                <li class="disabled"><a href="#"><img src="img/pagprev-arrow.svg"
+                                                            alt="prev"></a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><span>...</span></li>
+                                                <li><a href="#">9</a></li>
+                                                <li><a href="#">10</a></li>
+                                                <li><a href="#"><img src="img/pagnext-arrow.svg" alt="next"></a></li>
+                                                <li><a href="#"><img src="img/tolast.svg" alt="last page"></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="startcourse_videosect">
-                                        <video controls playsinline poster="img/test.png" id="player">
-                                            <!-- Video files -->
-                                            <source src="video/video.mp4" type="video/mp4">
-                                            <!-- Captions are optional -->
-                                            <!-- <track> need for "CC" controll button -->
-                                            <!-- <track kind="captions" label="English" srclang="en"
-                                                src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                                                default> -->
 
-                                        </video>
-
-                                        <!-- <div class="actions">
-                                            <button type="button" class="btn js-play">Play</button>
-                                            <button type="button" class="btn js-pause">Pause</button>
-                                            <button type="button" class="btn js-stop">Stop</button>
-                                            <button type="button" class="btn js-rewind">Rewind</button>
-                                            <button type="button" class="btn js-forward">Forward</button>
-                                        </div> -->
-                                    </div>
-                                    <div class="startcourse__stepbodybtns step1">
+                                    <div class="startcourse__stepbodybtns">
                                         <div class="stepbodybtnsleft">
                                             <button class="greenbtn">
-                                                Next
                                                 <svg width="25" height="26" viewBox="0 0 25 26" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M12.4999 21.3337L13.9687 19.8649L8.15617 14.042L20.8333 14.042L20.8333 11.9587L8.15617 11.9587L13.9791 6.14616L12.4999 4.66699L4.16659 13.0003L12.4999 21.3337Z"
                                                         fill="white" />
                                                 </svg>
+                                                Prev
                                             </button>
                                         </div>
                                         <div class="stepbodybtnsright">
@@ -210,8 +204,8 @@
                                                 title="You can save and continue the course next time">
                                                 <span data-toggle="modal" data-target="#saved-success">Save</span>
                                             </button>
-                                            <button class="greenbtn">
-                                                Next
+                                            <button class="greenbtn finish">
+                                                Finish
                                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -230,31 +224,6 @@
             </div>
         </section>
     </main>
-
-
-
-
-
-    <div class="modal fade smallmodal" id="saved-success" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="topsect">
-                        <img src="img/check-icon.svg" alt="img">
-                        <p class="title">Saved successfully</p>
-                        <div class="descr">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet labore.</p>
-                        </div>
-                    </div>
-                    <div class="bottsect">
-                        <a href="#" class="greenbtn">Home</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <script src="js/jquery.js"></script>
