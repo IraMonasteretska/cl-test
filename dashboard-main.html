@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard / Main</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <main class="main-dashboard">
+        <section class="dashboard-wrapper">
+            <aside class="dashside">
+                <div class="dashside__logo">
+                    <a href="#"><img src="img/dashlogo.png" alt="logo"></a>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Manage Your Services</p>
+                    <ul>
+                        <li><a href="#"><img src="img/cb.png" alt="icon"> Care Bundle</a></li>
+                        <li class="active"><a href="#"><img src="img/l.png" alt="icon"> CI - Learning</a></li>
+                    </ul>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li><a href="#"><img src="img/single-neutral.svg" alt="icon"> Account</a></li>
+                        <li><a href="#"><img src="img/question-help-circle.svg" alt="icon"> Help & Feedback</a></li>
+                        <li><a href="#"><img src="img/exit-ic.svg" alt="icon"> Sign Out</a></li>
+                    </ul>
+                </div>
+
+
+
+
+
+            </aside>
+            <div class="dashboard-section">
+                <div class="dashheadsect">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="dashpagenav">
+                                <ul>
+                                    <li><a href="#">CI Dashboard</a></li>
+                                    <li>CI - Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <a href="#" class="orangebtn">Learning Homepage
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.5003 4.16667L11.0316 5.63542L16.8441 11.4583L4.16699 11.4583L4.16699 13.5417L16.8441 13.5417L11.0212 19.3542L12.5003 20.8333L20.8337 12.5L12.5003 4.16667Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashtab-section">
+                    <ul class="nav nav-tabs dashtab__header" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="yourcourses-tab" data-toggle="tab" href="#yourcourses"
+                                role="tab" aria-controls="yourcourses" aria-selected="true">Your courses</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="allcourses-tab" data-toggle="tab" href="#allcourses" role="tab"
+                                aria-controls="allcourses" aria-selected="false">All courses list</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="completedcourses-tab" data-toggle="tab" href="#completedcourses"
+                                role="tab" aria-controls="completedcourses" aria-selected="false">Completed courses</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="certificate-tab" data-toggle="tab" href="#certificate" role="tab"
+                                aria-controls="certificate" aria-selected="false">Certificate</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="archive-tab" data-toggle="tab" href="#archive" role="tab"
+                                aria-controls="archive" aria-selected="false">Archive</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+
+                        <div class="tab-pane fade show active" id="yourcourses" role="tabpanel"
+                            aria-labelledby="yourcourses-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! CI Learner!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button class="archivebtn" data-toggle="modal" data-target="#archivemodal">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.1167 4.35833L15.9583 2.95833C15.7333 2.675 15.3917 2.5 15 2.5H5C4.60833 2.5 4.26667 2.675 4.03333 2.95833L2.88333 4.35833C2.64167 4.64167 2.5 5.01667 2.5 5.41667V15.8333C2.5 16.75 3.25 17.5 4.16667 17.5H15.8333C16.75 17.5 17.5 16.75 17.5 15.8333V5.41667C17.5 5.01667 17.3583 4.64167 17.1167 4.35833ZM10 14.5833L5.41667 10H8.33333V8.33333H11.6667V10H14.5833L10 14.5833ZM4.26667 4.16667L4.94167 3.33333H14.9417L15.725 4.16667H4.26667Z"
+                                                fill="#8C8C8C" />
+                                        </svg>
+                                        Archive
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="check-all" class="checkall">
+                                        <label for="check-all"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="All">
+                                            <option value="0">Course</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__instructor">
+                                        <button class="ashtable-btn">
+                                            Instructor <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__enroll">
+                                        <button class="ashtable-btn">
+                                            Enroll <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__due">
+                                        <button class="ashtable-btn">
+                                            Due <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__progress">
+                                        <button class="ashtable-btn">
+                                            Progress
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-all1">
+                                                <label for="check-all1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>N/A</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <div class="dashprwrapp">
+                                                    <div class="progressbar-line">
+                                                        <span class="progressbar-percent" style="width: 0;"></span>
+                                                    </div>
+                                                    <div class="percentinfo">0%</div>
+                                                </div>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="greenbtn" data-toggle="modal"
+                                                    data-target="#starttostudy">Start Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-all2">
+                                                <label for="check-all2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Dementia</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>08/31/2021</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <div class="dashprwrapp">
+                                                    <div class="progressbar-line">
+                                                        <span class="progressbar-percent" style="width: 60%;"></span>
+                                                    </div>
+                                                    <div class="percentinfo">60%</div>
+                                                </div>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic3.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="greenbtn" data-toggle="modal"
+                                                    data-target="#starttostudy">Join Workshop</a>
+                                                <div id="cpbtn" class="passcodetext js-copy"
+                                                    onclick="copyText('2021Go!')">
+                                                    Zoom Passcode: 2021Go!
+                                                    <span id="custom-tooltip">Copied!</sapn>
+                                                </div>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap disabled">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-all3" disabled>
+                                                <label for="check-all3" data-toggle="tooltip" data-placement="top"
+                                                    title="This course is we assigned for you so you can’t make the edit."></label>
+                                            </div>
+
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>08/31/2021</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <div class="dashprwrapp">
+                                                    <div class="progressbar-line">
+                                                        <span class="progressbar-percent" style="width: 60%;"></span>
+                                                    </div>
+                                                    <div class="percentinfo">60%</div>
+                                                </div>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic3.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="greenbtn" data-toggle="modal"
+                                                    data-target="#starttostudy">Join Workshop</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="allcourses" role="tabpanel" aria-labelledby="allcourses-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! CI Learner!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button data-toggle="modal" data-target="#archivemodal">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.61055 13.6134H4.16332C3.85631 13.6134 3.60742 13.3645 3.60742 13.0575V5.27484C3.60742 4.96782 3.85631 4.71893 4.16332 4.71893H14.1696C14.4766 4.71893 14.7255 4.96782 14.7255 5.27484V8.8882"
+                                                stroke="#8C8C8C" />
+                                            <path d="M6.38672 3.60768V6.3872" stroke="#8C8C8C" />
+                                            <path d="M11.9463 3.60768V6.3872" stroke="#8C8C8C" />
+                                            <path d="M3.60742 7.49901H14.7255" stroke="#8C8C8C" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M13.0581 16.3934C14.9002 16.3934 16.3935 14.9001 16.3935 13.058C16.3935 11.2159 14.9002 9.72261 13.0581 9.72261C11.216 9.72261 9.72266 11.2159 9.72266 13.058C9.72266 14.9001 11.216 16.3934 13.0581 16.3934Z"
+                                                stroke="#8C8C8C" />
+                                            <path d="M13.0576 11.3903V14.7257" stroke="#8C8C8C" />
+                                            <path d="M14.7251 13.058H11.3896" stroke="#8C8C8C" />
+                                        </svg>
+
+                                        Enroll
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="check-alltab2" class="checkall">
+                                        <label for="check-alltab2"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="All">
+                                            <option value="0">Course</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__instructor">
+                                        <button class="ashtable-btn">
+                                            Instructor <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__startdate">
+                                        <button class="ashtable-btn">
+                                            Start Date <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist1">
+                                                <label for="check-courseslist1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist2">
+                                                <label for="check-courseslist2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Dementia</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist3">
+                                                <label for="check-courseslist3"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist4">
+                                                <label for="check-courseslist4"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist5">
+                                                <label for="check-courseslist5"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Dementia</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist6">
+                                                <label for="check-courseslist6"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-courseslist7">
+                                                <label for="check-courseslist7"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2021 Annual Training</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__startdate">
+                                                <p>08/31/2020</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-enroll">Enroll Course</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade " id="completedcourses" role="tabpanel"
+                            aria-labelledby="completedcourses-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! CI Learner!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button data-toggle="modal" data-target="#archivemodal">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.417 7.50001C8.20866 7.50001 6.20866 8.32501 4.66699 9.66667L1.66699 6.66667V14.1667H9.16699L6.15033 11.15C7.30866 10.1833 8.78366 9.58334 10.417 9.58334C13.367 9.58334 15.8753 11.5083 16.7503 14.1667L18.7253 13.5167C17.567 10.025 14.292 7.50001 10.417 7.50001Z"
+                                                fill="#8C8C8C" />
+                                        </svg>
+
+                                        Re-Enroll
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="check-allcomplited" class="checkall">
+                                        <label for="check-allcomplited"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="All">
+                                            <option value="0">Course</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__instructor">
+                                        <button class="ashtable-btn">
+                                            Instructor <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__enrolled">
+                                        <button class="ashtable-btn">
+                                            Enrolled <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__completed">
+                                        <button class="ashtable-btn">
+                                            Completed <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-complited1">
+                                                <label for="check-complited1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enrolled">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__completed">
+                                                <p>08/31/2021</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-reenroll">Re-enroll</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-complited2">
+                                                <label for="check-complited2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Dementia</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enrolled">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__completed">
+                                                <p>08/31/2021</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-reenroll">Re-enroll</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-complited3">
+                                                <label for="check-complited3"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enrolled">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__completed">
+                                                <p>08/31/2021</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#congrats-reenroll">Re-enroll</a>
+                                                <p>Total Time Left: 1h 12mins</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade " id="certificate" role="tabpanel" aria-labelledby="certificate-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! CI Learner!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button class="archivebtn" data-toggle="modal" data-target="#archivemodal">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.6717 13.7708V14.931C16.6714 15.8917 15.8926 16.6705 14.9319 16.6708H5.06995C4.10905 16.6708 3.33008 15.8919 3.33008 14.931V13.7708"
+                                                stroke="#8C8C8C" />
+                                            <path d="M10 13.7041V3.32916" stroke="#8C8C8C" />
+                                            <path d="M14.246 9.45905L10.0009 13.7041L5.75586 9.45905"
+                                                stroke="#8C8C8C" />
+                                        </svg>
+
+                                        Download
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="check-allcertificate" class="checkall">
+                                        <label for="check-allcertificate"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="All">
+                                            <option value="0">Course</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__specialized">
+                                        <button class="ashtable-btn">
+                                            Specialized <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__issue">
+                                        <button class="ashtable-btn">
+                                            Issue <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__expire">
+                                        <button class="ashtable-btn">
+                                            Expire <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__hours">
+                                        <button class="ashtable-btn">
+                                            Hours
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-cert1">
+                                                <label for="check-cert1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>8/31/2021</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <p>2.5hr</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashcertificate-wrapp">
+                                                <div class="dashcertificate__pic">
+                                                    <img src="img/certificate.png" alt="sertificate">
+                                                </div>
+                                                <div class="dashcertificate__descr">
+                                                    <div class="textbox">
+                                                        <p>
+                                                            This printable certificate is only available for one month
+                                                            from completion in Dashboard. Please download for your
+                                                            records.
+                                                        </p>
+                                                        <div class="infobtn"><img src="img/info-orange.svg" alt="info">
+                                                        </div>
+                                                    </div>
+                                                    <div class="btnsbox">
+                                                        <a href="#" class="greenbtn">Download</a>
+                                                        <a href="#" class="greenbtn white">Print</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-cert2">
+                                                <label for="check-cert2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>8/31/2021</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <p>2.5hr</p>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashcertificate-wrapp">
+                                                <div class="dashcertificate__pic">
+                                                    <img src="img/certificate.png" alt="sertificate">
+                                                </div>
+                                                <div class="dashcertificate__descr">
+                                                    <div class="textbox">
+                                                        <p>
+                                                            This printable certificate is only available for one month
+                                                            from completion in Dashboard. Please download for your
+                                                            records.
+                                                        </p>
+                                                        <div class="infobtn"><img src="img/info-orange.svg" alt="info">
+                                                        </div>
+                                                    </div>
+                                                    <div class="btnsbox">
+                                                        <a href="#" class="greenbtn disabled">Download</a>
+                                                        <a href="#" class="greenbtn white disabled">Print</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="archive" role="tabpanel" aria-labelledby="archive-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! CI Learner!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button class="archivebtn" data-toggle="modal" data-target="#archivemodal">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.417 7.50001C8.20866 7.50001 6.20866 8.32501 4.66699 9.66667L1.66699 6.66667V14.1667H9.16699L6.15033 11.15C7.30866 10.1833 8.78366 9.58334 10.417 9.58334C13.367 9.58334 15.8753 11.5083 16.7503 14.1667L18.7253 13.5167C17.567 10.025 14.292 7.50001 10.417 7.50001Z"
+                                                fill="#8C8C8C"></path>
+                                        </svg>
+                                        Re-Activated
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="check-all" class="checkall">
+                                        <label for="check-all"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="All">
+                                            <option value="0">Course</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__instructor">
+                                        <button class="ashtable-btn">
+                                            Instructor <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__enroll">
+                                        <button class="ashtable-btn">
+                                            Enroll <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__due">
+                                        <button class="ashtable-btn">
+                                            Archive <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__progress">
+                                        <button class="ashtable-btn">
+                                            Last time progress
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-arch1">
+                                                <label for="check-arch1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>N/A</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <div class="dashprwrapp">
+                                                    <div class="progressbar-line">
+                                                        <span class="progressbar-percent" style="width: 0;"></span>
+                                                    </div>
+                                                    <div class="percentinfo">0%</div>
+                                                </div>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#reactivatemodal">Reactivate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-arch2">
+                                                <label for="check-arch2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Dementia</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <div class="dashprwrapp">
+                                                    <div class="progressbar-line">
+                                                        <span class="progressbar-percent" style="width: 60%;"></span>
+                                                    </div>
+                                                    <div class="percentinfo">60%</div>
+                                                </div>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#reactivatemodal">Reactivate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-arch3">
+                                                <label for="check-arch3"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__enroll">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__due">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__progress">
+                                                <div class="dashprwrapp">
+                                                    <div class="progressbar-line">
+                                                        <span class="progressbar-percent" style="width: 70%;"></span>
+                                                    </div>
+                                                    <div class="percentinfo">70%</div>
+                                                </div>
+                                                <div class="droparrowbrn">
+                                                    <img src="img/droparrow.svg" alt="dropdown">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="orangebtn" data-toggle="modal"
+                                                    data-target="#reactivatemodal">Reactivate</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+    <div class="modal fade smallmodal" id="starttostudy" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">Start to study</p>
+                        <div class="descr">
+                            <p>You will now leave the Dashboard to start your course.</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Cancel</a>
+                        <a href="#" class="greenbtn">Go to learning page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade smallmodal" id="congrats-enroll" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">Congrats for your new enroll!</p>
+                        <div class="descr">
+                            <p>You can find your new enroll course in “your course” section, you can also start your
+                                course now!</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Back to list</a>
+                        <a href="#" class="greenbtn">Start learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade smallmodal" id="congrats-reenroll" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">You re-enroll successfully</p>
+                        <div class="descr">
+                            <p>You can find your new enroll course in “your course” section, you can also start your
+                                course now!</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Back to list</a>
+                        <a href="#" class="greenbtn">Start learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade smallmodal" id="archivemodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">Archive the course</p>
+                        <div class="descr">
+                            <p>After you archive this course will be show in “Archive” section and you can reactivate
+                                anytime.</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Cancel</a>
+                        <a href="#" class="greenbtn">Confirm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade smallmodal" id="reactivatemodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">Confirm to reactivate</p>
+                        <div class="descr">
+                            <p>If you confirm to reactivate this course, it will show up in your “Enrolled courses”
+                                section.</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Back to list</a>
+                        <a href="#" class="greenbtn">Confirm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="dashboard-gotodesktop">
+        <div class="dashboard-gotodesktop__content">
+            <div class="topsect">
+                <p class="title">Dashboard</p>
+                <div class="descr">
+                    <p>If you want to view your Dashboard please login from desktop devices.</p>
+                </div>
+            </div>
+            <div class="bottsect">
+                <a href="homepage.html" class="greenbtn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/common.js"></script>
+
+    <script>
+        var copyText = function (text) {
+            var command, support, enable, copyTextarea, defaultStyle;
+
+            command = 'copy';
+            try {
+                support = document.queryCommandSupported(command);
+            } catch (e) {
+                support = false;
+            }
+
+            try {
+                enable = document.queryCommandEnabled(command);
+            } catch (e) {
+                enable = false
+            }
+
+            defaultStyle = [
+                'position: absolute;',
+                'left: -10px; bottom: -10px;',
+                'width: 0; height: 0;',
+                'line-height: 0;',
+                'opacity: 0;'
+            ].join('');
+
+            var init = function () {
+                copyTextarea = document.createElement('textarea');
+                copyTextarea.style.cssText = defaultStyle;
+                document.body.appendChild(copyTextarea);
+            };
+
+            return function (text) {
+                if (!support && !enable) {
+                    return false;
+                }
+                if (!copyTextarea) {
+                    init();
+                }
+
+                copyTextarea.value = text;
+                copyTextarea.focus();
+                copyTextarea.select();
+
+                try {
+                    document.execCommand(command);
+                    return true;
+                } catch (e) {
+                    return false;
+                } finally {
+                    copyTextarea.value = '';
+                    copyTextarea.blur();
+                }
+            };
+        }();
+    </script>
+</body>
+
+</html>
