@@ -190,7 +190,6 @@ $(document).ready(function () {
 
 
 
-
         $(document).click(function (event) {
             let $target = $(event.target);
             if (!$target.closest('.startcourse__sidebar').length && !$target.closest('.startcourse__sidebarburger').length && !$target.closest('.mobsidebarlink').length) {
@@ -200,22 +199,33 @@ $(document).ready(function () {
         });
     }
 
-
-    // questions
-
-
-    // $('.answerbox input').change(function () {
-    //     if ($('.answerbox input').is(':checked')) {
-    //         $(this).parents('.startcourse__stepbody').find('.stepbodybtnsright .greenbtn').prop('disabled', false)
-    //     }
-    // });
-
-
     // close alert - start-course-wrong.html
 
     $('.alertclose').click(function () {
         $(this).parent('.alert').fadeOut();
+        $(this).parent('.alert').next('.correctans').fadeOut();
     });
+
+
+
+    // PAGE TOUR
+    $('.tourstart__skip, .tourstart__bottsect a').click(function () {
+        $('.darkwrapper.tourwrapper').hide();
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
@@ -307,3 +317,7 @@ if ($('*').is('video')) {
     })
 
 }
+
+
+
+

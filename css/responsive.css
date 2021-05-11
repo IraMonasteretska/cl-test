@@ -122,6 +122,18 @@
     }
 }
 
+@media(max-width:1600.8px) {
+    .loginpage .loginmodal__formsection {
+        padding: 50px 150px;
+    }
+}
+
+@media(max-width:1400.8px) {
+    .loginpage .loginmodal__formsection {
+        padding: 50px 100px;
+    }
+}
+
 @media(max-width:1199.8px) {
 
     header .greenbtn,
@@ -323,6 +335,9 @@
         font-size: 24px;
     }
 
+    .loginpage .loginmodal__formsection {
+        padding: 50px 90px;
+    }
 }
 
 @media(max-width:1100.8px) {
@@ -782,6 +797,10 @@
         -o-transition: .5s;
     }
 
+    .loginpage .loginmodal__formsection {
+        padding: 50px 60px;
+    }
+
 
 
 
@@ -1162,6 +1181,9 @@
         margin-bottom: 40px;
     }
 
+    .loginpage .loginmodal__formsection {
+        padding: 50px 30px;
+    }
 
 
 
@@ -1458,6 +1480,12 @@
     .startcourse__stepbodybtns .stepbodybtnsleft .greenbtn {
         margin-left: 0;
     }
+
+
+
+
+
+
 
 
 
@@ -2043,6 +2071,7 @@
 
     .instructorsect__wrap .descrsect .information {
         font-size: 12px;
+        margin-bottom: 0;
     }
 
     .coursesslider h4 {
@@ -2120,9 +2149,14 @@
         bottom: 30px;
     }
 
+    .course-progress {
+        margin-bottom: 30px;
+    }
 
-
-
+    .coursebody__coursedescription p:not(.title) {
+        font-size: 16px;
+        line-height: 140%;
+    }
 
 
 
