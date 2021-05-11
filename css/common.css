@@ -1918,7 +1918,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .coursebody__leftside .subtitle {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 14px;
     color: #595959;
 }
@@ -1955,11 +1955,11 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .instructorsect__wrap {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .instructorsect__wrap .picsect {
-    max-width: 70px;
+    max-width: 100px;
     width: 100%;
 }
 
@@ -1981,7 +1981,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .instructorsect__wrap .descrsect {
-    max-width: calc(100% - 70px);
+    max-width: calc(100% - 100px);
     width: 100%;
     padding-left: 30px;
     padding-right: 20px;
@@ -1997,7 +1997,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 14px;
     color: #8C8C8C;
     margin-bottom: 4px;
-    margin-top: -2px;
 }
 
 .instructorsect__wrap .descrsect .information {
@@ -2127,7 +2126,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .coursehead__descrsect h1 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .mobbtncourse {
@@ -2135,7 +2134,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .course-progress {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     padding-right: 20px;
 }
 
@@ -3838,17 +3837,25 @@ button {
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-.darkwrapper {
-    /* display: none; */
+#enrolled-successfully .modal-content {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
+.coursehead__picsect {
+    text-align: right;
+}
+
+.coursehead__wrap {
+    padding-right: 35px;
+}
+
+.progressbarbox {
+    max-width: 330px;
+}
 
 
 
