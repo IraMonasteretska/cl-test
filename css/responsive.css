@@ -2448,11 +2448,19 @@
         height: auto;
     }
 
+    .coursfilter .tourwrapper {
+        padding: 15px 0;
+    }
 
+    .coursfilter .phone-leftbox {
+        width: 140px;
+        padding-right: 5px;
+    }
 
-
-
-
+    .coursfilter .phone-rightbox {
+        width: calc(100% - 140px);
+        padding-left: 10px;
+    }
 
 
 
