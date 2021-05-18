@@ -209,15 +209,31 @@ $(document).ready(function () {
 
 
     // PAGE TOUR
-    $('.tourstart__skip, .tourstart__bottsect a').click(function () {
-        $('.darkwrapper.tourwrapper').hide();
+    $('.tourstart__skip, .tourstart__bottsect button').click(function () {
+        $('.darkwrapper.tourwrapper.beforesteps').hide();
+    });
+
+    $('#repeattour').click(function () {
+        $('.darkwrapper.tourwrapper.aftersteps').removeClass('show');
+    });
+
+    $('.closetour').click(function (e) {
+        e.preventDefault();
+        $('.darkwrapper.tourwrapper.aftersteps').removeClass('show');
     });
 
 
+    // home page - mobile course popup
+    $('.coursessection .courslists__item').attr('data-toggle', '');
 
+    if ($(window).width() < 576) {
+        $('.courseitemwrap').click(function (e) {
+            e.preventDefault();
+        });
 
+        $('.coursessection .courslists__item').attr('data-toggle', 'modal');
 
-
+    }
 
 
 
@@ -229,6 +245,33 @@ $(document).ready(function () {
 
 
 });
+
+// video__nocontrols
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if ($('*').is('video')) {
@@ -252,7 +295,8 @@ if ($('*').is('video')) {
             'fullscreen' // Toggle fullscreen
         ];
 
-        const player = new Plyr('#player', { controls });
+        // const player = new Plyr('#player', { controls });
+        const players = Plyr.setup('.video__controls', { controls });
 
         // Expose
         window.player = player;
@@ -290,31 +334,61 @@ if ($('*').is('video')) {
         // });
     });
 
-    $(document).ready(() => {
+    // $(document).ready(() => {
 
-        $('.player-src').on('click', function () {
+    //     $('.player-src').on('click', function () {
 
-            src = $(this).data("src");
-            type = 'video/' + $(this).data("type");
-            poster = $(this).data("poster") || "";
+    //         src = $(this).data("src");
+    //         type = 'video/' + $(this).data("type");
+    //         poster = $(this).data("poster") || "";
 
-            player.source = {
-                type: 'video',
-                title: 'Example title',
-                sources: [
-                    {
-                        src: src,
-                        type: type,
-                        size: 720
-                    }
-                ],
-                poster: poster
-            };
+    //         player.source = {
+    //             type: 'video',
+    //             title: 'Example title',
+    //             sources: [
+    //                 {
+    //                     src: src,
+    //                     type: type,
+    //                     size: 720
+    //                 }
+    //             ],
+    //             poster: poster
+    //         };
 
-            player.play();
+    //         player.play();
 
-        });
-    })
+    //     });
+    // });
+
+    // no controls
+    document.addEventListener('DOMContentLoaded', () => {
+        // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+        const controls = [
+            'play-large', // The large play button in the center
+            'play', // Play/pause playback
+            'current-time', // The current time of playback
+            'duration', // The full duration of the media
+            'mute', // Toggle mute
+            'volume', // Volume control
+            'settings', // Settings menu
+            'pip', // Picture-in-picture (currently Safari only)
+            'airplay', // Airplay (currently Safari only)
+            'fullscreen' // Toggle fullscreen
+        ];
+
+        // const player = new Plyr('#player', { controls });
+        const players1 = Plyr.setup('.video__nocontrols', { controls });
+
+        // Expose
+        window.player = player;
+
+
+        // Bind event listener
+        function on(selector, type, callback) {
+            document.querySelector(selector).addEventListener(type, callback, false);
+        }
+    });
+
 
 }
 

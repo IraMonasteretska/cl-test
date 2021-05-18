@@ -8,6 +8,7 @@
     <title>CI-Learning Homepage</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -26,7 +27,7 @@
                     <div class="header__logsect">
                         <!-- <a href="#" class="greenbtn" data-toggle="modal" data-target="#loginmodal">Login</a> -->
                         <div class="loginned-section">
-                            <div class="loginnedsect__userinfo a-section" id="one">
+                            <div class="loginnedsect__userinfo" id="one" data-step="1">
                                 <div class="picwrap ">
                                     <img src="img/user.png" alt="user photo">
                                 </div>
@@ -67,13 +68,13 @@
             </div>
         </section>
 
-        <section class="coursesslider a-section" id="two">
+        <section class="coursesslider">
             <div class="container">
                 <h3>Assigned and Upcoming Courses</h3>
                 <div class="coursessl-wrap">
                     <div class="coursessl">
                         <div>
-                            <a href="#">
+                            <a href="#" id="two" data-step="2">
                                 <img class="course__label" src="img/assigned.svg" alt="Assigned">
                                 <div class="coursesslider__course red">
                                     <div class="picbox">
@@ -212,84 +213,86 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="coursfilter">
-                            <p class="coursfilter__title">Filter courses by</p>
-                            <div class="coursfilter__searchbox">
-                                <input type="text" placeholder="Search">
-                                <button></button>
-                                <span class="showfilter">Filter <img src="img/filtarr.svg" alt="icon"></span>
-                            </div>
-                            <div class="filtboxeswrapp">
-                                <div class="phone-leftbox">
-                                    <span class="btn-filtbox1">Your Course</span>
-                                    <span class="btn-filtbox2">Programs</span>
-                                    <span class="btn-filtbox3">Duration</span>
+                            <div class="tourwrapper" id="three" data-step="3">
+                                <p class="coursfilter__title">Filter courses by</p>
+                                <div class="coursfilter__searchbox">
+                                    <input type="text" placeholder="Search">
+                                    <button></button>
+                                    <span class="showfilter">Filter <img src="img/filtarr.svg" alt="icon"></span>
                                 </div>
-                                <div class="phone-rightbox">
-                                    <div class="coursfilter__filtbox filtbox1">
-                                        <p class="coursfilter__filtbox-title">Your Course</p>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="check1" name="yourcourse">
-                                            <label for="check1">Enrolled</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="check2" name="yourcourse">
-                                            <label for="check2">Assigned</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="check3" name="yourcourse">
-                                            <label for="check3">Completed</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="check4" name="yourcourse">
-                                            <label for="check4">Save</label>
-                                        </div>
-                                        <a href="#" class="managecourse-link" data-toggle="modal"
-                                            data-target="#managemodal">
-                                            Manage your course
-                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M7.00016 0.333171L5.82516 1.50817L10.4752 6.1665L0.333496 6.1665L0.333496 7.83317L10.4752 7.83317L5.81683 12.4832L7.00016 13.6665L13.6668 6.99984L7.00016 0.333171Z"
-                                                    fill="#FF6200" />
-                                            </svg>
-                                        </a>
+                                <div class="filtboxeswrapp">
+                                    <div class="phone-leftbox">
+                                        <span class="btn-filtbox1">Your Course</span>
+                                        <span class="btn-filtbox2">Programs</span>
+                                        <span class="btn-filtbox3">Duration</span>
                                     </div>
-                                    <div class="coursfilter__filtbox filtbox2">
-                                        <p class="coursfilter__filtbox-title">Programs</p>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="coursetype1" name="coursetype">
-                                            <label for="coursetype1">On-boarding (2)</label>
+                                    <div class="phone-rightbox">
+                                        <div class="coursfilter__filtbox filtbox1">
+                                            <p class="coursfilter__filtbox-title">Your Course</p>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="check1" name="yourcourse">
+                                                <label for="check1">Enrolled</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="check2" name="yourcourse">
+                                                <label for="check2">Assigned</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="check3" name="yourcourse">
+                                                <label for="check3">Completed</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="check4" name="yourcourse">
+                                                <label for="check4">Save</label>
+                                            </div>
+                                            <a href="#" class="managecourse-link" data-toggle="modal"
+                                                data-target="#managemodal">
+                                                Manage your course
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M7.00016 0.333171L5.82516 1.50817L10.4752 6.1665L0.333496 6.1665L0.333496 7.83317L10.4752 7.83317L5.81683 12.4832L7.00016 13.6665L13.6668 6.99984L7.00016 0.333171Z"
+                                                        fill="#FF6200" />
+                                                </svg>
+                                            </a>
                                         </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="coursetype2" name="coursetype">
-                                            <label for="coursetype2">CNA Annual Training</label>
+                                        <div class="coursfilter__filtbox filtbox2">
+                                            <p class="coursfilter__filtbox-title">Programs</p>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="coursetype1" name="coursetype">
+                                                <label for="coursetype1">On-boarding (2)</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="coursetype2" name="coursetype">
+                                                <label for="coursetype2">CNA Annual Training</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="coursetype3" name="coursetype">
+                                                <label for="coursetype3">Continuing Education</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="coursetype4" name="coursetype">
+                                                <label for="coursetype4">Diseases</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="coursetype5" name="coursetype">
+                                                <label for="coursetype5">Health & Safety</label>
+                                            </div>
                                         </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="coursetype3" name="coursetype">
-                                            <label for="coursetype3">Continuing Education</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="coursetype4" name="coursetype">
-                                            <label for="coursetype4">Diseases</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="coursetype5" name="coursetype">
-                                            <label for="coursetype5">Health & Safety</label>
-                                        </div>
-                                    </div>
-                                    <div class="coursfilter__filtbox filtbox3">
-                                        <p class="coursfilter__filtbox-title">Duration</p>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="duration1" name="duration">
-                                            <label for="duration1">Below 30mins</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="duration2" name="duration">
-                                            <label for="duration2">30 - 45 mins</label>
-                                        </div>
-                                        <div class="coursfilter__check">
-                                            <input type="radio" id="duration3" name="duration">
-                                            <label for="duration3">over an hour</label>
+                                        <div class="coursfilter__filtbox filtbox3">
+                                            <p class="coursfilter__filtbox-title">Duration</p>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="duration1" name="duration">
+                                                <label for="duration1">Below 30mins</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="duration2" name="duration">
+                                                <label for="duration2">30 - 45 mins</label>
+                                            </div>
+                                            <div class="coursfilter__check">
+                                                <input type="radio" id="duration3" name="duration">
+                                                <label for="duration3">over an hour</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -302,7 +305,8 @@
                                 <h3>Explore New</h3>
                             </div>
                             <div class="courslists__body">
-                                <div class="courslists__item">
+                                <div class="courslists__item" id="four" data-step="4" data-toggle="modal"
+                                    data-target="#mobilecourseinfo">
                                     <div class="duration-label">
                                         <img src="img/time-clock-circle.svg" alt="icon">
                                         <span>2h 30mins</span>
@@ -333,7 +337,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="courslists__item">
+                                <div class="courslists__item" data-toggle="modal" data-target="#mobilecourseinfo">
                                     <div class="duration-label">
                                         <img src="img/time-clock-circle.svg" alt="icon">
                                         <span>2h 30mins</span>
@@ -365,7 +369,7 @@
                                         <div class="yourduedate phone">Your due date: 01/30/2021</div>
                                     </div>
                                 </div>
-                                <div class="courslists__item">
+                                <div class="courslists__item" data-toggle="modal" data-target="#mobilecourseinfo">
                                     <div class="duration-label">
                                         <img src="img/time-clock-circle.svg" alt="icon">
                                         <span>2h 30mins</span>
@@ -393,7 +397,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="courslists__item">
+                                <div class="courslists__item" data-toggle="modal" data-target="#mobilecourseinfo">
                                     <div class="duration-label">
                                         <img src="img/time-clock-circle.svg" alt="icon">
                                         <span>2h 30mins</span>
@@ -420,7 +424,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="courslists__item">
+                                <div class="courslists__item" data-toggle="modal" data-target="#mobilecourseinfo">
                                     <div class="duration-label">
                                         <img src="img/time-clock-circle.svg" alt="icon">
                                         <span>2h 30mins</span>
@@ -564,7 +568,7 @@
     </div>
 
     <!-- Page Tour -->
-    <!-- <div class="darkwrapper tourwrapper">
+    <div class="darkwrapper tourwrapper beforesteps">
         <div class="tourstart">
             <button class="tourstart__skip">Skip</button>
             <div class="tourstart__topsect">
@@ -576,14 +580,94 @@
                 </p>
             </div>
             <div class="tourstart__bottsect">
-                <a href="#" class="greenbtn" id="startTour">Learn how to use the website</a>
+                <button class="greenbtn" id="startTour" onclick="startIntro();">Learn how to use the website</button>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <div class="darkwrapper tourwrapper aftersteps">
+        <div class="tourstart">
+            <div class="tourstart__topsect">
+                <img src="img/tourpic2.png" alt="image">
+                <p class="title">Congrats! You finish the tutorial!</p>
+                <p class="description">
+                    You can start your study journey now, if you have any questions feel free to ask your advisor or go
+                    through the tutorial again.
+                </p>
+            </div>
+            <div class="tourstart__bottsect">
+                <div class="tourstart__bottsect-btnsbox">
+                    <button class="greenbtn white" id="repeattour" onclick="startIntro();">Play Tutorial again </button>
+                    <a href="#" class="greenbtn closetour">Homepage</a>
+                </div>
+                <div class="tourstart__bottsect-checkblock">
+                    <input type="checkbox" id="tourscheck">
+                    <label for="tourscheck">I hope not to show the tutorial again on my next time login</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade mobcourse" id="mobilecourseinfo" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="mobilecourseinfo__picbox">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img
+                                src="img/closeicon-black.svg" alt="close"></button>
+                        <div class="mobilecourseinfo__time"><span>2h 30mins</span></div>
+                        <div class="mobilecourseinfo__label">Assigned</div>
+                        <img src="img/piccourse.jpg" alt="2021 Parkinson’s Disease & The Caregiving Role">
+                    </div>
+                    <div class="mobilecourseinfo__descrbox">
+                        <p class="title">
+                            2021 Parkinson’s Disease & The Caregiving Role
+                        </p>
+                        <div class="mobilecourseinfo__instructorbox">
+                            <div class="avathar">
+                                <img src="img/user2.png" alt="avatar">
+                            </div>
+                            <div class="descr">
+                                <p class="name">Heidie Higginbotham</p>
+                                <p class="proff">LVN, CDP, EMS Instructor</p>
+                            </div>
+                        </div>
+                        <div class="mobilecourseinfo__description">
+                            <p>This class will teach the caregiver how to recognize, report, and protect themselves from
+                                sexual harassment and other forms of harassment.</p>
+                        </div>
+                        <p class="date">Enrolled Date: 01/03/2021</p>
+                        <a href="#" class="mobilecourseinfobtn greenbtn" data-dismiss="modal" data-toggle="modal"
+                            data-target="#mobilecoursecontinue">Contine to start</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-
+    <div class="modal fade mobcourse" id="mobilecoursecontinue" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img
+                            src="img/closeicon-black.svg" alt="close"></button>
+                    <div class="mobilecoursecontinue__content">
+                        <p class="title">Continue course</p>
+                        <div class="descr">
+                            <p>We will jump back to last time you end you can continue study.</p>
+                        </div>
+                    </div>
+                    <div class="mobilecoursecontinue__bottsect">
+                        <a href="#" class="tranparentbtn">Course detail</a>
+                        <a href="#" class="greenbtn" data-dismiss="modal">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -592,10 +676,62 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/intro.js"></script>
     <script src="js/common.js"></script>
 
     <script>
+        function startIntro() {
 
+            $("header.header").css("position", "absolute");
+            var intro = introJs();
+            intro.setOptions({
+
+                steps: [{
+                        element: "#one",
+                        intro: "<div class='testIntro'>At the right side top is your profile, from here you can manage your courses that you already enrolled and completed.</div>",
+                        position: 'bottom',
+                        tooltipClass: 'customTooltip1',
+                    },
+                    {
+                        element: "#two",
+                        intro: "<div class='testIntro'>This is the section to inform your upcoming due course. You can easily click “Start” to start your course immediately.</div>",
+                        position: 'right',
+                        tooltipClass: 'customTooltip2',
+                    },
+                    {
+                        element: "#three",
+                        intro: "<div class='testIntro'>You can search for a specific course here, or you can sort by clicking the below categories. The result will show on the right-hand side. You can also manage your other courses by clicking “Manage your course”.</div>",
+                        position: 'right',
+                        tooltipClass: 'customTooltip3',
+                    },
+                    {
+                        element: "#four",
+                        intro: "<div class='testIntro'>This is the section that you can enroll and continue your courses. You can check on the right color flag to know about your status.</div>",
+                        position: 'top',
+                        tooltipClass: 'customTooltip4',
+                    }
+                ],
+
+                // tooltipClass: 'customTooltip',
+                nextLabel: "Next",
+                prevLabel: "Back",
+                skipLabel: "Stop Tutorial",
+                doneLabel: "Next",
+                tooltipClass: "testclass",
+                exitOnOverlayClick: false,
+                showStepNumbers: false,
+                showBullets: false,
+                // exitOnOverlayClick: true,
+            });
+            intro.start();
+
+            intro.onexit(function () {
+                $("header.header").css("position", "fixed");
+            });
+            introJs.fn.oncomplete(function () {
+                $('.darkwrapper.tourwrapper.aftersteps').addClass('show');
+            });
+        }
     </script>
 </body>
 

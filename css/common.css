@@ -1006,8 +1006,9 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .coursesslider__course .picbox {
     overflow: hidden;
     height: 135px;
-    max-width: 230px;
+    /* max-width: 230px; */
     position: relative;
+    max-width: 100%;
 }
 
 .coursesslider__course .picbox:after {
@@ -1215,7 +1216,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .course__label {
     position: absolute;
-    right: 3px;
+    right: -7px;
     top: 8px;
     width: 117px;
     height: 37px;
@@ -1224,8 +1225,12 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .coursfilter {
     background: #EBF4F4;
-    padding: 15px 22px;
+    /* padding: 15px 22px; */
     height: 100%;
+}
+
+.coursfilter .tourwrapper {
+    padding: 15px 22px;
 }
 
 .coursfilter__title {
@@ -3759,7 +3764,8 @@ button {
     top: 0;
     left: 0;
     background-color: #000;
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.9) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.7) 100%);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3809,7 +3815,8 @@ button {
     border-top: 1px solid #DEE5EF;
 }
 
-.tourstart__bottsect a {
+.tourstart__bottsect a,
+.tourstart__bottsect button {
     width: 100%;
     text-align: center;
 }
@@ -3856,6 +3863,439 @@ button {
 .progressbarbox {
     max-width: 330px;
 }
+
+.coursesslider .slick-slide a {
+    display: block;
+    position: relative;
+}
+
+.introjs-helperLayer {
+    box-shadow: rgb(255 255 255 / 0%) 0px 0px 1px 2px, rgb(33 33 33 / 70%) 0px 0px 0px 5000px !important;
+}
+
+.introjs-tooltip {
+    min-width: 720px !important;
+    width: 100% !important;
+    padding: 70px 90px 50px 90px;
+    box-sizing: border-box;
+    border: 10px solid #FF9334;
+    border-radius: 10px;
+}
+
+.introjs-skipbutton {
+    text-decoration: underline;
+    color: #8C8C8C;
+    font-size: 20px;
+    line-height: 140%;
+    outline: none;
+    font-weight: normal;
+    padding: 0;
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-family: Avenir book;
+}
+
+.introjs-skipbutton:hover {
+    text-decoration: none;
+}
+
+.introjs-tooltip-header {
+    padding: 0;
+}
+
+.testIntro {
+    font-family: Avenir book;
+    color: #595959;
+    font-size: 24px;
+    line-height: 140%;
+}
+
+.introjs-tooltiptext {
+    padding: 0;
+}
+
+.introjs-tooltipbuttons {
+    border: none;
+    padding: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introjs-tooltipbuttons a {
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    border-radius: 10px;
+    border: 2px solid #FF9334;
+    text-shadow: none;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.introjs-tooltipbuttons a:focus {
+    box-shadow: none;
+    border: 2px solid #FF9334;
+}
+
+.introjs-tooltipbuttons a.introjs-nextbutton {
+    color: #fff;
+    background: #FF9334;
+    margin-left: 15px;
+}
+
+.introjs-tooltipbuttons a.introjs-prevbutton {
+    color: #FF9334;
+    background: #fff;
+    margin-right: 15px;
+}
+
+.introjs-tooltipbuttons a.introjs-nextbutton:hover {
+    color: #FF9334;
+    background: #fff;
+    border: 2px solid #FF9334;
+}
+
+.introjs-tooltipbuttons a.introjs-prevbutton:hover {
+    color: #fff;
+    background: #FF9334;
+    border: 2px solid #FF9334;
+}
+
+.introjs-tooltipbuttons a.introjs-prevbutton.introjs-disabled {
+    opacity: .6;
+    cursor: no-drop;
+}
+
+.introjs-tooltipbuttons a.introjs-prevbutton.introjs-disabled:hover {
+    color: #FF9334;
+    background: #fff;
+    border: 2px solid #FF9334;
+}
+
+.darkwrapper.tourwrapper.aftersteps {
+    display: none;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__topsect {
+    padding: 0 60px 35px 60px;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__topsect img {
+    margin-bottom: 20px;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__topsect .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect-btnsbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect {
+    padding: 20px 80px 23px;
+}
+
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect a,
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect button {
+    max-width: 236px;
+}
+
+.tourstart__bottsect-checkblock {
+    margin-top: 20px;
+}
+
+.tourstart__bottsect-checkblock input {
+    display: none;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect-checkblock label {
+    margin: 0;
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #000;
+    cursor: pointer;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect-checkblock label:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    border: 1px solid #A4B0C0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.darkwrapper.tourwrapper.aftersteps .tourstart__bottsect-checkblock input:checked+label:after {
+    border: 1px solid #FF9334;
+    background: #FF9334;
+}
+
+.darkwrapper.tourwrapper.aftersteps.show {
+    display: flex;
+}
+
+.tourstart .tourstart__skip {
+    background: transparent;
+}
+
+.mobcourse .modal-body {
+    padding: 0;
+}
+
+.mobcourse .modal-content {
+    width: calc(100% - 20px);
+    max-width: 334px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mobilecourseinfo__picbox {
+    position: relative;
+}
+
+.mobcourse .close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobilecourseinfo__picbox .close img {
+    width: 16px;
+}
+
+.mobilecourseinfo__picbox>img {
+    width: 100%;
+}
+
+.mobilecourseinfo__time {
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 124px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 12px;
+    line-height: 130%;
+    font-family: Avenir heavy;
+}
+
+.mobilecourseinfo__time span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.mobilecourseinfo__time span:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../img/time-clock-course.svg') no-repeat center;
+    background-size: 14px;
+}
+
+.mobilecourseinfo__label {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    background: #FF6200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 130%;
+    font-family: Avenir heavy;
+    width: 124px;
+    height: 20px;
+}
+
+.mobilecourseinfo__descrbox {
+    padding: 16px 20px 12px 20px;
+}
+
+.mobilecourseinfo__descrbox .title {
+    font-family: Avenir black;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.mobilecourseinfo__instructorbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.mobilecourseinfo__instructorbox .avathar {
+    width: 100%;
+    max-width: 50px;
+    flex: 0 0 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.mobilecourseinfo__instructorbox .avathar img {
+    width: 100%;
+}
+
+.mobilecourseinfo__instructorbox .descr {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: 15px;
+}
+
+.mobilecourseinfo__instructorbox .descr .name {
+    margin: 0;
+    font-family: Avenir heavy;
+    font-size: 14px;
+    line-height: 130%;
+    color: #000;
+}
+
+.mobilecourseinfo__instructorbox .descr .proff {
+    margin: 0;
+    color: #BFBFBF;
+    font-size: 14px;
+}
+
+.mobilecourseinfo__description {
+    margin-bottom: 16px;
+    color: #394A64;
+}
+
+.mobilecourseinfo__description p {
+    margin: 0;
+}
+
+.mobilecourseinfo__description .date {
+    margin-bottom: 12px;
+    color: #8C8C8C;
+    font-size: 14px;
+}
+
+.mobilecourseinfo__descrbox .mobilecourseinfobtn {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    font-size: 18px;
+}
+
+.mobilecoursecontinue__content {
+    padding: 36px 16px 34px 16px;
+}
+
+.mobilecoursecontinue__content .title {
+    text-align: center;
+    margin: 0 0 16px 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.mobilecoursecontinue__content .descr {
+    max-width: 245px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mobilecoursecontinue__content .descr p {
+    margin: 0;
+}
+
+.mobilecoursecontinue__bottsect {
+    border-top: 1px solid #DEE5EF;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobilecoursecontinue__bottsect .greenbtn {
+    width: 150px;
+    height: 48px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.mobilecoursecontinue__bottsect .tranparentbtn {
+    width: 140px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #269FA3;
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 140%;
+    font-family: Avenir heavy;
+}
+
+
+
+
+.coursessl-wrap .duebox {
+    margin-bottom: 0;
+}
+
+.coursessl-wrap .coursesslider__course {
+    height: 300px;
+}
+
 
 
 
