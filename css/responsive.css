@@ -456,7 +456,9 @@
         font-size: 16px;
     }
 
-
+    .coursebody__rightside {
+        padding-left: 45px;
+    }
 
 
 
@@ -1378,6 +1380,7 @@
 
 
 
+
     h1,
     .titleh1 {
         font-size: 32px;
@@ -1683,7 +1686,9 @@
         margin-left: 0;
     }
 
-
+    .coursebody__rightside {
+        padding-left: 15px;
+    }
 
 
 
@@ -2462,7 +2467,9 @@
         padding-left: 10px;
     }
 
-
+    .coursebody__rightside {
+        padding-left: 0;
+    }
 
 
 
@@ -2576,3 +2583,23 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEST */

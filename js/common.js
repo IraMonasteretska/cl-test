@@ -246,31 +246,6 @@ $(document).ready(function () {
 
 });
 
-// video__nocontrols
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -51,36 +51,36 @@ main {
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
-    border: 1px solid #269FA3;
     padding: 11px 36px;
+    border: none;
 }
 
 .orangebtn {
     padding: 11px 16px;
-    background: #FF9334;
+    background: #EF8A32;
     border-radius: 10px;
     color: #fff;
     font-family: Avenir heavy;
     font-size: 18px;
     line-height: 140%;
-    border: 1px solid #FF9334;
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
     display: inline-block;
+    border: none;
 }
 
 .greenbtn:hover {
-    background: #fff;
-    color: #269FA3;
+    color: #fff;
+    background: #1E7B7E;
     text-decoration: none;
 }
 
 .orangebtn:hover {
-    background: #fff;
-    color: #FF9334;
+    background: #CC662C;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -834,7 +834,7 @@ p.centerline span {
     outline: none;
     background: #FF9334;
     border-radius: 8px;
-    border: 1px solid #FF9334;
+    border: none;
     color: #fff;
     font-weight: 600;
     font-size: 14px;
@@ -850,8 +850,8 @@ p.centerline span {
 }
 
 .loginmodal__submit:hover {
-    color: #FF9334;
-    background: #fff;
+    color: #fff;
+    background: #CC662C;
 }
 
 .passwrapper {
@@ -1816,11 +1816,13 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .greenbtn.white {
     background-color: #fff;
     color: #269FA3;
+    border: 1px solid #269FA3;
 }
 
 .greenbtn.white:hover {
-    background-color: #269FA3;
     color: #fff;
+    background: #1E7B7E;
+    text-decoration: none;
 }
 
 #dashboard-mobpop .title {
@@ -2047,7 +2049,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .course__accordeon-row {
-    padding: 20px 0 30px 0;
+    padding: 20px 0 20px 0;
     border-bottom: 1px solid #DEE5EF;
 }
 
@@ -2078,7 +2080,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .accordeon-descrbox {
-    padding-top: 15px;
+    padding-top: 11px;
 }
 
 .accordeon-descrbox ol {
@@ -2360,10 +2362,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
-}
-
-.dashheadsect a:hover svg path {
-    fill: #FF9334;
 }
 
 .dashheadsect {
@@ -3294,9 +3292,10 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     -o-transition: .3s;
 }
 
+/* 
 .startcourse__stepbodybtns .greenbtn:hover svg path {
     fill: #269FA3;
-}
+} */
 
 .startcourse__stepbodybtns .savebtn {
     height: 48px;
@@ -3517,8 +3516,8 @@ button {
 .question__submit {
     width: 100px;
     height: 32px;
-    background: #FF6200;
-    border: 1px solid #FF6200;
+    background: #EF8A32;
+    border: none;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -3537,8 +3536,8 @@ button {
 }
 
 .question__submit:hover {
-    background-color: #fff;
-    color: #FF6200;
+    background-color: #CC662C;
+    color: #fff;
 }
 
 .questionsection__bottsect {
@@ -3668,17 +3667,14 @@ button {
 
 .stepbodybtnsright .greenbtn.finish {
     background: #FF9334;
-    border: 1px solid #FF9334;
+    border: none;
 }
 
 .stepbodybtnsright .greenbtn.finish:hover {
-    background: #fff;
-    color: #FF9334;
+    background: #CC662C;
+    color: #fff;
 }
 
-.stepbodybtnsright .greenbtn.finish:hover svg path {
-    fill: #FF9334;
-}
 
 .coursebody.final {
     padding-top: 40px;
@@ -3938,18 +3934,20 @@ button {
     line-height: 120%;
     letter-spacing: -0.01em;
     border-radius: 10px;
-    border: 2px solid #FF9334;
+    /* border: 2px solid #FF9334; */
     text-shadow: none;
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
+    border: none;
 }
 
 .introjs-tooltipbuttons a:focus {
     box-shadow: none;
-    border: 2px solid #FF9334;
+    border: none;
+    /* border: 2px solid #FF9334; */
 }
 
 .introjs-tooltipbuttons a.introjs-nextbutton {
@@ -3962,18 +3960,20 @@ button {
     color: #FF9334;
     background: #fff;
     margin-right: 15px;
+    border: 2px solid #FF9334;
 }
 
 .introjs-tooltipbuttons a.introjs-nextbutton:hover {
-    color: #FF9334;
-    background: #fff;
-    border: 2px solid #FF9334;
+    background: #CC662C;
+    color: #fff;
+    text-decoration: none;
 }
 
 .introjs-tooltipbuttons a.introjs-prevbutton:hover {
+    background: #CC662C;
     color: #fff;
-    background: #FF9334;
-    border: 2px solid #FF9334;
+    text-decoration: none;
+    border: 2px solid #CC662C;
 }
 
 .introjs-tooltipbuttons a.introjs-prevbutton.introjs-disabled {
@@ -4285,9 +4285,6 @@ button {
     font-family: Avenir heavy;
 }
 
-
-
-
 .coursessl-wrap .duebox {
     margin-bottom: 0;
 }
@@ -4295,6 +4292,29 @@ button {
 .coursessl-wrap .coursesslider__course {
     height: 300px;
 }
+
+.dashsearch__box button {
+    box-shadow: none;
+}
+
+.coursebody__rightside {
+    padding-left: 62px;
+}
+
+.coursebody.final .coursebody__rightside {
+    padding-left: 0;
+}
+
+.introjs-showElement {
+    pointer-events: none;
+}
+
+
+
+
+
+
+
 
 
 
