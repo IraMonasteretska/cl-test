@@ -127,7 +127,6 @@ h6 {
     color: #fff;
 }
 
-
 /* general -- end*/
 
 /* header */
@@ -188,7 +187,6 @@ header .greenbtn {
     align-items: center;
     justify-content: flex-end;
 }
-
 
 .loginned-section {
     position: relative;
@@ -292,12 +290,6 @@ header .greenbtn {
 .loginnedsect__nav ul li:hover+li a:after {
     display: none;
 }
-
-
-
-
-
-
 
 /* header -- end*/
 
@@ -458,11 +450,9 @@ header .greenbtn {
     transform: translateX(20px);
 }
 
-
 /* landing -- end */
 
 /* footer */
-
 
 footer {
     padding: 60px 0 0 0;
@@ -634,8 +624,6 @@ footer .contact-list li a:hover {
     margin-right: 0;
 }
 
-
-
 /* footer -- end*/
 
 .provides-block .picbox img {
@@ -646,8 +634,8 @@ footer .contact-list li a:hover {
     margin-bottom: 0;
 }
 
-
 /* Login modal */
+
 #loginmodal .modal-dialog {
     max-width: 1170px;
 }
@@ -965,8 +953,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .picpostection__authorblock .name {
     margin: 0;
-    /* font-family: Avenir heavy; */
-    /* font-size: 12px; */
     font-size: 20px;
     font-family: Avenir black;
     line-height: 130%;
@@ -1006,7 +992,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .coursesslider__course .picbox {
     overflow: hidden;
     height: 135px;
-    /* max-width: 230px; */
     position: relative;
     max-width: 100%;
 }
@@ -1048,8 +1033,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     min-height: 48px;
     display: flex;
     align-items: center;
-
-
     height: 36px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1074,7 +1057,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir heavy;
     color: #000;
     background-image: url('../img/percpic.png');
-
 }
 
 .duebox__info {
@@ -1225,7 +1207,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .coursfilter {
     background: #EBF4F4;
-    /* padding: 15px 22px; */
     height: 100%;
 }
 
@@ -1568,7 +1549,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     justify-content: center;
     text-align: center;
     background: #FF6200;
-
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.01em;
     color: #FFFFFF;
@@ -1593,7 +1573,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     position: absolute;
     right: 0;
     bottom: -6px;
-
 }
 
 .courslists {
@@ -1618,7 +1597,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .pagination ul li {
     display: inline-block;
 }
-
 
 .pagination ul li a {
     font-family: Avenir heavy;
@@ -1848,7 +1826,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     margin-bottom: 0;
 }
 
-
 /* HOME PAGE -- end*/
 
 /* COURSE */
@@ -1962,7 +1939,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .instructorsect__wrap {
     display: flex;
-    /* align-items: center; */
 }
 
 .instructorsect__wrap .picsect {
@@ -2206,12 +2182,10 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     padding: 24px 24px 27px 24px;
 }
 
-
 /* COURSE - END*/
 
-
-
 /* DASHBOARD */
+
 .main-dashboard {
     padding-top: 0;
 }
@@ -2424,7 +2398,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 #archive-tab {
     width: 130px;
 }
-
 
 .dashtab-section .nav-tabs .nav-item.show .nav-link,
 .dashtab-section .nav-tabs .nav-link.active {
@@ -2721,7 +2694,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     box-shadow: none !important;
     box-shadow: none !important;
     background-color: transparent;
-    /* border: none; */
 }
 
 .dashtable__header .bootstrap-select .dropdown-menu {
@@ -3020,7 +2992,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     position: relative;
 }
 
-
 .dashcertificate__descr .textbox p:last-child {
     margin-bottom: 0;
 }
@@ -3072,9 +3043,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     border-color: #045acf;
 }
 
-
 /* DASHBOARD - END */
-
 
 /* START COURSE */
 
@@ -3292,11 +3261,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     -o-transition: .3s;
 }
 
-/* 
-.startcourse__stepbodybtns .greenbtn:hover svg path {
-    fill: #269FA3;
-} */
-
 .startcourse__stepbodybtns .savebtn {
     height: 48px;
     padding: 3px 20px;
@@ -3359,7 +3323,6 @@ button {
     margin: 0 auto;
     width: 100%;
     padding-bottom: 15px;
-
 }
 
 .startcourse__stephead {
@@ -3545,8 +3508,6 @@ button {
     padding: 12px 60px;
 }
 
-
-
 .stepbodybtnsright {
     justify-content: flex-end;
 }
@@ -3675,7 +3636,6 @@ button {
     color: #fff;
 }
 
-
 .coursebody.final {
     padding-top: 40px;
 }
@@ -3729,6 +3689,7 @@ button {
 }
 
 /* LOGIN */
+
 .loginpage {
     padding-top: 0;
 }
@@ -3934,7 +3895,6 @@ button {
     line-height: 120%;
     letter-spacing: -0.01em;
     border-radius: 10px;
-    /* border: 2px solid #FF9334; */
     text-shadow: none;
     transition: .3s;
     -webkit-transition: .3s;
@@ -3947,7 +3907,6 @@ button {
 .introjs-tooltipbuttons a:focus {
     box-shadow: none;
     border: none;
-    /* border: 2px solid #FF9334; */
 }
 
 .introjs-tooltipbuttons a.introjs-nextbutton {
@@ -4176,7 +4135,6 @@ button {
     -o-border-radius: 50%;
 }
 
-
 .mobilecourseinfo__instructorbox .avathar img {
     width: 100%;
 }
@@ -4309,20 +4267,6 @@ button {
     pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 font-family: 'Inter', sans-serif;
 font-family: 'Montserrat', sans-serif;
@@ -4334,15 +4278,3 @@ font-family: Avenir black;
 font-family: Avenir heavy;
 font-family: Avenir-Light;
 */
-
-
-
-
-
-
-
-/* 
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 2;
--webkit-box-orient: vertical; */

@@ -11,7 +11,6 @@ $(document).ready(function () {
     });
 
     // show / hide header nav
-
     $('.loginnedsect__userinfo').click(function () {
         $('.loginnedsect__nav').slideToggle();
     });
@@ -23,9 +22,7 @@ $(document).ready(function () {
         }
     });
 
-
     // Courses slider
-
     $('.coursessl').slick({
         slidesToShow: 3.5,
         slidesToScroll: 1,
@@ -125,7 +122,6 @@ $(document).ready(function () {
         $(this).parents('.dashtable__rowwrap').toggleClass('open');
     });
 
-
     // tooltips
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
@@ -139,7 +135,6 @@ $(document).ready(function () {
         }, 2000);
     });
 
-
     // check all
     $('.checkall').change(function () {
         if ($(this).is(':checked')) {
@@ -147,12 +142,10 @@ $(document).ready(function () {
         } else {
             $(this).parents('.dashtable__header').next('.dashtable__body').find('.dashtable__checkblock input:not(:disabled)').prop('checked', false);;
         }
-
     });
 
 
     // action btn - set green color
-
     $('.dashtable__checkblock input').change(function () {
         if ($(this).parents('.dashtable').find('.dashtable__checkblock input:not(:disabled)').is(':checked')) {
             $(this).parents('.tab-pane').find('.dashaction__labels button').addClass('green');
@@ -171,7 +164,6 @@ $(document).ready(function () {
         $('.startcourse__sbhead button').click(function () {
             $('.sidebarcol').addClass('hidesidenav');
         });
-
         $('.startcourse__sidebarburger').click(function () {
             $('.sidebarcol').removeClass('hidesidenav');
         });
@@ -182,14 +174,10 @@ $(document).ready(function () {
             $('.startcourse__sidebar').addClass('tabletshowsidebar');
             $("<div class='darkoverley'></div>").appendTo($("body"));
         });
-
         $('.startcourse__sbhead button, .mobtext-closemenu').click(function () {
             $('.startcourse__sidebar').removeClass('tabletshowsidebar');
             $('.darkoverley').remove();
         });
-
-
-
         $(document).click(function (event) {
             let $target = $(event.target);
             if (!$target.closest('.startcourse__sidebar').length && !$target.closest('.startcourse__sidebarburger').length && !$target.closest('.mobsidebarlink').length) {
@@ -200,28 +188,22 @@ $(document).ready(function () {
     }
 
     // close alert - start-course-wrong.html
-
     $('.alertclose').click(function () {
         $(this).parent('.alert').fadeOut();
         $(this).parent('.alert').next('.correctans').fadeOut();
     });
 
-
-
     // PAGE TOUR
     $('.tourstart__skip, .tourstart__bottsect button').click(function () {
         $('.darkwrapper.tourwrapper.beforesteps').hide();
     });
-
     $('#repeattour').click(function () {
         $('.darkwrapper.tourwrapper.aftersteps').removeClass('show');
     });
-
     $('.closetour').click(function (e) {
         e.preventDefault();
         $('.darkwrapper.tourwrapper.aftersteps').removeClass('show');
     });
-
 
     // home page - mobile course popup
     $('.coursessection .courslists__item').attr('data-toggle', '');
@@ -232,25 +214,10 @@ $(document).ready(function () {
         });
 
         $('.coursessection .courslists__item').attr('data-toggle', 'modal');
-
     }
-
-
-
-
-
-
-
-
-
-
 });
 
-
-
-
 if ($('*').is('video')) {
-
     document.addEventListener('DOMContentLoaded', () => {
         // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
         const controls = [
@@ -274,7 +241,7 @@ if ($('*').is('video')) {
         const players = Plyr.setup('.video__controls', { controls });
 
         // Expose
-        window.player = player;
+        window.players = players;
 
 
         // Bind event listener
@@ -282,60 +249,34 @@ if ($('*').is('video')) {
             document.querySelector(selector).addEventListener(type, callback, false);
         }
 
-
-        // // Play
+        // Custom btn - if need gtml btns
+        // Play
         // on('.js-play', 'click', () => {
         //     player.play();
         // });
 
-        // // Pause
+        //Pause
         // on('.js-pause', 'click', () => {
         //     player.pause();
         // });
 
-        // // Stop
+        //Stop
         // on('.js-stop', 'click', () => {
         //     player.stop();
         // });
 
-        // // Rewind
+        //Rewind
         // on('.js-rewind', 'click', () => {
         //     player.rewind();
         // });
 
-        // // Forward
+        //Forward
         // on('.js-forward', 'click', () => {
         //     player.forward();
         // });
     });
 
-    // $(document).ready(() => {
-
-    //     $('.player-src').on('click', function () {
-
-    //         src = $(this).data("src");
-    //         type = 'video/' + $(this).data("type");
-    //         poster = $(this).data("poster") || "";
-
-    //         player.source = {
-    //             type: 'video',
-    //             title: 'Example title',
-    //             sources: [
-    //                 {
-    //                     src: src,
-    //                     type: type,
-    //                     size: 720
-    //                 }
-    //             ],
-    //             poster: poster
-    //         };
-
-    //         player.play();
-
-    //     });
-    // });
-
-    // no controls
+    // without controls
     document.addEventListener('DOMContentLoaded', () => {
         // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
         const controls = [
@@ -345,6 +286,7 @@ if ($('*').is('video')) {
             'duration', // The full duration of the media
             'mute', // Toggle mute
             'volume', // Volume control
+            'captions', // Toggle captions
             'settings', // Settings menu
             'pip', // Picture-in-picture (currently Safari only)
             'airplay', // Airplay (currently Safari only)
@@ -355,16 +297,13 @@ if ($('*').is('video')) {
         const players1 = Plyr.setup('.video__nocontrols', { controls });
 
         // Expose
-        window.player = player;
-
+        window.players1 = players1;
 
         // Bind event listener
         function on(selector, type, callback) {
             document.querySelector(selector).addEventListener(type, callback, false);
         }
     });
-
-
 }
 
 

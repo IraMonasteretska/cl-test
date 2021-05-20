@@ -103,17 +103,6 @@
     .startcourse__btnsect a svg {
         margin-right: 10px;
     }
-
-
-
-
-
-
-
-
-
-
-
 }
 
 @media(min-width:1200px) {
@@ -199,13 +188,6 @@
         height: 46px;
     }
 
-
-
-
-
-
-
-
     .tourstart__topsect .title,
     .tourstart__topsect img,
     .darkwrapper.tourwrapper.aftersteps .tourstart__topsect .title {
@@ -220,7 +202,6 @@
     .tourstart__bottsect .greenbtn {
         font-size: 16px;
     }
-
 }
 
 @media(max-width:1199.8px) {
@@ -460,18 +441,6 @@
         padding-left: 45px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
     .coursebody__coursedescription {
         margin-bottom: 60px;
     }
@@ -479,7 +448,6 @@
     .course-progress {
         margin-bottom: 30px;
     }
-
 
     .course-progress {
         padding: 0;
@@ -944,8 +912,6 @@
         overflow: auto;
     }
 
-
-
     .startcourse__sidebar.tabletshowsidebar {
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
@@ -972,9 +938,6 @@
     .loginpage .loginmodal__formsection {
         padding: 50px 60px;
     }
-
-
-
 
     .courslists__itemdescr .bottsect .orangebtn,
     .courslists__itemdescr .bottsect .greenbtn,
@@ -1013,7 +976,6 @@
     .goalssect__block .picbox {
         margin-bottom: 20px;
     }
-
 
 }
 
@@ -1374,13 +1336,6 @@
         width: 180px;
     }
 
-
-
-
-
-
-
-
     h1,
     .titleh1 {
         font-size: 32px;
@@ -1583,8 +1538,6 @@
         left: 95%;
     }
 
-
-
     .showfilter.rotatepic img {
         transform: rotate(180deg);
     }
@@ -1690,16 +1643,6 @@
         padding-left: 15px;
     }
 
-
-
-
-
-
-
-
-
-
-
     .coursfilter__title,
     .managecourse-link,
     .coursfilter__filtbox-title,
@@ -1714,6 +1657,7 @@
 }
 
 @media(max-width:575.8px) {
+
     .onlinelearning__textbox {
         padding: 30px 20px 30px 0;
     }
@@ -1966,7 +1910,6 @@
     .courslists__itempic {
         max-width: 32%;
         flex: 0 0 32%;
-        /* min-height: 210px; */
     }
 
     .courslists__itemdescr {
@@ -2467,12 +2410,14 @@
         padding-left: 10px;
     }
 
+    .startcourse__sbgroup .startcourse__sblist li.active a span {
+        color: #FF9334;
+        font-family: Avenir black;
+    }
+
     .coursebody__rightside {
         padding-left: 0;
     }
-
-
-
 
     h1,
     .titleh1 {
@@ -2576,30 +2521,10 @@
         max-width: calc(50% - 5px);
     }
 
-
-
     .coursehead__wrap {
         padding: 0;
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* TEST */
