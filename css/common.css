@@ -4267,6 +4267,43 @@ button {
     pointer-events: none;
 }
 
+.introjs-helperLayer:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 25%);
+}
+
+.introjs-tooltip,
+.introjs-tooltipReferenceLayer,
+.introjs-helperLayer {
+    transition: 0s !important;
+    -webkit-transition: 0s !important;
+    -moz-transition: 0s !important;
+    -ms-transition: 0s !important;
+    -o-transition: 0s !important;
+    transition-delay: unset !important;
+
+    z-index: 9999999;
+}
+
+.introjs-button.introjs-prevbutton {
+    display: none;
+}
+
+.introjs-arrow {
+    display: none !important;
+}
+
+
+
+
+
+
 /* 
 font-family: 'Inter', sans-serif;
 font-family: 'Montserrat', sans-serif;
