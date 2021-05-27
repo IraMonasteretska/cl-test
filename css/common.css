@@ -93,7 +93,7 @@ h6,
 .titleh1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     letter-spacing: -0.01em;
     line-height: 120%;
 }
@@ -217,7 +217,7 @@ header .greenbtn {
 
 .loginnedsect__userinfo .name {
     margin: 0;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-family: Avenir heavy;
 }
 
@@ -256,7 +256,7 @@ header .greenbtn {
 
 .loginnedsect__nav ul li a {
     font-size: 14px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     min-height: 48px;
     padding: 3px 5px;
     display: flex;
@@ -693,7 +693,7 @@ footer .contact-list li a:hover {
     margin-bottom: 11px;
     font-family: 'Work Sans', sans-serif;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
     font-weight: bold;
     font-size: 30px;
     line-height: 120%;
@@ -1027,7 +1027,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir heavy;
     font-size: 18px;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     padding: 0 12px;
     margin-bottom: 20px;
     min-height: 48px;
@@ -1055,7 +1055,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     align-items: center;
     justify-content: center;
     font-family: Avenir heavy;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     background-image: url('../img/percpic.png');
 }
 
@@ -1071,7 +1071,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 14px;
     line-height: 130%;
     font-family: Avenir heavy;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 4px;
     height: 25px;
     align-items: center;
@@ -1220,7 +1220,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 18px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 13px;
 }
 
@@ -1271,7 +1271,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .coursfilter__filtbox-title {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     letter-spacing: -0.01em;
     font-weight: 600;
     font-size: 18px;
@@ -1293,7 +1293,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     margin: 0;
     font-size: 14px;
     line-height: 140%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     padding-left: 25px;
     cursor: pointer;
 }
@@ -1445,7 +1445,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 20px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin: 0;
     width: calc(100% - 120px);
 }
@@ -1463,7 +1463,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .courslists__itemdescr .descr p {
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
     margin: 0;
     font-size: 18px;
     line-height: 140%;
@@ -1472,7 +1472,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .courslists__itemdescr .descr a {
     font-family: Avenir heavy;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .courslists__itemdescr .bottsect {
@@ -1607,7 +1607,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
@@ -1654,7 +1654,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir heavy;
     font-size: 16px;
     line-height: 140%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .totop button:hover span {
@@ -1687,7 +1687,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .courslists__itemdescr .title a {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .courslists__itemdescr .title a:hover {
@@ -1767,7 +1767,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .smallmodal .title {
     text-align: center;
     margin-bottom: 8px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 24px;
@@ -1806,7 +1806,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 #dashboard-mobpop .title {
     margin-bottom: 16px;
     letter-spacing: -0.01em;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-weight: bold;
     font-size: 24px;
     line-height: 120%;
@@ -1909,7 +1909,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .providecourse {
     font-family: Avenir heavy;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 30px;
 }
 
@@ -1933,7 +1933,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 20px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 16px;
 }
 
@@ -1973,7 +1973,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .instructorsect__wrap .descrsect .name {
     font-family: Avenir heavy;
     margin: 0;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .instructorsect__wrap .descrsect .proff {
@@ -1983,7 +1983,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .instructorsect__wrap .descrsect .information {
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .coursebody__rightside .btnbox {
@@ -1993,7 +1993,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .coursebody__coursedescription .title {
     margin-bottom: 10px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     letter-spacing: -0.01em;
     font-weight: bold;
     font-size: 20px;
@@ -2002,7 +2002,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .coursebody__coursedescription p:not(.title) {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .coursebody__coursedescription p:last-child {
@@ -2039,7 +2039,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 18px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     padding: 0 10px;
     cursor: pointer;
 }
@@ -2064,7 +2064,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .accordeon-descrbox ol li {
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 10px;
 }
 
@@ -2128,7 +2128,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     line-height: 120%;
     margin-bottom: 16px;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .progressbarbox__topsect {
@@ -2139,7 +2139,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .progressbarbox__topsect span {
     font-family: Avenir heavy;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-size: 14px;
     line-height: 130%;
 }
@@ -2222,7 +2222,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-weight: 500;
     font-size: 10px;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .dashside__navbox ul {
@@ -2247,7 +2247,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     display: block;
     position: relative;
     padding-left: 24px;
@@ -2296,7 +2296,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 28px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .dashpagenav ul li:last-child {
@@ -2431,7 +2431,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     line-height: 120%;
     margin: 0;
     letter-spacing: -0.01em;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .dashsearch__box {
@@ -2495,7 +2495,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir heavy;
     font-size: 12px;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .dashaction__labels {
@@ -2618,7 +2618,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     outline: none;
     background-color: transparent;
     padding: 0;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-size: 14px;
     line-height: 130%;
     font-family: Avenir heavy;
@@ -2633,7 +2633,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .dashtable__name p {
     margin: 0;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-family: Avenir heavy;
     font-size: 14px;
     line-height: 130%;
@@ -2705,14 +2705,14 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .dashtable__header .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-size: 14px;
     line-height: 130%;
     font-family: Avenir heavy;
 }
 
 .dashtable__header .dropdown-toggle::after {
-    border-top: .3em solid #000;
+    border-top: .3em solid rgba(0, 0, 0, .9);
 }
 
 .dashtable__header .dropdown-item {
@@ -2721,7 +2721,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     align-items: center;
     border-bottom: 1px solid rgba(96, 96, 96, .5);
     font-size: 14px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     outline: none;
 }
 
@@ -2795,12 +2795,12 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir heavy;
     font-size: 14px;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 4px;
 }
 
 .dashtable__descrdetail .descr {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-size: 14px;
 }
 
@@ -2810,7 +2810,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .dashtable__descrstart p {
     margin: 0;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-size: 14px;
     line-height: 130%;
     font-family: Avenir heavy;
@@ -2875,7 +2875,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir black;
     font-size: 14px;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     align-items: center;
     justify-content: center;
 }
@@ -3092,7 +3092,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 18px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
     padding: 0 15px 0 10px;
 }
 
@@ -3124,7 +3124,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-family: Avenir heavy;
     font-size: 16px;
     line-height: 140%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 10px;
     cursor: pointer;
 }
@@ -3145,13 +3145,13 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .startcourse__sbgroup .startcourse__sblist li {
     font-size: 14px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 10px;
 }
 
 .startcourse__sbgroup .startcourse__sblist li a {
     font-size: 14px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     text-decoration: none;
 }
 
@@ -3188,7 +3188,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     font-size: 28px;
     line-height: 120%;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .startcourse__stephead .gritemname {
@@ -3210,7 +3210,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 }
 
 .startcourse__stepbody .descr p {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .startcourse__stepbody .descr {
@@ -3287,7 +3287,8 @@ button {
     margin: 0 auto;
 }
 
-.startcourse__sidebarburger {
+.startcourse__sidebarburger,
+.startcourse__sidebarburgermob {
     background: #FFFFFF;
     box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -3297,6 +3298,10 @@ button {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.startcourse__sidebarburgermob {
+    display: none;
 }
 
 .sidebarcol.hidesidenav .startcourse__sidebarburger {
@@ -3407,7 +3412,7 @@ button {
 }
 
 .coursebody__descriptionbox p {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin: 0;
 }
 
@@ -3417,7 +3422,7 @@ button {
     line-height: 120%;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 10px;
 }
 
@@ -3438,7 +3443,7 @@ button {
 .questionsection__topsect .question {
     margin-bottom: 20px;
     font-weight: 800;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .answervariant input {
@@ -3448,7 +3453,7 @@ button {
 .answervariant label {
     margin: 0;
     font-size: 14px;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     position: relative;
     padding-left: 55px;
     cursor: pointer;
@@ -3560,7 +3565,7 @@ button {
 }
 
 .correctans .title {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-weight: bold;
     font-size: 24px;
     line-height: 120%;
@@ -3573,9 +3578,12 @@ button {
     font-size: 14px;
 }
 
-.questionsection__bottsect.wrongans .question__submit {
-    background-color: #fff;
-    color: #FF6200;
+.questionsection__bottsect .question__submit:disabled,
+.questionsection__bottsect .question__submit:disabled:hover {
+    pointer-events: none;
+    background: #BFBFBF;
+    color: #fff;
+    border-color: #BFBFBF;
 }
 
 .alert.error {
@@ -3751,7 +3759,7 @@ button {
 }
 
 .tourstart__topsect .title {
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     letter-spacing: -0.01em;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -3762,7 +3770,7 @@ button {
 
 .tourstart__topsect .description {
     margin: 0;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     font-size: 20px;
     line-height: 140%;
 }
@@ -3992,7 +4000,7 @@ button {
     padding-left: 25px;
     font-size: 14px;
     line-height: 140%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     cursor: pointer;
 }
 
@@ -4113,7 +4121,7 @@ button {
     font-family: Avenir black;
     font-size: 20px;
     line-height: 140%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
     margin-bottom: 12px;
 }
 
@@ -4153,7 +4161,7 @@ button {
     font-family: Avenir heavy;
     font-size: 14px;
     line-height: 130%;
-    color: #000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .mobilecourseinfo__instructorbox .descr .proff {
@@ -4199,7 +4207,7 @@ button {
     line-height: 120%;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: rgba(0, 0, 0, .9);
 }
 
 .mobilecoursecontinue__content .descr {

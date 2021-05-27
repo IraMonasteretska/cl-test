@@ -160,32 +160,33 @@ $(document).ready(function () {
         $(this).next('.startcourse__sblist').slideToggle();
     });
 
-    if ($(window).width() > 1024) {
-        $('.startcourse__sbhead button').click(function () {
-            $('.sidebarcol').addClass('hidesidenav');
-        });
-        $('.startcourse__sidebarburger').click(function () {
-            $('.sidebarcol').removeClass('hidesidenav');
-        });
-    }
+    // if ($(window).width() > 1024) {
+    $('.startcourse__sbhead button').click(function () {
+        $('.sidebarcol').addClass('hidesidenav');
+    });
+    $('.startcourse__sidebarburger').click(function () {
+        $('.sidebarcol').removeClass('hidesidenav');
+    });
+    // }
 
-    if ($(window).width() < 1025) {
-        $('.startcourse__sidebarburger, .mobsidebarlink').click(function () {
-            $('.startcourse__sidebar').addClass('tabletshowsidebar');
-            $("<div class='darkoverley'></div>").appendTo($("body"));
-        });
-        $('.startcourse__sbhead button, .mobtext-closemenu').click(function () {
+    // if ($(window).width() < 1025) {
+    $('.startcourse__sidebarburgermob, .mobsidebarlink').click(function () {
+        $('.startcourse__sidebar').addClass('tabletshowsidebar');
+        $("<div class='darkoverley'></div>").appendTo($("body"));
+    });
+    $('.startcourse__sbhead button, .mobtext-closemenu').click(function () {
+        $('.startcourse__sidebar').removeClass('tabletshowsidebar');
+        $('.darkoverley').remove();
+    });
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.startcourse__sidebar').length && !$target.closest('.startcourse__sidebarburgermob').length && !$target.closest('.mobsidebarlink').length) {
             $('.startcourse__sidebar').removeClass('tabletshowsidebar');
             $('.darkoverley').remove();
-        });
-        $(document).click(function (event) {
-            let $target = $(event.target);
-            if (!$target.closest('.startcourse__sidebar').length && !$target.closest('.startcourse__sidebarburger').length && !$target.closest('.mobsidebarlink').length) {
-                $('.startcourse__sidebar').removeClass('tabletshowsidebar');
-                $('.darkoverley').remove();
-            }
-        });
-    }
+        }
+    });
+    // }
+
 
     // close alert - start-course-wrong.html
     $('.alertclose').click(function () {
@@ -215,6 +216,19 @@ $(document).ready(function () {
 
         $('.coursessection .courslists__item').attr('data-toggle', 'modal');
     }
+
+
+
+    // start course - remove disabled (start-course2.html)
+
+    $('.answervariant input').change(function () {
+        if ($('.answervariant input').prop("checked")) {
+            $('.question__submit').removeAttr("disabled");
+        }
+    });
+
+
+
 });
 
 if ($('*').is('video')) {

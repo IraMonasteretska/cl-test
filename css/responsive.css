@@ -716,7 +716,7 @@
         font-size: 20px;
         line-height: 120%;
         letter-spacing: -0.01em;
-        color: #000000;
+        color: rgba(0, 0, 0, .9);
     }
 
     .totop button * {
@@ -813,7 +813,7 @@
 
     .dashboard-gotodesktop__content .title {
         margin-bottom: 16px;
-        color: #000;
+        color: rgba(0, 0, 0, .9);
         letter-spacing: -0.01em;
         font-weight: bold;
         font-size: 24px;
@@ -854,6 +854,11 @@
     }
 
     .startcourse__sidebarburger {
+        /* display: flex; */
+        display: none;
+    }
+
+    .startcourse__sidebarburgermob {
         display: flex;
     }
 
@@ -975,6 +980,14 @@
     .onlinelearning__textbox .descr,
     .goalssect__block .picbox {
         margin-bottom: 20px;
+    }
+
+    .startcourse__sidebarburger {
+        display: none !important;
+    }
+
+    .sidebarcol.hidesidenav .startcourse__sidebar {
+        display: block;
     }
 
 }
@@ -1491,12 +1504,14 @@
         right: -16px;
     }
 
-    .startcourse__sidebarburger {
+    .startcourse__sidebarburger,
+    .startcourse__sidebarburgermob {
         width: 60px;
         height: 60px;
     }
 
-    .startcourse__sidebarburger img {
+    .startcourse__sidebarburger img,
+    .startcourse__sidebarburgermob img {
         width: 24px;
     }
 
@@ -1584,7 +1599,7 @@
         font-family: Avenir heavy;
         font-size: 14px;
         line-height: 130%;
-        color: #000;
+        color: rgba(0, 0, 0, .9);
     }
 
     .phone-leftbox span.active {
@@ -1959,10 +1974,10 @@
         width: 100%;
         background: #DF3030;
         border-radius: 0px 0px 10px 10px;
-        height: 21px;
+        height: 28px;
         text-align: center;
         color: #fff;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 130%;
         font-family: Avenir heavy;
         display: flex;
@@ -2126,17 +2141,25 @@
         max-width: 330px;
     }
 
-    .sidebarcol .col-lg-4 {
+    .sidebarcol .col-lg-4,
+    .sidebarcol.hidesidenav .col-lg-4 {
         -ms-flex: 0 0 0%;
         flex: 0 0 0%;
         max-width: 0%;
+        padding: 0;
     }
 
-    .startcourse__sidebarburger {
-        display: none;
+    .startcourse__sidebarburger,
+    .startcourse__sidebarburgermob {
+        display: none !important;
     }
 
-    .sidebarcol .col-lg-8 {
+    .sidebarcol.hidesidenav .startcourse__sidebar {
+        display: block;
+    }
+
+    .sidebarcol .col-lg-8,
+    .sidebarcol.hidesidenav .col-lg-8 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -2178,9 +2201,11 @@
         justify-content: center;
     }
 
+
+
     .mobsidebarlink {
         display: inline-block;
-        color: #000;
+        color: rgba(0, 0, 0, .9);
         font-size: 14px;
         line-height: 130%;
         font-family: Avenir heavy;
@@ -2257,7 +2282,7 @@
     }
 
     .startcourse__stephead .gritemname {
-        color: #000;
+        color: rgba(0, 0, 0, .9);
     }
 
     .startcourse__stepbodybtns.step1 .stepbodybtnsright {
@@ -2451,7 +2476,7 @@
     }
 
     .courslists__itemdescr .bottsect .date {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .goalssect,
@@ -2463,6 +2488,37 @@
     .infosect .descr {
         margin-bottom: 20px;
     }
+
+    .loginnedsect__userinfo .picwrap {
+        width: 30px;
+        height: 30px;
+        margin: 0 4px 0 0;
+    }
+
+    .loginnedsect__userinfo {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .loginnedsect__userinfo .name {
+        font-size: 14px;
+        font-weight: 800;
+        max-width: 90px;
+    }
+
+    .startcourse__sbgroup .startcourse__sblist li a {
+        font-size: 16px;
+    }
+
+    .startcourse__sbgroup .startcourse__sblist li span {
+        font-size: 14px;
+    }
+
+    .startcourse__sbgroup .startcourse__sblist li {
+        margin-bottom: 15px;
+    }
+
 }
 
 @media(max-width:360.8px) {
