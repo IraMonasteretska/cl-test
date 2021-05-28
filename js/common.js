@@ -209,24 +209,25 @@ $(document).ready(function () {
     // home page - mobile course popup
     $('.coursessection .courslists__item').attr('data-toggle', '');
 
-    if ($(window).width() < 576) {
-        $('.courseitemwrap').click(function (e) {
-            e.preventDefault();
-        });
-
+    if ($(window).width() < 1200) {
         $('.coursessection .courslists__item').attr('data-toggle', 'modal');
     }
 
+    $(window).resize(function () {
+        if ($(window).width() < 1200) {
+            $('.coursessection .courslists__item').attr('data-toggle', 'modal');
+        } else {
+            $('.coursessection .courslists__item').attr('data-toggle', '');
+        }
+    });
 
 
     // start course - remove disabled (start-course2.html)
 
     $('.answervariant input').change(function () {
-        if ($('.answervariant input').prop("checked")) {
-            $('.question__submit').removeAttr("disabled");
-        }
+        $('.question__submit').removeAttr("disabled");
+        // $(this).parents('.startcourse__stepbody').find('.stepbodybtnsright:not(.wrong) .greenbtn').removeAttr("disabled");
     });
-
 
 
 });

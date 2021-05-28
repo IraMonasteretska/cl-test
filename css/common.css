@@ -3543,6 +3543,7 @@ button {
     background: #BFBFBF;
     color: #fff;
     border-color: #BFBFBF;
+    cursor: no-drop;
 }
 
 .startcourse__stepbodybtns .greenbtn:disabled:hover svg path {
@@ -3580,10 +3581,11 @@ button {
 
 .questionsection__bottsect .question__submit:disabled,
 .questionsection__bottsect .question__submit:disabled:hover {
-    pointer-events: none;
+    /* pointer-events: none; */
     background: #BFBFBF;
     color: #fff;
     border-color: #BFBFBF;
+    cursor: no-drop;
 }
 
 .alert.error {
@@ -4299,7 +4301,7 @@ button {
     z-index: 9999999;
 }
 
-.introjs-button.introjs-prevbutton {
+.customTooltip1 .introjs-button.introjs-prevbutton {
     display: none;
 }
 
@@ -4307,9 +4309,24 @@ button {
     display: none !important;
 }
 
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+    border-right-color: #ff9334;
+}
 
+.bs-tooltip-auto[x-placement^=left] .arrow::before,
+.bs-tooltip-left .arrow::before {
+    border-left-color: #ff9334;
+}
 
+.tooltip.bs-tooltip-right .tooltip-inner {
+    padding: 4px 20px;
+    width: 200px;
+}
 
+.tooltip.bs-tooltip-left .tooltip-inner {
+    padding: 4px 20px;
+}
 
 
 /* 

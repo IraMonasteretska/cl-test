@@ -478,6 +478,13 @@
     .loginpage .loginmodal__formsection {
         padding: 50px 90px;
     }
+
+    .courseitemwrap,
+    .courseitemwrap * {
+        pointer-events: none;
+    }
+
+
 }
 
 @media(max-width:1100.8px) {
