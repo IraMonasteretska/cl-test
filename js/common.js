@@ -116,11 +116,13 @@ $(document).ready(function () {
     });
 
     // drop dashboard course
-    $('.droparrowbrn').not('.disabled .droparrowbrn').click(function () {
-        $(this).toggleClass('rotatearrow');
-        $(this).parents('.dashtable__row').next('.dashtable__rowdescr').toggleClass('show');
-        $(this).parents('.dashtable__rowwrap').toggleClass('open');
+
+    $('.dashtable__row').click(function () {
+        $(this).find('.droparrowbrn').toggleClass('rotatearrow');
+        $(this).next('.dashtable__rowdescr').toggleClass('show');
+        $(this).parent().toggleClass('open');
     });
+
 
     // tooltips
     $(function () {

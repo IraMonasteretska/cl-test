@@ -2574,6 +2574,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     padding: 10px 24px 10px 14px;
     align-items: center;
     min-height: 56px;
+    cursor: pointer;
 }
 
 .dashtable__rowwrap {
@@ -2941,6 +2942,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 #completedcourses .dashtable__enrolled p,
 #completedcourses .dashtable__completed p {
     margin: 0;
+    font-size: 14px;
 }
 
 #completedcourses .dashtable__completed p {
@@ -2950,6 +2952,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .dashtable__progress p {
     margin: 0;
     width: calc(100% - 24px);
+    font-size: 14px;
 }
 
 .dashtable__progress {
@@ -4197,6 +4200,8 @@ button {
     font-size: 18px;
 }
 
+/* background: #EF8A32; */
+
 .mobilecoursecontinue__content {
     padding: 36px 16px 34px 16px;
 }
@@ -4327,6 +4332,21 @@ button {
 .tooltip.bs-tooltip-left .tooltip-inner {
     padding: 4px 20px;
 }
+
+.introjs-skipbutton {
+    color: #dedede;
+}
+
+.dashpagenav ul li a {
+    pointer-events: none;
+}
+
+.loginmodal__submit:hover {
+    text-decoration: none;
+}
+
+
+
 
 
 /* 
