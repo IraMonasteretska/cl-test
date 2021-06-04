@@ -4345,7 +4345,13 @@ button {
     text-decoration: none;
 }
 
+.tourstart .tourstart__skip {
+    color: #dedede;
+}
 
+.tourstart .tourstart__skip:hover {
+    color: #212121;
+}
 
 
 
