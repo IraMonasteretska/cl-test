@@ -3802,7 +3802,7 @@ button {
     height: 62px;
     text-decoration: underline;
     color: #8C8C8C;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     padding: 0;
     outline: none;
@@ -4352,6 +4352,98 @@ button {
 .tourstart .tourstart__skip:hover {
     color: #212121;
 }
+
+#yourcourses .dashtable__progress .dashprwrapp,
+#archive .dashtable__progress .dashprwrapp {
+    max-width: 100%;
+}
+
+#yourcourses .dashtable__progress .dashprwrapp .progressbar-line,
+#archive .dashtable__progress .dashprwrapp .progressbar-line {
+    max-width: 138px;
+}
+
+.dashtable__startdate p {
+    font-size: 14px;
+}
+
+.cilearn-faq {
+    padding: 50px 0 10px;
+    background: #EBF4F4;
+}
+
+.cilearn-faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cilearn-faq__box h6 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #000;
+}
+
+.cilearn-faq__box .descr {
+    margin-bottom: 70px;
+}
+
+.cilearn-faq__box .descr p {
+    color: #000;
+}
+
+.cilearn-faq__box .descr p:last-child {
+    margin-bottom: 0;
+}
+
+.footer.footer_white {
+    padding: 48px 0 0 0;
+    background: #fff;
+}
+
+.footer.footer_white .footer__leftsect p,
+.footer.footer_white .contact-list li,
+.footer.footer_white .contact-list li a,
+.footer.footer_white .footer__navblock ul li a {
+    color: #2e2e2e;
+}
+
+.footer.footer_white .footer__navblock .title {
+    color: #000;
+}
+
+.footer.footer_white .footer__bottsect {
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer.footer_white .termslinks a,
+.footer.footer_white .footer__bottsect p {
+    color: #606060;
+}
+
+.totop button.show {
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

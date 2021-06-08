@@ -484,6 +484,30 @@
         pointer-events: none;
     }
 
+    .cilearn-faq__box h6,
+    h6 {
+        font-size: 18px;
+    }
+
+    .cilearn-faq__box .descr {
+        margin-bottom: 50px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -2450,6 +2474,38 @@
     .coursebody__rightside {
         padding-left: 0;
     }
+
+    .cilearn-faq__box .descr {
+        margin-bottom: 30px;
+    }
+
+    .cilearn-faq__box h6,
+    h6 {
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     h1,
     .titleh1 {
