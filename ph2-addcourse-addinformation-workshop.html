@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course / Add Information / Workshop</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <main class="main-dashboard">
+        <section class="dashboard-wrapper">
+            <aside class="dashside">
+                <div class="dashside__logo">
+                    <a href="https://www.careindeed.com/"><img src="img/dashlogo.png" alt="logo"></a>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Manage Your Services</p>
+                    <ul>
+                        <li><a href="#"><img src="img/cb.png" alt="icon"> Care Bundle</a></li>
+                        <li class="active"><a href="#"><img src="img/l.png" alt="icon"> CI - Learning</a></li>
+                    </ul>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li><a href="#"><img src="img/single-neutral.svg" alt="icon"> Account</a></li>
+                        <li><a href="#"><img src="img/question-help-circle.svg" alt="icon"> Help & Feedback</a></li>
+                        <li><a href="#"><img src="img/exit-ic.svg" alt="icon"> Sign Out</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="dashboard-section pb140">
+                <div class="dashheadsect">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="dashpagenav">
+                                <ul>
+                                    <li><a href="#">CI Dashboard</a></li>
+                                    <li>CI - Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addcoursesection">
+                    <div class="addcoursesection__nav">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <a href="#">1. Choose Type</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="active">2. Add Information</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">3. Add Curriculum</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">4. Publish</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="addcoursesection__content contaddinfo">
+                        <!-- not sure if the form is required -->
+                        <!-- <form action=""> -->
+                        <div class="addcoursesection__contblock">
+                            <div class="row no-gutters">
+                                <div class="contaddinfo__titlesect">
+                                    <p class="title">Workshop Cover</p>
+                                </div>
+                                <div class="contaddinfo__contentsect">
+                                    <div class="course-uploadimg">
+                                        <p class="course-uploadimg__title">Upload a cover image</p>
+                                        <div class="course-uploadimg__wrap">
+                                            <div class="inpdropfield">
+                                                <input type="file" name="chooseFile" id="chooseFile">
+                                                <label class="file-upload file-select" for="chooseFile">
+                                                    <div class="centerbox">
+                                                        <div class="file-select-button" id="fileName">
+                                                            <img src="img/upload2.svg" alt="icon">
+                                                            <p><span>Upload</span> a file or drag and drop</p>
+                                                            <p>(File requirement: PDF, PPT and less than 1MG )</p>
+                                                        </div>
+                                                        <div class="file-select-name" id="noFile">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addcoursesection__contblock greybg">
+                            <div class="row no-gutters">
+                                <div class="contaddinfo__titlesect">
+                                    <p class="title">Workshop Details</p>
+                                </div>
+                                <div class="contaddinfo__contentsect">
+                                    <div class="forminpwrap">
+                                        <div class="forminpwrap__inpfield">
+                                            <label for="course-title">Workshop title</label>
+                                            <input id="course-title" type="text" placeholder="Type something">
+                                        </div>
+                                        <div class="forminpwrap__inpfield">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="course-zoomid">Zoom ID</label>
+                                                    <input id="course-zoomid" type="text" placeholder="Type something">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="course-zoompass">Zoom Password</label>
+                                                    <input id="course-zoompass" type="text"
+                                                        placeholder="Type something">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forminpwrap__inpfield">
+                                            <label for="course-description">Workshop Description</label>
+                                            <textarea id="course-description" placeholder="Type something"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addcoursesection__contblock">
+                            <div class="row no-gutters">
+                                <div class="contaddinfo__titlesect">
+                                    <p class="title">Workshop Settings</p>
+                                </div>
+                                <div class="contaddinfo__contentsect">
+                                    <div class="forminpwrap__inpfield">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">
+                                                    Need to complete below course (Optional)
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select name="" id="" class="selectpicker addcourse__select"
+                                                    title="Select">
+                                                    <option value="0">Annual Training (Part 1)</option>
+                                                    <option value="1">Annual Training (Part 2)</option>
+                                                    <option value="2">Annual Training (Part 3)</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 flexalign">
+                                                <div class="coursesetting-labelwrap">
+                                                    <div class="coursesetting-label">
+                                                        <span>Annual Training 2020</span>
+                                                        <button></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forminpwrap__inpfield">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="">Holding Date</label>
+                                                <div class="calendar-wrap">
+                                                    <input class="datepicker" id="calendar-holdingdate"
+                                                        placeholder="Select">
+                                                    <label for="calendar-holdingdate" class="calendar-icon"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Time Range</label>
+                                                <div class="timerange">
+                                                    <div class="main-input">
+                                                        <label for="maininput"></label>
+                                                        <input type="text" id="maininput" value="" placeholder="Select">
+                                                        <div class="subinputs">
+                                                            <div class="startcol">
+                                                                <label for="start-hour">Start Time </label>
+                                                                <input type="text" id="start-hour" value=""
+                                                                    class="test inputmask">
+                                                            </div>
+                                                            <div class="endcol">
+                                                                <label for="end-hour">End Time </label>
+                                                                <input type="text" id="end-hour" value=""
+                                                                    class="test inputmask">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forminpwrap__inpfield">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="">
+                                                    Department
+                                                </label>
+                                                <select name="" id="" class="selectpicker addcourse__select"
+                                                    title="Select">
+                                                    <option value="0">Product Team</option>
+                                                    <option value="1">Team 2</option>
+                                                    <option value="2">Team 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">
+                                                    Target Learner
+                                                </label>
+                                                <select name="" id="" class="selectpicker addcourse__select"
+                                                    title="Select">
+                                                    <option value="0">UX Designer</option>
+                                                    <option value="1">Learner 2</option>
+                                                    <option value="2">Learner 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addcoursesection__btnsblock">
+                            <a href="#" class="greenbtn">Create a Workshop</a>
+                            <a href="#" class="greenbtn white">Cancel</a>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+
+
+    <!-- MODALS -->
+
+    <div class="dashboard-gotodesktop">
+        <div class="dashboard-gotodesktop__content">
+            <div class="topsect">
+                <p class="title">Dashboard</p>
+                <div class="descr">
+                    <p>If you want to view your Dashboard please login from desktop devices.</p>
+                </div>
+            </div>
+            <div class="bottsect">
+                <a href="homepage.html" class="greenbtn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="coursedatepickcontainer"></div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-datepicker.js">
+    </script>
+    <script src="js/inputmask.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

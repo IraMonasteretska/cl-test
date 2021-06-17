@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hifi author / main</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <main class="main-dashboard">
+        <section class="dashboard-wrapper">
+            <aside class="dashside">
+                <div class="dashside__logo">
+                    <a href="https://www.careindeed.com/"><img src="img/dashlogo.png" alt="logo"></a>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Manage Your Services</p>
+                    <ul>
+                        <li><a href="#"><img src="img/cb.png" alt="icon"> Care Bundle</a></li>
+                        <li class="active"><a href="#"><img src="img/l.png" alt="icon"> CI - Learning</a></li>
+                    </ul>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li><a href="#"><img src="img/single-neutral.svg" alt="icon"> Account</a></li>
+                        <li><a href="#"><img src="img/question-help-circle.svg" alt="icon"> Help & Feedback</a></li>
+                        <li><a href="#"><img src="img/exit-ic.svg" alt="icon"> Sign Out</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="dashboard-section">
+                <div class="dashheadsect">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="dashpagenav">
+                                <ul>
+                                    <li><a href="#">CI Dashboard</a></li>
+                                    <li>CI - Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <div class="optdropdown">
+                                <button class="orangebtn">
+                                    <span>Options</span>
+                                </button>
+                                <ul>
+                                    <li><a href="#">Learner</a></li>
+                                    <li><a href="#">Author</a></li>
+                                    <li><a href="#">Homepage</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashtab-section dashtab-section_hifiauthor">
+                    <ul class="nav nav-tabs dashtab__header" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="curriculum-tab" data-toggle="tab" href="#curriculum"
+                                role="tab" aria-controls="curriculum" aria-selected="true">Curriculum</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="deactivated-tab" data-toggle="tab" href="#deactivated" role="tab"
+                                aria-controls="deactivated" aria-selected="false">Deactivated</a>
+                        </li>
+                        <li class="addnewcourse-li">
+                            <a href="#" class="greenbtn">Add New Course</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="curriculum" role="tabpanel"
+                            aria-labelledby="curriculum-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! Our awsome author!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button class="archivebtn deactivatebtn" data-toggle="modal"
+                                        data-target="#deactivate">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M10.0001 16.3927C13.5307 16.3927 16.3929 13.5305 16.3929 9.99981C16.3929 6.46912 13.5307 3.60693 10.0001 3.60693C6.46937 3.60693 3.60718 6.46912 3.60718 9.99981C3.60718 13.5305 6.46937 16.3927 10.0001 16.3927Z"
+                                                stroke="#8C8C8C" />
+                                            <path d="M5.47949 5.47998L14.5207 14.5206" stroke="#8C8C8C" />
+                                            <path d="M14.5207 5.47998L5.47949 14.5201" stroke="#8C8C8C" />
+                                        </svg>
+                                        Deactivate
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable dashtable_curriculum">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="check-all" class="checkall">
+                                        <label for="check-all"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="Courses">
+                                            <option value="0">Courses</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__instructor">
+                                        <button class="ashtable-btn" data-sort-value="name">
+                                            Instructor <img src="img/arrow-bott2.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__createdate">
+                                        <button class="ashtable-btn">
+                                            Create Date <img src="img/arrow-bott2.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__type">
+                                        <button class="ashtable-btn">
+                                            Type <img src="img/arrow-bott2.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__departmants">
+                                        <button class="ashtable-btn">
+                                            Departments
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="department-filterslabels">
+                                    <button class="deplabel">Product Team</button>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-all1">
+                                                <label for="check-all1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__createdate">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__type">
+                                                <p>Workshop</p>
+                                            </div>
+                                            <div class="dashtable__departmants">
+
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-category1">
+                                                    <label class="deplabel" for="department-category1">Product
+                                                        Team</label>
+                                                </div>
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-category2">
+                                                    <label class="deplabel" for="department-category2">HR</label>
+                                                </div>
+                                                <button class="deplabel deplabel_more">...</button>
+                                                <div class="deplabels-morebox">
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-category3">
+                                                        <label class="deplabel" for="department-category3">Product
+                                                            Team</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-category4">
+                                                        <label class="deplabel" for="department-category4">HR</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-category5">
+                                                        <label class="deplabel"
+                                                            for="department-category5">Caregivers</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-category6">
+                                                        <label class="deplabel" for="department-category6">CSD</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-category7">
+                                                        <label class="deplabel" for="department-category7">System
+                                                            Team</label>
+                                                    </div>
+
+                                                    <!-- or button -->
+                                                    <!-- <button class="deplabel">Product Team</button>
+                                                    <button class="deplabel">HR</button>
+                                                    <button class="deplabel">Caregivers</button>
+                                                    <button class="deplabel">CSD</button>
+                                                    <button class="deplabel">System Team</button> -->
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__iconsbox">
+                                                <div class="flexalign">
+                                                    <button class="editcourse-btn"></button>
+                                                    <button class="extendcourse-btn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__durationtext">
+                                                <p>Duration: 1h 12mins <span>|</span> Module: 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-all2">
+                                                <label for="check-all2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training (Part2)</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__createdate">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__type">
+                                                <p>Workshop</p>
+                                            </div>
+                                            <div class="dashtable__departmants">
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-category21">
+                                                    <label class="deplabel" for="department-category21">Product
+                                                        Team</label>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__iconsbox">
+                                                <div class="flexalign">
+                                                    <button class="draftcourse-btn">Draft</button>
+                                                    <button class="extendcourse-btn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__durationtext">
+                                                <p>Duration: 1h 12mins <span>|</span> Module: 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="check-all3">
+                                                <label for="check-all3"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training (Part1)</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__createdate">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__type">
+                                                <p>Course</p>
+                                            </div>
+                                            <div class="dashtable__departmants">
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-category31">
+                                                    <label class="deplabel" for="department-category31">HR
+                                                    </label>
+                                                </div>
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-category32">
+                                                    <label class="deplabel" for="department-category32">Caregivers
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__iconsbox">
+                                                <div class="flexalign">
+                                                    <button class="editcourse-btn"></button>
+                                                    <button class="extendcourse-btn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__durationtext">
+                                                <p>Duration: 1h 12mins <span>|</span> Module: 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="deactivated" role="tabpanel" aria-labelledby="deactivated-tab">
+                            <div class="dashsearch-section">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <p class="title">Hello! Our awsome author!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="dashsearch__box">
+                                            <input type="text" placeholder="Name, Date ...">
+                                            <button>Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashaction">
+                                <div class="dashaction__title"><span>Action:</span></div>
+                                <div class="dashaction__labels">
+                                    <button class="deactivatebtn" data-toggle="modal" data-target="#reactivate">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.2533 3.74512V7.91439H12.084" stroke="#8C8C8C"
+                                                stroke-width="1.5" />
+                                            <path
+                                                d="M10.0002 16.2529C6.8193 16.2548 4.14375 13.8687 3.78296 10.7083C3.42217 7.548 5.49108 4.62029 8.59053 3.90518C11.69 3.19007 14.8325 4.9154 15.8927 7.91436"
+                                                stroke="#8C8C8C" stroke-width="1.5" />
+                                        </svg>
+                                        Reactivate
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashtable dashtable_curriculum">
+                                <div class="dashtable__header">
+                                    <div class="dashtable__checkblock">
+                                        <input type="checkbox" id="checkdeact-all" class="checkall">
+                                        <label for="checkdeact-all"></label>
+                                    </div>
+                                    <div class="dashtable__name">
+                                        <select class="selectpicker" title="Courses">
+                                            <option value="0">Courses</option>
+                                            <option value="1">Workshop</option>
+                                            <option value="2">Certificate</option>
+                                        </select>
+                                    </div>
+                                    <div class="dashtable__instructor">
+                                        <button class="ashtable-btn" data-sort-value="name">
+                                            Instructor <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__createdate">
+                                        <button class="ashtable-btn">
+                                            Create Date <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__type">
+                                        <button class="ashtable-btn">
+                                            Type <img src="img/arrow-bott.svg" alt="arrow">
+                                        </button>
+                                    </div>
+                                    <div class="dashtable__departmants">
+                                        <button class="ashtable-btn">
+                                            Departments
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="department-filterslabels">
+                                    <button class="deplabel">Product Team</button>
+                                </div>
+                                <div class="dashtable__body">
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="checkdeact-all1">
+                                                <label for="checkdeact-all1"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>Maintaining a Clean & Healthy
+                                                    Environment</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__createdate">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__type">
+                                                <p>Workshop</p>
+                                            </div>
+                                            <div class="dashtable__departmants">
+
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-deactcategory1">
+                                                    <label class="deplabel" for="department-deactcategory1">Product
+                                                        Team</label>
+                                                </div>
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-deactcategory2">
+                                                    <label class="deplabel" for="department-deactcategory2">HR</label>
+                                                </div>
+                                                <button class="deplabel deplabel_more">...</button>
+                                                <div class="deplabels-morebox">
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-deactcategory3">
+                                                        <label class="deplabel" for="department-deactcategory3">Product
+                                                            Team</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-deactcategory4">
+                                                        <label class="deplabel"
+                                                            for="department-deactcategory4">HR</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-deactcategory5">
+                                                        <label class="deplabel"
+                                                            for="department-deactcategory5">Caregivers</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-deactcategory6">
+                                                        <label class="deplabel"
+                                                            for="department-deactcategory6">CSD</label>
+                                                    </div>
+                                                    <div class="deplabel-checkwrap">
+                                                        <input type="checkbox" id="department-deactcategory7">
+                                                        <label class="deplabel" for="department-deactcategory7">System
+                                                            Team</label>
+                                                    </div>
+
+                                                    <!-- or button -->
+                                                    <!-- <button class="deplabel">Product Team</button>
+                                                    <button class="deplabel">HR</button>
+                                                    <button class="deplabel">Caregivers</button>
+                                                    <button class="deplabel">CSD</button>
+                                                    <button class="deplabel">System Team</button> -->
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__iconsbox">
+                                                <div class="flexalign">
+                                                    <button class="editcourse-btn"></button>
+                                                    <button class="extendcourse-btn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="greenbtn" data-toggle="modal"
+                                                    data-target="#reactivate">Reactivate</a>
+                                            </div>
+                                            <div class="dashtable__durationtext">
+                                                <p>Duration: 1h 12mins <span>|</span> Module: 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="checkdeact-all2">
+                                                <label for="checkdeact-all2"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training (Part2)</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Vince Amazona
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__createdate">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__type">
+                                                <p>Workshop</p>
+                                            </div>
+                                            <div class="dashtable__departmants">
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-deactcategory21">
+                                                    <label class="deplabel" for="department-deactcategory21">Product
+                                                        Team</label>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__iconsbox">
+                                                <div class="flexalign">
+                                                    <button class="editcourse-btn"></button>
+                                                    <button class="extendcourse-btn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="greenbtn" data-toggle="modal"
+                                                    data-target="#reactivate">Reactivate</a>
+                                            </div>
+                                            <div class="dashtable__durationtext">
+                                                <p>Duration: 1h 12mins <span>|</span> Module: 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashtable__rowwrap">
+                                        <div class="dashtable__row">
+                                            <div class="dashtable__checkblock">
+                                                <input type="checkbox" id="checkdeact-all3">
+                                                <label for="checkdeact-all3"></label>
+                                            </div>
+                                            <div class="dashtable__name">
+                                                <p>2020 Annual Training (Part1)</p>
+                                            </div>
+                                            <div class="dashtable__instructor">
+                                                <p>
+                                                    Heidie Higginbotham
+                                                </p>
+                                            </div>
+                                            <div class="dashtable__createdate">
+                                                <p>08/31/2020</p>
+                                            </div>
+                                            <div class="dashtable__type">
+                                                <p>Course</p>
+                                            </div>
+                                            <div class="dashtable__departmants">
+                                                <div class="deplabel-checkwrap">
+                                                    <input type="checkbox" id="department-deactcategory31">
+                                                    <label class="deplabel" for="department-deactcategory31">Product
+                                                        Team</label>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__iconsbox">
+                                                <div class="flexalign">
+                                                    <button class="editcourse-btn"></button>
+                                                    <button class="extendcourse-btn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashtable__rowdescr">
+                                            <div class="dashtable__descrpic">
+                                                <div class="picwrap">
+                                                    <img src="img/itempic2.png" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrdetail">
+                                                <p class="title">Course Detail</p>
+                                                <div class="descr">
+                                                    <p>
+                                                        It is a long established fact that a reader will be distracted
+                                                        by the readable content of a page when looking at its layout.
+                                                        The point of using Lorem Ipsum is that it has a more-or-less
+                                                        normal distribution of letters.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="dashtable__descrstart">
+                                                <a href="#" class="greenbtn" data-toggle="modal"
+                                                    data-target="#reactivate">Reactivate</a>
+                                            </div>
+                                            <div class="dashtable__durationtext">
+                                                <p>Duration: 1h 12mins <span>|</span> Module: 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- MODALS -->
+    <div class="modal fade smallmodal" id="deactivate" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">Confirm your Deactivate</p>
+                        <div class="descr">
+                            <p>When you confirm the Deactivate it will show in “Deactivated” section.</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Cancel</a>
+                        <a href="#" class="greenbtn">Deactivate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade smallmodal" id="reactivate" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="topsect">
+                        <p class="title">Confirm your reactivate</p>
+                        <div class="descr">
+                            <p>When you confirm the reactivate it will show in “Curriculum” section.</p>
+                        </div>
+                    </div>
+                    <div class="bottsect">
+                        <a href="#" class="greenbtn white" data-dismiss="modal">Cancel</a>
+                        <a href="#" class="greenbtn">Reactivate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-gotodesktop">
+        <div class="dashboard-gotodesktop__content">
+            <div class="topsect">
+                <p class="title">Dashboard</p>
+                <div class="descr">
+                    <p>If you want to view your Dashboard please login from desktop devices.</p>
+                </div>
+            </div>
+            <div class="bottsect">
+                <a href="homepage.html" class="greenbtn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

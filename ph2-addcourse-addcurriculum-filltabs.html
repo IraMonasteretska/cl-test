@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course / Add Curriculum</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.23.0/ui/trumbowyg.min.css"
+        integrity="sha512-iw/TO6rC/bRmSOiXlanoUCVdNrnJBCOufp2s3vhTPyP1Z0CtTSBNbEd5wIo8VJanpONGJSyPOZ5ZRjZ/ojmc7g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <main class="main-dashboard">
+        <section class="dashboard-wrapper">
+            <aside class="dashside">
+                <div class="dashside__logo">
+                    <a href="https://www.careindeed.com/"><img src="img/dashlogo.png" alt="logo"></a>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Manage Your Services</p>
+                    <ul>
+                        <li><a href="#"><img src="img/cb.png" alt="icon"> Care Bundle</a></li>
+                        <li class="active"><a href="#"><img src="img/l.png" alt="icon"> CI - Learning</a></li>
+                    </ul>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li><a href="#"><img src="img/single-neutral.svg" alt="icon"> Account</a></li>
+                        <li><a href="#"><img src="img/question-help-circle.svg" alt="icon"> Help & Feedback</a></li>
+                        <li><a href="#"><img src="img/exit-ic.svg" alt="icon"> Sign Out</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="dashboard-section">
+                <div class="dashheadsect">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="dashpagenav">
+                                <ul>
+                                    <li><a href="#">CI Dashboard</a></li>
+                                    <li>CI - Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addcoursesection">
+                    <div class="addcoursesection__nav">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <a href="#">1. Choose Type</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">2. Add Information</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="active">3. Add Curriculum</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">4. Publish</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="addcoursesection__content">
+                        <div class="row no-gutters addcoursecont-head">
+                            <div class="sectbrcr-wrap">
+                                <div class="sect-breadcrumbs">
+                                    <ul>
+                                        <li><a href="#">Annual Training</a></li>
+                                        <li><a href="#">First Module</a></li>
+                                        <li>Topic 1</li>
+                                    </ul>
+                                    <a href="#" class="sect-breadcrumbs__editbtn"></a>
+                                </div>
+                            </div>
+                            <div class="viewadding">
+                                <a href="#">View adding</a>
+                            </div>
+                        </div>
+                        <div class="row no-gutters addcoursecont-body">
+                            <div class="addcoursecont__tabnav">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="addfile-tab" data-toggle="tab" href="#addfile"
+                                            role="tab" aria-controls="addfile" aria-selected="true">Add File</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="addtext-tab" data-toggle="tab" href="#addtext"
+                                            role="tab" aria-controls="addtext" aria-selected="false">Add Text</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="addvideo-tab" data-toggle="tab" href="#addvideo"
+                                            role="tab" aria-controls="addvideo" aria-selected="false">Add Video</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="addquiz-tab" data-toggle="tab" href="#addquiz"
+                                            role="tab" aria-controls="addquiz" aria-selected="false">Add Quiz</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="addcoursecont__tabcont-wrap">
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- add file -tab -->
+                                    <div class="tab-pane fade show active" id="addfile" role="tabpanel"
+                                        aria-labelledby="addfile-tab">
+                                        <p class="title">Upload your file</p>
+                                        <p class="subtitle">Use the file uploader to upload PDFs, or any other document
+                                            files into your lecture.</p>
+                                        <div class="course-uploadimg__wrap addfile-sect">
+                                            <div class="inpdropfield">
+                                                <input type="file" name="chooseFile" id="chooseFile" class="chooseFile">
+                                                <label class="file-upload file-select" for="chooseFile">
+                                                    <div class="centerbox">
+                                                        <div class="file-select-button" id="fileName">
+                                                            <img src="img/upload2.svg" alt="icon">
+                                                            <p><span>Upload</span> a file or drag and drop</p>
+                                                            <p>(File requirement: PDF, PPT and less than 1MG )</p>
+                                                        </div>
+                                                        <div class="file-select-name noFile" id="noFile">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="course-addinf__btns">
+                                                <button class="greenbtn white">Cancel</button>
+                                                <button class="greenbtn">Add File</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- add text -tab -->
+                                    <div class="tab-pane fade" id="addtext" role="tabpanel"
+                                        aria-labelledby="addtext-tab">
+                                        <p class="title">Text</p>
+                                        <p class="subtitle">
+                                            Use the rich text editor to cleanly format text in your
+                                            lecture.
+                                        </p>
+                                        <div class="editor-wrapper">
+                                            <div id="editor" class="editor"></div>
+                                        </div>
+                                        <div class="course-addinf__btns">
+                                            <button class="greenbtn white">Cancel</button>
+                                            <button class="greenbtn">Add Text</button>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                    <!-- add video -tab -->
+                                    <div class="tab-pane fade" id="addvideo" role="tabpanel"
+                                        aria-labelledby="addvideo-tab">
+                                        <p class="title">Upload your Video</p>
+                                        <p class="subtitle">Use the file uploader to upload any video files into your
+                                            lecture.</p>
+                                        <div class="course-uploadimg__wrap addfile-sect">
+                                            <div class="inpdropfield">
+                                                <input type="file" name="chooseFile" id="chooseFile1"
+                                                    class="chooseFile">
+                                                <label class="file-upload file-select" for="chooseFile1">
+                                                    <div class="centerbox">
+                                                        <div class="file-select-button" id="fileName1">
+                                                            <img src="img/upload2.svg" alt="icon">
+                                                            <p><span>Upload</span> a file or drag and drop</p>
+                                                            <p>(File requirement: PDF, PPT and less than 1MG )</p>
+                                                        </div>
+                                                        <div class="file-select-name noFile" id="noFile1">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="addvideo__bottsect">
+                                                <div class="addvideo__switchwrap">
+                                                    <div class="switch-control">
+                                                        <input type="checkbox" id="switch" checked />
+                                                        <label for="switch"></label>
+                                                    </div>
+                                                    <div class="addvideo__switchwrap-descr">
+                                                        <p class="addvid__title">preview</p>
+                                                        <p class="descr">Learner can’t forward seeing the video</p>
+                                                    </div>
+                                                </div>
+                                                <div class="course-addinf__btns">
+                                                    <button class="greenbtn white">Cancel</button>
+                                                    <button class="greenbtn">Add File</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- add quiz -tab -->
+                                    <div class="tab-pane fade" id="addquiz" role="tabpanel"
+                                        aria-labelledby="addquiz-tab">
+                                        <p class="title">Quiz</p>
+                                        <p class="subtitle">
+                                            Informal questions during the course to help with learning experiense.<br>
+                                            It’s not a requirement to pass all the quiz to continue learning.
+                                        </p>
+                                        <div class="quizsection">
+                                            <div class="quizsection__topsect">
+                                                <div class="quizsection__qw">
+                                                    <div class="quizsection__num">
+                                                        q1
+                                                    </div>
+                                                    <div class="quizsection__text">
+                                                        <input type="text" placeholder="Type question">
+                                                    </div>
+                                                    <div class="quizsection__type">
+                                                        <select name="" class="selectpicker">
+                                                            <option value="0">Checkboxes</option>
+                                                            <option value="1">Radioboxes</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="quizsection__answers">
+                                                    <div class="quizsection__answerrow">
+                                                        <div class="checkblock">
+                                                            <input type="checkbox" id="answ1">
+                                                            <label for="answ1"></label>
+                                                        </div>
+                                                        <div class="qwtext">
+                                                            <input type="text" placeholder="Type answer">
+                                                        </div>
+                                                        <div class="qwbtns">
+                                                            <button class="addqw"></button>
+                                                            <button class="removeqw"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quizsection__answerrow">
+                                                        <div class="checkblock">
+                                                            <input type="checkbox" id="answ2">
+                                                            <label for="answ2"></label>
+                                                        </div>
+                                                        <div class="qwtext">
+                                                            <input type="text" placeholder="Type answer">
+                                                        </div>
+                                                        <div class="qwbtns">
+                                                            <button class="addqw"></button>
+                                                            <button class="removeqw"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quizsection__answerrow">
+                                                        <div class="checkblock">
+                                                            <input type="checkbox" id="answ3">
+                                                            <label for="answ3"></label>
+                                                        </div>
+                                                        <div class="qwtext">
+                                                            <input type="text" placeholder="Type answer">
+                                                        </div>
+                                                        <div class="qwbtns">
+                                                            <button class="addqw"></button>
+                                                            <button class="removeqw"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="quizsection__sett">
+                                                    <div class="quizsection__sett-switchbox">
+                                                        <div class="addvideo__switchwrap">
+                                                            <div class="switch-control">
+                                                                <input type="checkbox" id="switchsett1" />
+                                                                <label for="switchsett1"></label>
+                                                            </div>
+                                                            <div class="addvideo__switchwrap-descr">
+                                                                <label for="switchsett1">Show currect answer</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="addvideo__switchwrap">
+                                                            <div class="switch-control">
+                                                                <input type="checkbox" id="switchsett2" />
+                                                                <label for="switchsett2"></label>
+                                                            </div>
+                                                            <div class="addvideo__switchwrap-descr">
+                                                                <label for="switchsett2">Shuffle answer</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quizsection__sett-btns">
+                                                        <a href="#" class="cancel">Cancel</a>
+                                                        <a href="#" class="save">Save</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quizsection__bottsect">
+                                                <button class="darkbluebtn">
+                                                    <span>Add next question</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end">
+                                            <button class="greenbtn finishbtn">Finish</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- view addings -->
+                                <div class="viewaddings-section">
+                                    <div class="my-container dragwrap">
+                                        <div class="dragitem">
+                                            <div class="dragitem__flexwrap">
+                                                <div class="dragitem__name">
+                                                    <p>Text</p>
+                                                </div>
+                                                <div class="dragitem__content">
+                                                    <textarea
+                                                        disabled>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</textarea>
+                                                </div>
+                                                <div class="dragitem__btns">
+                                                    <button class="edit"></button>
+                                                    <button class="delete"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dragitem">
+                                            <div class="dragitem__flexwrap">
+                                                <div class="dragitem__name">
+                                                    <p>File</p>
+                                                </div>
+                                                <div class="dragitem__content">
+                                                    <p class="attached-file">Annual Training.PDF</p>
+                                                </div>
+                                                <div class="dragitem__btns">
+                                                    <button class="edit"></button>
+                                                    <button class="delete"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dragitem">
+                                            <div class="dragitem__flexwrap">
+                                                <div class="dragitem__name">
+                                                    <p>Video</p>
+                                                </div>
+                                                <div class="dragitem__content">
+                                                    <p class="attached-file">Annual Training.MP4</p>
+                                                </div>
+                                                <div class="dragitem__btns">
+                                                    <button class="edit"></button>
+                                                    <button class="delete"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dragitem">
+                                            <div class="dragitem__flexwrap">
+                                                <div class="dragitem__name">
+                                                    <p>Quiz</p>
+                                                </div>
+                                                <div class="dragitem__content">
+                                                    <p>Annual Training question sample</p>
+                                                    <div class="dragitem__quizbox">
+                                                        <div class="dragitem__quiz">
+                                                            <input type="checkbox" id="quiz1" disabled>
+                                                            <label for="quiz1">Answer 1</label>
+                                                        </div>
+                                                        <div class="dragitem__quiz">
+                                                            <input type="checkbox" id="quiz2" disabled checked>
+                                                            <label for="quiz2">Answer 2</label>
+                                                        </div>
+                                                        <div class="dragitem__quiz">
+                                                            <input type="checkbox" id="quiz3" disabled>
+                                                            <label for="quiz3">Answer 3</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dragitem__btns">
+                                                    <button class="edit"></button>
+                                                    <button class="delete"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+    <!-- MODALS -->
+    <div class="dashboard-gotodesktop">
+        <div class="dashboard-gotodesktop__content">
+            <div class="topsect">
+                <p class="title">Dashboard</p>
+                <div class="descr">
+                    <p>If you want to view your Dashboard please login from desktop devices.</p>
+                </div>
+            </div>
+            <div class="bottsect">
+                <a href="homepage.html" class="greenbtn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.9.4/dist/trumbowyg.min.js"></script>
+    <script src="js/jquery.dad.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

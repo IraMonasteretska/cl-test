@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course / Choose type</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <main class="main-dashboard">
+        <section class="dashboard-wrapper">
+            <aside class="dashside">
+                <div class="dashside__logo">
+                    <a href="https://www.careindeed.com/"><img src="img/dashlogo.png" alt="logo"></a>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Manage Your Services</p>
+                    <ul>
+                        <li><a href="#"><img src="img/cb.png" alt="icon"> Care Bundle</a></li>
+                        <li class="active"><a href="#"><img src="img/l.png" alt="icon"> CI - Learning</a></li>
+                    </ul>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li><a href="#"><img src="img/single-neutral.svg" alt="icon"> Account</a></li>
+                        <li><a href="#"><img src="img/question-help-circle.svg" alt="icon"> Help & Feedback</a></li>
+                        <li><a href="#"><img src="img/exit-ic.svg" alt="icon"> Sign Out</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="dashboard-section">
+                <div class="dashheadsect">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="dashpagenav">
+                                <ul>
+                                    <li><a href="#">CI Dashboard</a></li>
+                                    <li>CI - Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addcoursesection">
+                    <div class="addcoursesection__nav">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <a href="#" class="active">1. Choose Type</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">2. Add Information</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">3. Add Curriculum</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">4. Publish</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="addcoursesection__content contchoosetype">
+                        <div class="addcoursesection__contblock">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="addcoursesection__radiobox">
+                                        <input type="radio" id="radio-course" name="choosetype">
+                                        <label for="radio-course">
+                                            Course
+                                            <span>User can learner this course in any time</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="addcoursesection__radiobox">
+                                        <input type="radio" id="radio-workshop" name="choosetype">
+                                        <label for="radio-workshop">
+                                            Workshop
+                                            <span>User need to study in a specific date and time</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addcoursesection__contblock">
+                            <p class="title">Search Bar
+                                <span data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                    <img src="img/info2.svg" alt="info">
+                                </span>
+                            </p>
+                            <div class="addcoursesection__checkswrap">
+                                <div class="addcoursesection__checkwrap">
+                                    <input type="checkbox" id="checkcourse-type1">
+                                    <label for="checkcourse-type1">On-boarding (2)</label>
+                                </div>
+                                <div class="addcoursesection__checkwrap">
+                                    <input type="checkbox" id="checkcourse-type2">
+                                    <label for="checkcourse-type2">Diseases</label>
+                                </div>
+                                <div class="addcoursesection__checkwrap">
+                                    <input type="checkbox" id="checkcourse-type3">
+                                    <label for="checkcourse-type3">CNA Annual Training</label>
+                                </div>
+                                <div class="addcoursesection__checkwrap">
+                                    <input type="checkbox" id="checkcourse-type4">
+                                    <label for="checkcourse-type4">Health & Safety</label>
+                                </div>
+                                <div class="addcoursesection__checkwrap">
+                                    <input type="checkbox" id="checkcourse-type5">
+                                    <label for="checkcourse-type5">Continuing Education</label>
+                                </div>
+                            </div>
+                            <div class="addnewcoursetype-btn">
+                                <button data-toggle="modal" data-target="#addcoursetype">Add new course type</button>
+                            </div>
+                            <div class="addcoursesection__bottbtnsgroup">
+                                <a href="#" class="addcoursesection__continue disable">Continue</a>
+                                <a href="#" class="addcoursesection__cancel">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODALS -->
+
+    <div class="modal fade inftextmodal" id="addcoursetype" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="addcoursetype__head">
+                        <p class="title">Add a new course type</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="addcoursetype__body">
+                        <div class="infotext">
+                            <p>
+                                If you need to add a new course type it will be pending, after we get the approvel from
+                                the manager we will publish the course and the course type will show on the search bar.
+                            </p>
+                        </div>
+                        <div class="courseinpfield-wrap">
+                            <div class="courseinpfield">
+                                <input type="text" placeholder="New course type">
+                                <button>+ Add New</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-gotodesktop">
+        <div class="dashboard-gotodesktop__content">
+            <div class="topsect">
+                <p class="title">Dashboard</p>
+                <div class="descr">
+                    <p>If you want to view your Dashboard please login from desktop devices.</p>
+                </div>
+            </div>
+            <div class="bottsect">
+                <a href="homepage.html" class="greenbtn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

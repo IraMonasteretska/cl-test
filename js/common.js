@@ -23,48 +23,51 @@ $(document).ready(function () {
     });
 
     // Courses slider
-    $('.coursessl').slick({
-        slidesToShow: 3.5,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>',
-        infinite: false,
-        // centerPadding: '120px',
-        // centerMode: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 1025,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 4,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    variableWidth: true,
-                    slidesToShow: 3,
+    if ($('body *').is('.coursessl')) {
+        $('.coursessl').slick({
+            slidesToShow: 3.5,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            infinite: false,
+            // centerPadding: '120px',
+            // centerMode: true,
+            // autoplay: true,
+            // autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        variableWidth: true,
+                        slidesToShow: 3,
 
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    variableWidth: true
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        variableWidth: true
 
+                    }
                 }
-            }
-        ]
-    });
+            ]
+        });
+    }
+
 
     // top top
     $(function () {
@@ -117,7 +120,7 @@ $(document).ready(function () {
 
     // drop dashboard course
 
-    $('.dashtable__row').click(function () {
+    $('.dashboardtabs .dashtable__row').click(function () {
         $(this).find('.droparrowbrn').toggleClass('rotatearrow');
         $(this).next('.dashtable__rowdescr').toggleClass('show');
         $(this).parent().toggleClass('open');
@@ -324,5 +327,230 @@ if ($('*').is('video')) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ========================================================= PHASE 2 =========================================================
+
+$(document).ready(function () {
+    // Option BTN
+
+    let optionBtn = $('.optdropdown button');
+
+    $(optionBtn).click(function () {
+        $(this).toggleClass('rotatearrow');
+        $(this).next('ul').slideToggle();
+    });
+
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.optdropdown').length) {
+            $(optionBtn).removeClass('rotatearrow');
+            $(optionBtn).next('ul').slideUp();
+        }
+    });
+
+    // departments
+
+    let deplabelMoreBtn = $('.deplabel_more');
+
+    $(deplabelMoreBtn).click(function () {
+        $(this).next('.deplabels-morebox').slideToggle();
+    })
+
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.dashtable__body .dashtable__departmants').length) {
+            $('.deplabels-morebox').slideUp();
+        }
+    });
+
+    // drop dashboard course
+
+    $('.dashtab-section_hifiauthor .dashtable__row').click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.dashtable__departmants').length && !$target.closest('.editcourse-btn').length) {
+            $(this).find('.extendcourse-btn').toggleClass('rotatearrow');
+            $(this).next('.dashtable__rowdescr').toggleClass('show');
+            $(this).parents('.dashtable__rowwrap').toggleClass('open');
+        }
+    });
+
+    // check all - EDITED
+
+    $('.dashtable_curriculum .checkall').change(function () {
+        if ($(this).is(':checked')) {
+            $(this).parents('.dashtable__header').siblings('.dashtable__body').find('.dashtable__checkblock input:not(:disabled)').prop('checked', true);
+
+            $(this).parents('.tab-pane').find('.dashaction__labels button').addClass('green');
+        } else {
+            $(this).parents('.dashtable__header').siblings('.dashtable__body').find('.dashtable__checkblock input:not(:disabled)').prop('checked', false);
+
+            $(this).parents('.tab-pane').find('.dashaction__labels button').removeClass('green');
+        }
+    });
+
+    // choose type - disable btn
+
+    function inputsCheck() {
+        if ($('.addcoursesection__radiobox input').is(':checked') && $('.addcoursesection__checkswrap input').is(':checked')) {
+            $('.addcoursesection__continue').removeClass('disable');
+        } else {
+            $('.addcoursesection__continue').addClass('disable');
+        }
+    }
+
+    $('.contchoosetype input').change(function () {
+        inputsCheck();
+    });
+
+
+    // upload image
+    $('.chooseFile').bind('change', function () {
+        var filename = $(this).val();
+        $(this).next('.file-upload').find('.noFile').text(filename.replace("C:\\fakepath\\", ""));
+    });
+
+    // -----Course Settings / remove green box
+    $('.coursesetting-label button').click(function () {
+        $(this).parents('.coursesetting-labelwrap').remove();
+    });
+
+    // datepicker
+    if ($('body *').is('.datepicker')) {
+        $('.datepicker').datepicker({
+            // format: 'mm/dd/yyyy',
+            autoclose: true,
+            todayHighlight: true,
+            container: '#coursedatepickcontainer',
+            orientation: 'bottom'
+        });
+    }
+
+    // input mask
+    if ($('body *').is('.inputmask')) {
+        $("#start-hour").inputmask("99:99");
+        $("#end-hour").inputmask("99:99");
+    }
+
+    const main = document.querySelector('#maininput');
+    const start = document.querySelector('#start-hour');
+    const end = document.querySelector('#end-hour');
+
+    $(".test").on('keyup change click', function () {
+        let valueStart = $(start).val();
+        let valueEnd = $(end).val();
+
+        $(main).val(`${valueStart}  -  ${valueEnd}`);
+
+        if ($('.test').val() != '') {
+            $(main).addClass('show');
+        } else {
+            $(main).removeClass('show');
+        }
+    });
+
+
+
+    $(main).click(function () {
+        $('.main-input .subinputs').addClass('show');
+    });
+
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.main-input').length) {
+            $('.main-input .subinputs').removeClass('show');
+        }
+    });
+
+    $('.switch-control').tooltip({
+        container: 'div.addcurric__main'
+    });
+
+    // text editor
+
+    $("#editor").trumbowyg({
+        semantic: false,
+        defaultLinkTarget: '_blank',
+        btns: [
+            // // ["viewHTML"],
+            // // ["undo", "redo"], // Only supported in Blink browsers
+            // ["formatting"],
+            // ["strong", "em", "del"],
+            // ["superscript", "subscript"],
+            // ["link"],
+            // ["insertImage"],
+            // ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
+            // ["unorderedList", "orderedList"],
+            // ["horizontalRule"],
+            // // ["removeformat"],
+            // ["fullscreen"]
+
+            ['formatting'],
+            ['bold', 'italic', 'underline', 'strikethrough'],
+            ['superscript', 'subscript'],
+            ['link'],
+            'btnGrp-justify',
+            'btnGrp-lists',
+            ['removeformat'],
+            ['fullscreen']
+        ]
+
+    });
+
+    // view adding
+    let tabsContent = $('.addcoursecont__tabcont-wrap .tab-content'),
+        addingContent = $('.viewaddings-section'),
+        tabLink = $('.addcoursecont__tabnav .nav-link');
+    $('.viewadding').click(function (e) {
+        e.preventDefault();
+        $(tabsContent).hide();
+        $(addingContent).show();
+    });
+
+
+    $(tabLink).click(function () {
+        $(tabsContent).show();
+        $(addingContent).hide();
+    });
+
+    // drag & drop
+
+    var instance = $(".my-container").dad({
+        // draggable: ".viewaddings-section",
+    });
+
+
+
+
+
+
+
+
+});
 
 

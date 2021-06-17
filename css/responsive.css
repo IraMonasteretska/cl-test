@@ -2646,4 +2646,13 @@
 
 }
 
-/* TEST */
+
+
+
+/* PHASE 2 */
+
+@media(max-width:1100.8px) {
+    .deplabel {
+        padding: 4px 6px;
+    }
+}

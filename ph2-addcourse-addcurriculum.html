@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course / Add Curriculum</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <main class="main-dashboard">
+        <section class="dashboard-wrapper">
+            <aside class="dashside">
+                <div class="dashside__logo">
+                    <a href="https://www.careindeed.com/"><img src="img/dashlogo.png" alt="logo"></a>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Manage Your Services</p>
+                    <ul>
+                        <li><a href="#"><img src="img/cb.png" alt="icon"> Care Bundle</a></li>
+                        <li class="active"><a href="#"><img src="img/l.png" alt="icon"> CI - Learning</a></li>
+                    </ul>
+                </div>
+                <div class="dashside__navbox">
+                    <p class="title">Settings</p>
+                    <ul>
+                        <li><a href="#"><img src="img/single-neutral.svg" alt="icon"> Account</a></li>
+                        <li><a href="#"><img src="img/question-help-circle.svg" alt="icon"> Help & Feedback</a></li>
+                        <li><a href="#"><img src="img/exit-ic.svg" alt="icon"> Sign Out</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="dashboard-section">
+                <div class="dashheadsect">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="dashpagenav">
+                                <ul>
+                                    <li><a href="#">CI Dashboard</a></li>
+                                    <li>CI - Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addcoursesection">
+                    <div class="addcoursesection__nav">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <a href="#">1. Choose Type</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">2. Add Information</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#" class="active">3. Add Curriculum</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="#">4. Publish</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="addcoursesection__content addcurriculum">
+                        <div class="addcoursesection__contblock">
+                            <div class="addcurriculum__head">
+                                <div class="addcurriculum__headtitle">
+                                    <p>2021 Annual Training</p>
+                                </div>
+                                <div class="addcurriculum__headbtns">
+                                    <a href="#" class="greenbtn white">Save draft</a>
+                                    <a href="#" class="greenbtn"><span>Next <img src="img/arrow-rightbtn2.svg"
+                                                alt="icon"></span></a>
+                                </div>
+                            </div>
+
+                            <div class="addcurriculum__body">
+                                <div class="addcurric-currwrap">
+                                    <div class="addcurric__main">
+                                        <div class="addcurric__main-title">
+                                            <p>Overview</p>
+                                            <a href="#" class="edit"></a>
+                                        </div>
+                                        <div class="addcurric__main-controls">
+                                            <div class="switch-control" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Learner can skip this Module">
+                                                <input type="checkbox" id="switch" />
+                                                <label for="switch"></label>
+                                            </div>
+
+                                            <div class="close-control">
+                                                <button></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="addcurric__sub">
+                                        <div class="addcurric__main-title">
+                                            <p>Course Objective</p>
+                                            <a href="#" class="edit"></a>
+                                        </div>
+                                        <div class="addcurric__main-controls">
+                                            <div class="switch-control" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Learner can skip this Module">
+                                                <input type="checkbox" id="switch1" />
+                                                <label for="switch1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="addcurric-currwrap">
+                                    <div class="addcurric__main">
+                                        <div class="addcurric__main-title">
+                                            <p>Understanding the Disease</p>
+                                            <a href="#" class="edit"></a>
+                                        </div>
+                                        <div class="addcurric__main-controls">
+                                            <div class="switch-control" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Learner can skip this Module">
+                                                <input type="checkbox" id="switch" />
+                                                <label for="switch"></label>
+                                            </div>
+
+                                            <div class="close-control">
+                                                <button></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="addcurric__sub">
+                                        <div class="addcurric__main-title">
+                                            <p>Stages of Parkinson’s</p>
+                                            <a href="#" class="edit"></a>
+                                        </div>
+                                        <div class="addcurric__main-controls">
+                                            <div class="switch-control" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Learner can skip this Module">
+                                                <input type="checkbox" id="switch1" />
+                                                <label for="switch1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="addcurriculum__body-addmodule">
+                                    <a href="#" class="addlink">Add new module</a>
+                                </div>
+                            </div>
+
+                            <div class="addcurriculum__footer">
+                                <button class="addfinaltest">
+                                    <span>Add a final test</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+    <!-- MODALS -->
+    <div class="dashboard-gotodesktop">
+        <div class="dashboard-gotodesktop__content">
+            <div class="topsect">
+                <p class="title">Dashboard</p>
+                <div class="descr">
+                    <p>If you want to view your Dashboard please login from desktop devices.</p>
+                </div>
+            </div>
+            <div class="bottsect">
+                <a href="homepage.html" class="greenbtn">Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>
