@@ -2614,9 +2614,15 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     -o-border-radius: 4px;
     background-color: #fff;
     cursor: pointer;
+
+}
+
+.dashtable__header .dashtable__checkblock label {
     bottom: -2px;
     position: relative;
 }
+
+
 
 .dashtable__checkblock input:disabled+label {
     background: #8C8C8C;
