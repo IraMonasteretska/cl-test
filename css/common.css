@@ -5242,7 +5242,8 @@ button {
     margin-bottom: 20px;
 }
 
-.addcoursesection__contblock label {
+.addcoursesection__contblock label,
+.addcoursesection__contblock .labtitle {
     color: #000;
     font-size: 14px;
     margin-bottom: 2px;
