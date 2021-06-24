@@ -5221,7 +5221,8 @@ button {
     color: #394A64;
 }
 
-.file-select-button p span {
+.file-select-button p span,
+.file-select-button p b {
     color: #FF9334;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
