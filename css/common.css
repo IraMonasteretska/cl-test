@@ -2614,15 +2614,12 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     -o-border-radius: 4px;
     background-color: #fff;
     cursor: pointer;
-
 }
 
 .dashtable__header .dashtable__checkblock label {
     bottom: -2px;
     position: relative;
 }
-
-
 
 .dashtable__checkblock input:disabled+label {
     background: #8C8C8C;
@@ -4756,7 +4753,7 @@ button {
 .dashtable_curriculum .dashtable__descrdetail .title,
 .dashtable_curriculum .dashtable__descrdetail .descr {
     /* max-width: 460px; */
-    max-width: 80%;
+    max-width: 600px;
 }
 
 .department-filterslabels {
