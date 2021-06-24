@@ -450,9 +450,9 @@ $(document).ready(function () {
                 ['formatting'],
                 ['bold', 'italic', 'underline', 'strikethrough'],
                 ['link'],
-                ['fullscreen'],
                 ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
                 ["unorderedList", "orderedList"],
+                ['fullscreen'],
             ]
 
         });
