@@ -65,7 +65,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="addcoursesection__content contchoosetype">
                         <div class="addcoursesection__contblock">
                             <div class="row">
@@ -95,7 +94,7 @@
                                     <img src="img/info2.svg" alt="info">
                                 </span>
                             </p>
-                            <div class="addcoursesection__checkswrap">
+                            <div class="addcoursesection__checkswrap" id="mydiv">
                                 <div class="addcoursesection__checkwrap">
                                     <input type="checkbox" id="checkcourse-type1">
                                     <label for="checkcourse-type1">On-boarding (2)</label>
@@ -121,8 +120,9 @@
                                 <button data-toggle="modal" data-target="#addcoursetype">Add new course type</button>
                             </div>
                             <div class="addcoursesection__bottbtnsgroup">
-                                <a href="#" class="addcoursesection__continue disable">Continue</a>
-                                <a href="#" class="addcoursesection__cancel">Cancel</a>
+                                <a href="ph2-addcourse-addinformation.html"
+                                    class="addcoursesection__continue disable">Continue</a>
+                                <a href="ph2-hifi-author-main.html" class="addcoursesection__cancel">Cancel</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                         <div class="courseinpfield-wrap">
                             <div class="courseinpfield">
                                 <input type="text" placeholder="New course type">
-                                <button>+ Add New</button>
+                                <button data-dismiss="modal">+ Add New</button>
                             </div>
                         </div>
                     </div>
@@ -174,10 +174,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
     <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>

@@ -115,6 +115,82 @@
     .loginpage .loginmodal__formsection {
         padding: 50px 150px;
     }
+
+
+    /* -------- */
+
+    .acpublish__header .greenbtn {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    .acpublish__header {
+        height: 56px;
+    }
+
+    .acpublish__body .greywrap {
+        padding: 15px 30px;
+    }
+
+    .publish .startcourse__sidebar {
+        padding: 20px 10px;
+    }
+
+    .publish .startcourse__sbgroup {
+        padding: 15px 0 10px;
+    }
+
+    .publish .startcourse__sbgroup .title {
+        font-size: 14px;
+    }
+
+    .publish .startcourse__sbhead p {
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .publish .startcourse__sbgroup .startcourse__sblist li {
+        margin-bottom: 7px;
+    }
+
+    .publish .startcourse__sbgroup .startcourse__sblist li a {
+        font-size: 13px;
+    }
+
+    .publish .startcourse__sbgroup .startcourse__sblist li a span {
+        font-size: 11px;
+    }
+
+    .publish .startcourse__stephead .grtitle {
+        font-size: 24px;
+    }
+
+    .publish .startcourse__stephead .gritemname {
+        font-size: 16px;
+    }
+
+    .publish .startcourse__stephead {
+        padding: 0 20px;
+    }
+
+    .publish .startcourse__stepbody .descr p {
+        font-size: 14px;
+    }
+
+    .publish .startcourse__stepbody {
+        padding: 30px 20px 40px;
+    }
+
+    .publish .col-lg-4 {
+        -ms-flex: 0 0 320px;
+        flex: 0 0 320px;
+        max-width: 320px;
+    }
+
+
+
 }
 
 @media(max-width:1400.8px) {
@@ -202,6 +278,19 @@
     .tourstart__bottsect .greenbtn {
         font-size: 16px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 @media(max-width:1199.8px) {
@@ -493,7 +582,27 @@
         margin-bottom: 50px;
     }
 
+    .publish .col-lg-4 {
+        -ms-flex: 0 0 260px;
+        flex: 0 0 260px;
+        max-width: 260px;
+    }
 
+    .acpublish__body .greywrap {
+        padding: 15px 20px;
+    }
+
+    .publish .startcourse__sbgroup {
+        padding: 10px 0 10px;
+    }
+
+    .publish .startcourse__sbhead p {
+        font-size: 14px;
+    }
+
+    .startcourse__sbgroup .title {
+        margin-bottom: 7px;
+    }
 
 
 

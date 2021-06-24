@@ -414,6 +414,24 @@ $(document).ready(function () {
         }
     });
 
+
+
+    // ph2-addcourse-choosetype.html - add checkbox (test)
+
+    let inputAddCourse = $('.courseinpfield input'),
+        buttonAddCourse = $('.courseinpfield button'),
+        linkAddCourse = $('.addnewcoursetype-btn');
+
+    $(buttonAddCourse).click(function () {
+        $("#mydiv").append(`<div class="addcoursesection__checkwrap"><input type="checkbox" id="${inputAddCourse.val()}"><label for="${inputAddCourse.val()}">${inputAddCourse.val()}</label></div >`);
+    });
+
+    // clear input
+    $(linkAddCourse).click(function () {
+        inputAddCourse.val('');
+    });
+
+
     // choose type - disable btn
 
     function inputsCheck() {
@@ -424,9 +442,10 @@ $(document).ready(function () {
         }
     }
 
-    $('.contchoosetype input').change(function () {
+    $(document).on('change', '.contchoosetype input', function () {
         inputsCheck();
     });
+
 
 
     // upload image
@@ -492,35 +511,37 @@ $(document).ready(function () {
     });
 
     // text editor
+    if ($('body *').is('#editor')) {
+        $("#editor").trumbowyg({
+            semantic: false,
+            defaultLinkTarget: '_blank',
+            minimalLinks: true,
+            btns: [
+                // all settings
+                // ["viewHTML"],
+                // ["undo", "redo"], // Only supported in Blink browsers
+                // ["formatting"],
+                // ["strong", "em", "del"],
+                // ["superscript", "subscript"],
+                // ["link"],
+                // ["insertImage"],
+                // ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
+                // ["unorderedList", "orderedList"],
+                // ["horizontalRule"],
+                // // ["removeformat"],
+                // ["fullscreen"]
 
-    $("#editor").trumbowyg({
-        semantic: false,
-        defaultLinkTarget: '_blank',
-        btns: [
-            // // ["viewHTML"],
-            // // ["undo", "redo"], // Only supported in Blink browsers
-            // ["formatting"],
-            // ["strong", "em", "del"],
-            // ["superscript", "subscript"],
-            // ["link"],
-            // ["insertImage"],
-            // ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
-            // ["unorderedList", "orderedList"],
-            // ["horizontalRule"],
-            // // ["removeformat"],
-            // ["fullscreen"]
+                ['formatting'],
+                ['bold', 'italic', 'underline', 'strikethrough'],
+                ['link'],
+                ['fullscreen'],
+                ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
+                ["unorderedList", "orderedList"],
+            ]
 
-            ['formatting'],
-            ['bold', 'italic', 'underline', 'strikethrough'],
-            ['superscript', 'subscript'],
-            ['link'],
-            'btnGrp-justify',
-            'btnGrp-lists',
-            ['removeformat'],
-            ['fullscreen']
-        ]
+        });
+    }
 
-    });
 
     // view adding
     let tabsContent = $('.addcoursecont__tabcont-wrap .tab-content'),
@@ -532,21 +553,139 @@ $(document).ready(function () {
         $(addingContent).show();
     });
 
-
     $(tabLink).click(function () {
         $(tabsContent).show();
         $(addingContent).hide();
     });
 
     // drag & drop
+    if ($('body *').is('.viewaddings-section')) {
+        var instance = $(".my-container").dad({
+            draggable: ".viewaddings-section",
+        });
+    }
 
-    var instance = $(".my-container").dad({
-        // draggable: ".viewaddings-section",
+
+
+
+
+    // view adding - btns
+    $('.dragitem__btns .edit').click(function () {
+        $(tabsContent).show();
+        $(addingContent).hide();
+    });
+
+
+
+    $('.dragitem__text .edit').click(function (e) {
+        $('#myTab a[href="#addtext"]').tab('show');
+    });
+    $('.dragitem__file .edit').click(function (e) {
+        $('#myTab a[href="#addfile"]').tab('show');
+    });
+    $('.dragitem__material .edit').click(function (e) {
+        $('#myTab a[href="#addvmaterial"]').tab('show');
+    });
+    $('.dragitem__video .edit').click(function (e) {
+        $('#myTab a[href="#addvideo"]').tab('show');
+    });
+    $('.dragitem__quiz .edit').click(function (e) {
+        $('#myTab a[href="#addquiz"]').tab('show');
+    });
+
+    // remove drug row
+    const deleteBtn = $('.dragitem .delete');
+    $(deleteBtn).click(function () {
+        $(this).parents('.dragitem').remove();
     });
 
 
 
 
+    // back btn - publish page
+    $(".acpublish__header .back").click(function (event) {
+        event.preventDefault();
+        history.back(1);
+    });
+
+    // "option" - hover - remove border
+    let optionLink = $('.optdropdown ul li');
+    $(optionLink).mouseover(function () {
+        $(this).prev().addClass('bordernone');
+    });
+    $(optionLink).mouseleave(function () {
+        $(this).prev().removeClass('bordernone');
+    });
+
+
+
+    // ph2-addcourse-addcurriculum.html - delete row
+
+    let deleteCurrRow = $('.addcurric-currwrap .close-control button');
+
+    $(deleteCurrRow).click(function () {
+        $(this).parents('.addcurric-currwrap').remove();
+    });
+
+    // ph2-addcourse-addcurriculum-filltabs.html - create/delete new quiz (test)
+
+    const parentQ = $('.quizsection__answers');
+
+    $(document).on('click', '.qwbtns .removeqw', function () {
+        $(this).parents('.quizsection__answerrow').remove();
+    });
+
+    var i = 0;
+
+    $(document).on('click', '.qwbtns .addqw', function () {
+        let nameValue = $(this).parents('.quizsection__answerrow').find('input').attr("name");
+
+        if ($(selectQ).val() == 0) {
+            console.log('1');
+            $(parentQ).append(`<div class="quizsection__answerrow">
+            <div class="checkblock">
+                <input type="checkbox" id="${nameValue + i}" name="${nameValue}">
+                <label for="${nameValue + i}"></label>
+            </div>
+            <div class="qwtext">
+                <input type="text" placeholder="Type answer">
+            </div>
+            <div class="qwbtns">
+                <button class="addqw"></button>
+                <button class="removeqw"></button>
+            </div>
+        </div>`);
+        } else if ($(selectQ).val() == 1) {
+            console.log('2');
+            $(parentQ).append(`<div class="quizsection__answerrow">
+            <div class="checkblock">
+                <input type="radio" id="${nameValue + i}" name="${nameValue}">
+                <label for="${nameValue + i}"></label>
+            </div>
+            <div class="qwtext">
+                <input type="text" placeholder="Type answer">
+            </div>
+            <div class="qwbtns">
+                <button class="addqw"></button>
+                <button class="removeqw"></button>
+            </div>
+        </div>`);
+        }
+
+        i++;
+    });
+
+    // change checkbox to radio
+    let selectQ = $('.quizsection__type select');
+    $(document).on('change', '.quizsection__type select', function () {
+        $('.quizsection__answerrow .checkblock input').prop("checked", false);
+
+        if ($(selectQ).val() == 0) {
+            $('.quizsection__answerrow .checkblock input').attr('type', 'checkbox');
+        } else if ($(selectQ).val() == 1) {
+            $('.quizsection__answerrow .checkblock input').attr('type', 'radio');
+        }
+    });
 
 
 

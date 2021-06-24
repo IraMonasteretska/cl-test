@@ -2421,7 +2421,7 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .dashsearch-section {
     padding: 0 20px 0 28px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .dashsearch-section .title {
@@ -2451,7 +2451,8 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     padding-left: 45px;
     padding-right: 115px;
     font-size: 12px;
-    color: #8C8C8C;
+    /* color: #8C8C8C; */
+    color: #000;
     font-family: Avenir book;
     background-image: url('../img/search-ic.svg');
     background-repeat: no-repeat;
@@ -2478,7 +2479,18 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     position: absolute;
     right: 0;
     top: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
 }
+
+.dashsearch__box button:hover {
+    background: #364c74;
+}
+
+
 
 .dashaction {
     padding: 3px 15px;
@@ -2602,6 +2614,8 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     -o-border-radius: 4px;
     background-color: #fff;
     cursor: pointer;
+    bottom: -2px;
+    position: relative;
 }
 
 .dashtable__checkblock input:disabled+label {
@@ -4735,7 +4749,8 @@ button {
 
 .dashtable_curriculum .dashtable__descrdetail .title,
 .dashtable_curriculum .dashtable__descrdetail .descr {
-    max-width: 460px;
+    /* max-width: 460px; */
+    max-width: 80%;
 }
 
 .department-filterslabels {
@@ -5289,9 +5304,9 @@ textarea::-webkit-scrollbar-thumb {
 .contaddinfo__contentsect .bootstrap-select button,
 .contaddinfo__contentsect .bootstrap-select button:active,
 .contaddinfo__contentsect .bootstrap-select button:active:focus,
-.btn-light:not(:disabled):not(.disabled).active,
-.btn-light:not(:disabled):not(.disabled):active,
-.show>.btn-light.dropdown-toggle {
+.contaddinfo__contentsect .btn-light:not(:disabled):not(.disabled).active,
+.contaddinfo__contentsect .btn-light:not(:disabled):not(.disabled):active,
+.contaddinfo__contentsect .show>.btn-light.dropdown-toggle {
     outline: none !important;
     border: 1px solid #DEE5EF !important;
     box-shadow: none !important;
@@ -6343,7 +6358,11 @@ textarea::-webkit-scrollbar-thumb {
 .quizsection__type .btn-light:not(:disabled):not(.disabled):active,
 .quizsection__type .show>.btn-light.dropdown-toggle {
     border-radius: 0px 4px 4px 0px;
+    background-color: #fff;
+    border: 1px solid #DEE5EF !important;
 }
+
+
 
 .quizsection__type .dropdown-item.active,
 .quizsection__type .dropdown-item:active {
@@ -6795,25 +6814,160 @@ main.main-dashboard {
     overflow: hidden;
 }
 
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit {
+    background: #269fa3;
+    border-radius: 7px;
+}
+
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset {
+    border-radius: 7px;
+}
+
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit:hover,
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit:focus {
+    background: #1E7B7E;
+}
+
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset:hover,
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset:focus {
+    background: #e5e5e5;
+}
+
+label.addvid__title {
+    cursor: pointer;
+}
+
+.acpublish__header {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 18px;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.acpublish__header .back {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../img/arrow-right.svg') no-repeat center / 100%;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.acpublish__header .back:hover {
+    opacity: .6;
+}
+
+.acpublish__header .greenbtn {
+    width: 130px;
+    height: 48px;
+    font-size: 18px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acpublish__header .greenbtn img {
+    width: 20px;
+    margin-left: 5px;
+    margin-top: -1px;
+}
+
+.acpublish__body {
+    padding: 20px 26px 24px 26px;
+}
+
+.acpublish__body .greywrap {
+    border-radius: 4px;
+    border: 1px solid #DEE5EF;
+    background: #f3f5f7;
+    padding: 25px 40px;
+}
+
+.publish .startcourse__sidebar {
+    padding: 20px 30px;
+}
+
+.publish .startcourse__sbhead p {
+    padding: 0 10px 0 0;
+    max-width: calc(100% - 20px);
+}
+
+.publish .col-lg-4 {
+    -ms-flex: 0 0 400px;
+    flex: 0 0 400px;
+    max-width: 400px;
+}
+
+.publish .col-lg-8 {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.publish .startcourse__sbhead button {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    width: 20px;
+    height: 20px;
+    opacity: .7;
+    right: -5px;
+    position: relative;
+
+}
+
+.publish .startcourse__sbhead button img {
+    max-width: 100%;
+}
+
+.publish .startcourse__sbgroup {
+    padding: 20px 0 12px;
+}
 
 
+.publish .startcourse__sbgroup .title img {
+    margin-left: 7px;
+}
 
+.dragitem__content .disabledtext {
+    margin: 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #DEE5EF;
+    color: #A4B0C0;
+    font-size: 14px;
+    line-height: 140%;
+}
 
+.dashtab-section.dashtab-section_hifiauthor .dashaction__labels button.deactivatebtn {
+    padding: 2px;
+    height: 30px;
+    min-width: 110px;
+    justify-content: center;
+}
 
+.optdropdown ul li.bordernone a:after {
+    display: none;
+}
 
+.dashboard-section .contaddinfo__contentsect .bootstrap-select button {
+    background-color: transparent !important;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+#reactivate .greenbtn,
+#deactivate .greenbtn {
+    border: 1px solid #269FA3;
+}
 
 
 
