@@ -30,10 +30,6 @@ $(document).ready(function () {
             prevArrow: '<button type="button" class="slick-prev"></button>',
             nextArrow: '<button type="button" class="slick-next"></button>',
             infinite: false,
-            // centerPadding: '120px',
-            // centerMode: true,
-            // autoplay: true,
-            // autoplaySpeed: 2000,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -67,7 +63,6 @@ $(document).ready(function () {
             ]
         });
     }
-
 
     // top top
     $(function () {
@@ -119,13 +114,11 @@ $(document).ready(function () {
     });
 
     // drop dashboard course
-
     $('.dashboardtabs .dashtable__row').click(function () {
         $(this).find('.droparrowbrn').toggleClass('rotatearrow');
         $(this).next('.dashtable__rowdescr').toggleClass('show');
         $(this).parent().toggleClass('open');
     });
-
 
     // tooltips
     $(function () {
@@ -149,7 +142,6 @@ $(document).ready(function () {
         }
     });
 
-
     // action btn - set green color
     $('.dashtable__checkblock input').change(function () {
         if ($(this).parents('.dashtable').find('.dashtable__checkblock input:not(:disabled)').is(':checked')) {
@@ -165,16 +157,13 @@ $(document).ready(function () {
         $(this).next('.startcourse__sblist').slideToggle();
     });
 
-    // if ($(window).width() > 1024) {
     $('.startcourse__sbhead button').click(function () {
         $('.sidebarcol').addClass('hidesidenav');
     });
     $('.startcourse__sidebarburger').click(function () {
         $('.sidebarcol').removeClass('hidesidenav');
     });
-    // }
 
-    // if ($(window).width() < 1025) {
     $('.startcourse__sidebarburgermob, .mobsidebarlink').click(function () {
         $('.startcourse__sidebar').addClass('tabletshowsidebar');
         $("<div class='darkoverley'></div>").appendTo($("body"));
@@ -190,8 +179,6 @@ $(document).ready(function () {
             $('.darkoverley').remove();
         }
     });
-    // }
-
 
     // close alert - start-course-wrong.html
     $('.alertclose').click(function () {
@@ -226,15 +213,10 @@ $(document).ready(function () {
         }
     });
 
-
     // start course - remove disabled (start-course2.html)
-
     $('.answervariant input').change(function () {
         $('.question__submit').removeAttr("disabled");
-        // $(this).parents('.startcourse__stepbody').find('.stepbodybtnsright:not(.wrong) .greenbtn').removeAttr("disabled");
     });
-
-
 });
 
 if ($('*').is('video')) {
@@ -263,39 +245,11 @@ if ($('*').is('video')) {
         // Expose
         window.players = players;
 
-
         // Bind event listener
         function on(selector, type, callback) {
             document.querySelector(selector).addEventListener(type, callback, false);
         }
-
-        // Custom btn - if need gtml btns
-        // Play
-        // on('.js-play', 'click', () => {
-        //     player.play();
-        // });
-
-        //Pause
-        // on('.js-pause', 'click', () => {
-        //     player.pause();
-        // });
-
-        //Stop
-        // on('.js-stop', 'click', () => {
-        //     player.stop();
-        // });
-
-        //Rewind
-        // on('.js-rewind', 'click', () => {
-        //     player.rewind();
-        // });
-
-        //Forward
-        // on('.js-forward', 'click', () => {
-        //     player.forward();
-        // });
     });
-
     // without controls
     document.addEventListener('DOMContentLoaded', () => {
         // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
@@ -326,39 +280,10 @@ if ($('*').is('video')) {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ========================================================= PHASE 2 =========================================================
 
 $(document).ready(function () {
     // Option BTN
-
     let optionBtn = $('.optdropdown button');
 
     $(optionBtn).click(function () {
@@ -375,7 +300,6 @@ $(document).ready(function () {
     });
 
     // departments
-
     let deplabelMoreBtn = $('.deplabel_more');
 
     $(deplabelMoreBtn).click(function () {
@@ -414,10 +338,7 @@ $(document).ready(function () {
         }
     });
 
-
-
     // ph2-addcourse-choosetype.html - add checkbox (test)
-
     let inputAddCourse = $('.courseinpfield input'),
         buttonAddCourse = $('.courseinpfield button'),
         linkAddCourse = $('.addnewcoursetype-btn');
@@ -430,7 +351,6 @@ $(document).ready(function () {
     $(linkAddCourse).click(function () {
         inputAddCourse.val('');
     });
-
 
     // choose type - disable btn
 
@@ -445,8 +365,6 @@ $(document).ready(function () {
     $(document).on('change', '.contchoosetype input', function () {
         inputsCheck();
     });
-
-
 
     // upload image
     $('.chooseFile').bind('change', function () {
@@ -492,8 +410,6 @@ $(document).ready(function () {
             $(main).removeClass('show');
         }
     });
-
-
 
     $(main).click(function () {
         $('.main-input .subinputs').addClass('show');
@@ -542,7 +458,6 @@ $(document).ready(function () {
         });
     }
 
-
     // view adding
     let tabsContent = $('.addcoursecont__tabcont-wrap .tab-content'),
         addingContent = $('.viewaddings-section'),
@@ -565,17 +480,11 @@ $(document).ready(function () {
         });
     }
 
-
-
-
-
     // view adding - btns
     $('.dragitem__btns .edit').click(function () {
         $(tabsContent).show();
         $(addingContent).hide();
     });
-
-
 
     $('.dragitem__text .edit').click(function (e) {
         $('#myTab a[href="#addtext"]').tab('show');
@@ -599,9 +508,6 @@ $(document).ready(function () {
         $(this).parents('.dragitem').remove();
     });
 
-
-
-
     // back btn - publish page
     $(".acpublish__header .back").click(function (event) {
         event.preventDefault();
@@ -617,10 +523,7 @@ $(document).ready(function () {
         $(this).prev().removeClass('bordernone');
     });
 
-
-
     // ph2-addcourse-addcurriculum.html - delete row
-
     let deleteCurrRow = $('.addcurric-currwrap .close-control button');
 
     $(deleteCurrRow).click(function () {
@@ -628,7 +531,6 @@ $(document).ready(function () {
     });
 
     // ph2-addcourse-addcurriculum-filltabs.html - create/delete new quiz (test)
-
     const parentQ = $('.quizsection__answers');
 
     $(document).on('click', '.qwbtns .removeqw', function () {
@@ -641,7 +543,6 @@ $(document).ready(function () {
         let nameValue = $(this).parents('.quizsection__answerrow').find('input').attr("name");
 
         if ($(selectQ).val() == 0) {
-            console.log('1');
             $(parentQ).append(`<div class="quizsection__answerrow">
             <div class="checkblock">
                 <input type="checkbox" id="${nameValue + i}" name="${nameValue}">
@@ -686,9 +587,6 @@ $(document).ready(function () {
             $('.quizsection__answerrow .checkblock input').attr('type', 'radio');
         }
     });
-
-
-
 
 });
 

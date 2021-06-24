@@ -116,9 +116,6 @@
         padding: 50px 150px;
     }
 
-
-    /* -------- */
-
     .acpublish__header .greenbtn {
         width: 100px;
         height: 40px;
@@ -188,9 +185,6 @@
         flex: 0 0 320px;
         max-width: 320px;
     }
-
-
-
 }
 
 @media(max-width:1400.8px) {
@@ -279,18 +273,6 @@
         font-size: 16px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 @media(max-width:1199.8px) {
@@ -353,7 +335,6 @@
     .coursehead__descrsect h1 {
         margin-bottom: 35px;
     }
-
 
     .coursehead__wrap {
         padding-right: 25px;
@@ -604,19 +585,9 @@
         margin-bottom: 7px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .optdropdown ul {
+        padding: 10px 0;
+    }
 
 }
 
@@ -674,6 +645,10 @@
     .dashtable__descrdetail {
         max-width: 55%;
         flex: 0 0 55%;
+    }
+
+    .deplabel {
+        padding: 4px 6px;
     }
 
 }
@@ -994,7 +969,6 @@
     }
 
     .startcourse__sidebarburger {
-        /* display: flex; */
         display: none;
     }
 
@@ -2341,8 +2315,6 @@
         justify-content: center;
     }
 
-
-
     .mobsidebarlink {
         display: inline-block;
         color: rgba(0, 0, 0, .9);
@@ -2477,7 +2449,6 @@
         margin-top: 30px;
     }
 
-
     .tourstart__bottsect {
         padding: 20px;
     }
@@ -2592,29 +2563,6 @@
     h6 {
         font-size: 16px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     h1,
     .titleh1 {
@@ -2753,15 +2701,4 @@
         padding: 0;
     }
 
-}
-
-
-
-
-/* PHASE 2 */
-
-@media(max-width:1100.8px) {
-    .deplabel {
-        padding: 4px 6px;
-    }
 }
