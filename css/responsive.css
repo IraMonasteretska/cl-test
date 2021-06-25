@@ -273,6 +273,10 @@
         font-size: 16px;
     }
 
+    .coursessl .slick-next {
+        right: -45px;
+    }
+
 }
 
 @media(max-width:1199.8px) {
