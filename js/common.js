@@ -56,8 +56,16 @@ $(document).ready(function () {
                 {
                     breakpoint: 576,
                     settings: {
-                        variableWidth: true
+                        slidesToShow: 1.5,
 
+                    }
+                }
+                ,
+                {
+                    breakpoint: 350,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: true,
                     }
                 }
             ]
