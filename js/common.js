@@ -137,9 +137,18 @@ $(document).ready(function () {
     });
 
     // tooltips
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+
+    if ($('*').is('.addcurric__main')) {
+        $('body').tooltip({
+            selector: '[data-toggle=tooltip]',
+            container: 'div.addcurric__main',
+        });
+    } else {
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    }
+
 
     // copy btn
     $('.passcodetext').click(function () {
@@ -390,7 +399,7 @@ $(document).ready(function () {
 
     // -----Course Settings / remove green box
     $('.coursesetting-label button').click(function () {
-        $(this).parents('.coursesetting-labelwrap').remove();
+        $(this).parents('.coursesetting-label').removeClass('show');
     });
 
     // datepicker
@@ -438,9 +447,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.switch-control').tooltip({
-        container: 'div.addcurric__main'
-    });
+
 
     // text editor
     if ($('body *').is('#editor')) {
@@ -474,49 +481,12 @@ $(document).ready(function () {
         });
     }
 
-    // view adding
-    let tabsContent = $('.addcoursecont__tabcont-wrap .tab-content'),
-        addingContent = $('.viewaddings-section'),
-        tabLink = $('.addcoursecont__tabnav .nav-link');
-    $('.viewadding').click(function (e) {
-        e.preventDefault();
-        $(tabsContent).hide();
-        $(addingContent).show();
-    });
-
-    $(tabLink).click(function () {
-        $(tabsContent).show();
-        $(addingContent).hide();
-    });
-
     // drag & drop
     if ($('body *').is('.viewaddings-section')) {
         var instance = $(".my-container").dad({
             draggable: ".viewaddings-section",
         });
     }
-
-    // view adding - btns
-    $('.dragitem__btns .edit').click(function () {
-        $(tabsContent).show();
-        $(addingContent).hide();
-    });
-
-    $('.dragitem__text .edit').click(function (e) {
-        $('#myTab a[href="#addtext"]').tab('show');
-    });
-    $('.dragitem__file .edit').click(function (e) {
-        $('#myTab a[href="#addfile"]').tab('show');
-    });
-    $('.dragitem__material .edit').click(function (e) {
-        $('#myTab a[href="#addvmaterial"]').tab('show');
-    });
-    $('.dragitem__video .edit').click(function (e) {
-        $('#myTab a[href="#addvideo"]').tab('show');
-    });
-    $('.dragitem__quiz .edit').click(function (e) {
-        $('#myTab a[href="#addquiz"]').tab('show');
-    });
 
     // remove drug row
     const deleteBtn = $('.dragitem .delete');
@@ -525,10 +495,10 @@ $(document).ready(function () {
     });
 
     // back btn - publish page
-    $(".acpublish__header .back").click(function (event) {
-        event.preventDefault();
-        history.back(1);
-    });
+    // $(".acpublish__header .back").click(function (event) {
+    //     event.preventDefault();
+    //     history.back(1);
+    // });
 
     // "option" - hover - remove border
     let optionLink = $('.optdropdown ul li');
@@ -540,9 +510,7 @@ $(document).ready(function () {
     });
 
     // ph2-addcourse-addcurriculum.html - delete row
-    let deleteCurrRow = $('.addcurric-currwrap .close-control button');
-
-    $(deleteCurrRow).click(function () {
+    $(document).on('click', '.addcurric-currwrap .close-control button', function () {
         $(this).parents('.addcurric-currwrap').remove();
     });
 
@@ -573,7 +541,6 @@ $(document).ready(function () {
             </div>
         </div>`);
         } else if ($(selectQ).val() == 1) {
-            console.log('2');
             $(parentQ).append(`<div class="quizsection__answerrow">
             <div class="checkblock">
                 <input type="radio" id="${nameValue + i}" name="${nameValue}">
@@ -603,6 +570,104 @@ $(document).ready(function () {
             $('.quizsection__answerrow .checkblock input').attr('type', 'radio');
         }
     });
+
+
+    // Add curriculum - edit topic name
+    $('.sect-breadcrumbs__editbtn').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.sect-breadcrumbs').find('.topicname').attr('contenteditable', true);
+        $('.topicname').focus();
+    });
+
+    // ph2-addcourse-addcurriculum.html ---
+    // drag & drop
+    if ($('body *').is('.my-containerr')) {
+        var instance = $(".my-containerr").dad({
+            draggable: ".addcurriculum__body",
+        });
+
+        // add new module
+        const addNewNodule = $('.addcurriculum__body-addmodule .addlink');
+
+        var i = 0;
+        $(addNewNodule).on("click", function (e) {
+            e.preventDefault();
+
+            $('.addcurriculum__body .dragwrap').append(`<div class="dragitem">
+                <div class="addcurric-currwrap">
+                    <div class="addcurric__main">
+                        <div class="addcurric__main-title">
+                            <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Understanding the Disease</a></p>
+                            <a href="#" class="edit"></a>
+                        </div>
+                        <div class="addcurric__main-controls">
+                            <div class="switch-control" data-toggle="tooltip"
+                                data-placement="top" title=""
+                                data-original-title="Learner can skip this Module">
+                                <input type="checkbox" id="${'main' + i}" />
+                                <label for="${'main' + i}"></label>
+                            </div>
+                            <div class="close-control">
+                                <button></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addcurric__sub">
+                        <div class="addcurric__main-title">
+                            <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Stages of Parkinson’s</a></p>
+                            <a href="#" class="edit"></a>
+                        </div>
+                        <div class="addcurric__main-controls">
+                            <div class="switch-control" data-toggle="tooltip"
+                                data-placement="top" title=""
+                                data-original-title="Learner can skip this Module">
+                                <input type="checkbox" id="${'sub' + i}" />
+                                <label for="${'sub' + i}"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`);
+            i++;
+        });
+
+    }
+    // edit text
+
+    $(document).on('click', '.addcurric__main-title .edit', function (e) {
+        e.preventDefault();
+        $(this).parents('.addcurric__main-title').find('p').attr('contenteditable', true);
+        $(this).parents('.addcurric__main-title').find('p').focus();
+    });
+
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.addcurric__main-title p').length && !$target.closest('.addcurric__main-title a').length) {
+            $('.addcurric__main-title p').attr('contenteditable', false);
+        }
+    });
+
+    // course settings - select
+    $(document).on('change', '.addcourse__select', function (e) {
+        $('.coursesetting-label').addClass('show');
+        var e = $(".addcourse__select :selected").text();
+        $('.coursesetting-label span').text(e)
+    });
+
+    // $('#mytabs a[href="#addfile"]').tab('show')
+    (function ($) {
+        $(function () {
+            var hash = window.location.hash;
+            $('.nav-tabs a[href="' + hash + '"]').tab('show');
+        });
+        let tabLink = $('.addcoursecont-body .nav-link').attr("href");
+
+        $(".extra-tab").click(function (event) {
+            $(`.nav-tabs a[href=${tabLink}]`).tab('show');
+            document.location.href = $(this).attr('href');
+            return false;
+        });
+    })(jQuery)
 
 });
 

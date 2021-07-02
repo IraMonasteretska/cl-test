@@ -5795,6 +5795,7 @@ textarea::-webkit-scrollbar-thumb {
     line-height: 130%;
     color: #000;
     padding-left: 20px;
+    padding-top: 1px;
 }
 
 .addcurric__main-title p:before {
@@ -6029,8 +6030,11 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .addcoursesection__content .addcoursecont-head {
-    padding: 16px;
+    padding: 8px 16px;
     border-bottom: 1px solid #D8D8D8;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
 }
 
 .addcoursesection__content .viewadding {
@@ -6717,7 +6721,8 @@ textarea::-webkit-scrollbar-thumb {
     line-height: 140%;
 }
 
-.dragitem__btns button {
+.dragitem__btns button,
+.dragitem__btns a {
     outline: none;
     border: none;
     padding: 0;
@@ -6930,7 +6935,6 @@ label.addvid__title {
     opacity: .7;
     right: -5px;
     position: relative;
-
 }
 
 .publish .startcourse__sbhead button img {
@@ -6975,6 +6979,59 @@ label.addvid__title {
 #deactivate .greenbtn {
     border: 1px solid #269FA3;
 }
+
+.addcoursesection__contblock .dragitem {
+    margin-bottom: 0;
+}
+
+.topicname,
+.addcurric__main-title p {
+    outline: none !important;
+}
+
+.fade:not(.show) {
+    display: none;
+}
+
+.addcurriculum__headbtns.ciewaddheadbtns,
+.coursesetting-label {
+    display: none;
+}
+
+.addcurriculum__headbtns.ciewaddheadbtns.show,
+.coursesetting-label.show {
+    display: flex;
+}
+
+.optdropdown ul li.active a {
+    font-family: Avenir black;
+    font-size: 16px;
+}
+
+.addcurric__main-title p a {
+    color: #000;
+}
+
+.viewaddings-section {
+    display: block;
+}
+
+.dashtable.dashtable_curriculum .dashtable__departmants {
+    width: calc(21% - 85px);
+}
+
+
+
+.dashtable__header .dropdown-item:focus,
+.dashtable__header .dropdown-item:hover {
+    background-color: #fff;
+    font-family: Avenir heavy;
+    font-size: 18px;
+}
+
+
+
+
 
 
 

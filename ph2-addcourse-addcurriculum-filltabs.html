@@ -56,16 +56,16 @@
                     <div class="addcoursesection__nav">
                         <div class="row no-gutters">
                             <div class="col-md-3">
-                                <a href="#">1. Choose Type</a>
+                                <a href="ph2-addcourse-choosetype.html">1. Choose Type</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#">2. Add Information</a>
+                                <a href="ph2-addcourse-addinformation.html">2. Add Information</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#" class="active">3. Add Curriculum</a>
+                                <a href="ph2-addcourse-addcurriculum.html" class="active">3. Add Curriculum</a>
                             </div>
                             <div class="col-md-3">
-                                <a href="#">4. Publish</a>
+                                <a href="ph2-addcourse-publish.html">4. Publish</a>
                             </div>
                         </div>
                     </div>
@@ -74,15 +74,21 @@
                             <div class="sectbrcr-wrap">
                                 <div class="sect-breadcrumbs">
                                     <ul>
-                                        <li><a href="#">Annual Training</a></li>
-                                        <li><a href="#">First Module</a></li>
-                                        <li>Topic 1</li>
+                                        <li><a href="ph2-addcourse-addcurriculum.html">Annual Training</a></li>
+                                        <li><a href="ph2-addcourse-addcurriculum.html">First Module</a></li>
+                                        <li class="topicname">Topic 1</li>
                                     </ul>
                                     <a href="#" class="sect-breadcrumbs__editbtn"></a>
                                 </div>
                             </div>
                             <div class="viewadding">
-                                <a href="#">View adding</a>
+                                <a href="ph2-addcourse-addcurriculum-viewadding.html">View adding</a>
+                            </div>
+                            <div class="addcurriculum__headbtns ciewaddheadbtns">
+                                <a href="ph2-hifi-author-main-draft.html" class="greenbtn white">Save draft</a>
+                                <a href="ph2-addcourse-publish.html" class="greenbtn">
+                                    <span>Preview <img src="img/arrow-rightbtn2.svg" alt="icon"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="row no-gutters addcoursecont-body">
@@ -132,8 +138,11 @@
                                                 </label>
                                             </div>
                                             <div class="course-addinf__btns">
-                                                <button class="greenbtn white">Cancel</button>
-                                                <button class="greenbtn">Add File</button>
+                                                <a href="ph2-addcourse-addcurriculum-viewadding.html"
+                                                    class="greenbtn white">Cancel</a>
+                                                <a href="ph2-addcourse-addcurriculum-viewadding.html"
+                                                    class="greenbtn">Add
+                                                    Text</a>
                                             </div>
                                         </div>
                                     </div>
@@ -149,17 +158,11 @@
                                             <div id="editor" class="editor"></div>
                                         </div>
                                         <div class="course-addinf__btns">
-                                            <button class="greenbtn white">Cancel</button>
-                                            <button class="greenbtn">Add Text</button>
+                                            <a href="ph2-addcourse-addcurriculum-viewadding.html"
+                                                class="greenbtn white">Cancel</a>
+                                            <a href="ph2-addcourse-addcurriculum-viewadding.html" class="greenbtn">Add
+                                                Text</a>
                                         </div>
-
-
-
-
-
-
-
-
 
                                     </div>
                                     <!-- add video -tab -->
@@ -196,8 +199,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="course-addinf__btns">
-                                                    <button class="greenbtn white">Cancel</button>
-                                                    <button class="greenbtn">Add File</button>
+                                                    <a href="ph2-addcourse-addcurriculum-viewadding.html"
+                                                        class="greenbtn white">Cancel</a>
+                                                    <a href="ph2-addcourse-addcurriculum-viewadding.html"
+                                                        class="greenbtn">Add
+                                                        Text</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -302,95 +308,12 @@
                                         </div>
 
                                         <div class="d-flex justify-content-end">
-                                            <button class="greenbtn finishbtn">Finish</button>
+                                            <a href="ph2-addcourse-addcurriculum-viewadding.html"
+                                                class="greenbtn finishbtn">Finish</a>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- view addings -->
-                                <div class="viewaddings-section">
-                                    <div class="my-container dragwrap">
-                                        <div class="dragitem dragitem__text">
-                                            <div class="dragitem__flexwrap">
-                                                <div class="dragitem__name">
-                                                    <p>Text</p>
-                                                </div>
-                                                <div class="dragitem__content">
-                                                    <!-- <textarea
-                                                        disabled>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</textarea> -->
-                                                    <div class="disabledtext">
-                                                        It is a long established fact that a reader will be
-                                                        distracted
-                                                        by the readable content of a page when looking at its
-                                                        layout.
-                                                        The point of using Lorem Ipsum is that it has a more-or-less
-                                                        normal distribution of letters, as opposed to using 'Content
-                                                        here, content here', making it look like readable English.
-                                                    </div>
-                                                </div>
-                                                <div class="dragitem__btns">
-                                                    <button class="edit"></button>
-                                                    <button class="delete"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dragitem dragitem__file">
-                                            <div class="dragitem__flexwrap">
-                                                <div class="dragitem__name">
-                                                    <p>File</p>
-                                                </div>
-                                                <div class="dragitem__content">
-                                                    <p class="attached-file">Annual Training.PDF</p>
-                                                </div>
-                                                <div class="dragitem__btns">
-                                                    <button class="edit"></button>
-                                                    <button class="delete"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dragitem dragitem__video">
-                                            <div class="dragitem__flexwrap">
-                                                <div class="dragitem__name">
-                                                    <p>Video</p>
-                                                </div>
-                                                <div class="dragitem__content">
-                                                    <p class="attached-file">Annual Training.MP4</p>
-                                                </div>
-                                                <div class="dragitem__btns">
-                                                    <button class="edit"></button>
-                                                    <button class="delete"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dragitem dragitem__quiz">
-                                            <div class="dragitem__flexwrap">
-                                                <div class="dragitem__name">
-                                                    <p>Quiz</p>
-                                                </div>
-                                                <div class="dragitem__content">
-                                                    <p>Annual Training question sample</p>
-                                                    <div class="dragitem__quizbox">
-                                                        <div class="dragitem__quiz">
-                                                            <input type="checkbox" id="quiz1" disabled>
-                                                            <label for="quiz1">Answer 1</label>
-                                                        </div>
-                                                        <div class="dragitem__quiz">
-                                                            <input type="checkbox" id="quiz2" disabled checked>
-                                                            <label for="quiz2">Answer 2</label>
-                                                        </div>
-                                                        <div class="dragitem__quiz">
-                                                            <input type="checkbox" id="quiz3" disabled>
-                                                            <label for="quiz3">Answer 3</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="dragitem__btns">
-                                                    <button class="edit"></button>
-                                                    <button class="delete"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
