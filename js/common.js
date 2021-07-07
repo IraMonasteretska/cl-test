@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // show password (login popup)
+    // show password (login page -- login-page.html)
     $(".showpassbtn").click(function () {
         var input = $('#password');
         if (input.attr("type") == "password") {
@@ -10,11 +10,10 @@ $(document).ready(function () {
         }
     });
 
-    // show / hide header nav
+    // show / hide header nav (header)
     $('.loginnedsect__userinfo').click(function () {
         $('.loginnedsect__nav').slideToggle();
     });
-
     $(document).click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.loginnedsect__nav').length && !$target.closest('.loginnedsect__userinfo').length) {
@@ -22,7 +21,7 @@ $(document).ready(function () {
         }
     });
 
-    // Courses slider
+    // Slider (homepage.html)
     if ($('body *').is('.coursessl')) {
         $('.coursessl').slick({
             slidesToShow: 3.5,
@@ -80,33 +79,23 @@ $(document).ready(function () {
         });
     }
 
-    // top top
+    // top top (homepage.html)
     $(function () {
         $('#up').click(function () {
             $('body, html').animate({ scrollTop: 0 }, 1500);
         });
     });
 
-    $(document).scroll(function () {
-        if ($(document).scrollTop() > 10) {
-            $('.totop button').addClass('show');
-        } else {
-            $('.totop button').removeClass('show');
-        }
-    });
-
-    // mobile - filter
+    // mobile - filter (homepage.html)
     $('.showfilter').click(function () {
         $(this).toggleClass('rotatepic');
         $('.filtboxeswrapp').toggleClass('show');
     });
-
     $('.phone-leftbox span').click(function () {
         $('.phone-leftbox span').removeClass('active');
         $(this).addClass('active');
         $('.coursfilter__filtbox').hide();
     });
-
     $('.btn-filtbox1').click(function () {
         $('.filtbox1').show();
     });
@@ -123,13 +112,13 @@ $(document).ready(function () {
         $('.dashboardlink').attr('data-target', '#dashboard-mobpop');
     }
 
-    // course accordeon
+    // course accordeon (course-detail-start.html and other course pages)
     $('.accordeon-titlebox').click(function () {
         $(this).next('.accordeon-descrbox').slideToggle();
         $(this).toggleClass('rotatearrow');
     });
 
-    // drop dashboard course
+    // drop dashboard course (dashboard-main.html)
     $('.dashboardtabs .dashtable__row').click(function () {
         $(this).find('.droparrowbrn').toggleClass('rotatearrow');
         $(this).next('.dashtable__rowdescr').toggleClass('show');
@@ -137,7 +126,6 @@ $(document).ready(function () {
     });
 
     // tooltips
-
     if ($('*').is('.addcurric__main')) {
         $('body').tooltip({
             selector: '[data-toggle=tooltip]',
@@ -149,8 +137,7 @@ $(document).ready(function () {
         });
     }
 
-
-    // copy btn
+    // copy btn (dashboard-main.html)
     $('.passcodetext').click(function () {
         $("#custom-tooltip").addClass('show');
         setTimeout(function () {
@@ -158,7 +145,7 @@ $(document).ready(function () {
         }, 2000);
     });
 
-    // check all
+    // check all (dashboard-main.html)
     $('.checkall').change(function () {
         if ($(this).is(':checked')) {
             $(this).parents('.dashtable__header').next('.dashtable__body').find('.dashtable__checkblock input:not(:disabled)').prop('checked', true);;
@@ -167,7 +154,7 @@ $(document).ready(function () {
         }
     });
 
-    // action btn - set green color
+    // action btn - set green color (dashboard-main.html)
     $('.dashtable__checkblock input').change(function () {
         if ($(this).parents('.dashtable').find('.dashtable__checkblock input:not(:disabled)').is(':checked')) {
             $(this).parents('.tab-pane').find('.dashaction__labels button').addClass('green');
@@ -176,19 +163,17 @@ $(document).ready(function () {
         }
     });
 
-    // course burger - sidebar
+    // course burger - sidebar (start-course.html, start course pages)
     $('.startcourse__sbgroup .title').click(function () {
         $(this).toggleClass('rotatearrow');
         $(this).next('.startcourse__sblist').slideToggle();
     });
-
     $('.startcourse__sbhead button').click(function () {
         $('.sidebarcol').addClass('hidesidenav');
     });
     $('.startcourse__sidebarburger').click(function () {
         $('.sidebarcol').removeClass('hidesidenav');
     });
-
     $('.startcourse__sidebarburgermob, .mobsidebarlink').click(function () {
         $('.startcourse__sidebar').addClass('tabletshowsidebar');
         $("<div class='darkoverley'></div>").appendTo($("body"));
@@ -205,13 +190,13 @@ $(document).ready(function () {
         }
     });
 
-    // close alert - start-course-wrong.html
+    // close alert (start-course-wrong.html)
     $('.alertclose').click(function () {
         $(this).parent('.alert').fadeOut();
         $(this).parent('.alert').next('.correctans').fadeOut();
     });
 
-    // PAGE TOUR
+    // PAGE TOUR (homepage.html)
     $('.tourstart__skip, .tourstart__bottsect button').click(function () {
         $('.darkwrapper.tourwrapper.beforesteps').hide();
     });
@@ -223,13 +208,11 @@ $(document).ready(function () {
         $('.darkwrapper.tourwrapper.aftersteps').removeClass('show');
     });
 
-    // home page - mobile course popup
+    // mobile course popup (homepage.html)
     $('.coursessection .courslists__item').attr('data-toggle', '');
-
     if ($(window).width() < 1200) {
         $('.coursessection .courslists__item').attr('data-toggle', 'modal');
     }
-
     $(window).resize(function () {
         if ($(window).width() < 1200) {
             $('.coursessection .courslists__item').attr('data-toggle', 'modal');
@@ -244,7 +227,9 @@ $(document).ready(function () {
     });
 });
 
+
 if ($('*').is('video')) {
+    // video (start-course.html)
     document.addEventListener('DOMContentLoaded', () => {
         // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
         const controls = [
@@ -275,7 +260,7 @@ if ($('*').is('video')) {
             document.querySelector(selector).addEventListener(type, callback, false);
         }
     });
-    // without controls
+    // video (start-course-disable-rewind.html)
     document.addEventListener('DOMContentLoaded', () => {
         // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
         const controls = [
@@ -308,14 +293,12 @@ if ($('*').is('video')) {
 // ========================================================= PHASE 2 =========================================================
 
 $(document).ready(function () {
-    // Option BTN
+    // Option BTN (ph2-hifi-author-main.html)
     let optionBtn = $('.optdropdown button');
-
     $(optionBtn).click(function () {
         $(this).toggleClass('rotatearrow');
         $(this).next('ul').slideToggle();
     });
-
     $(document).click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.optdropdown').length) {
@@ -324,13 +307,11 @@ $(document).ready(function () {
         }
     });
 
-    // departments
+    // departments (ph2-hifi-author-main.html)
     let deplabelMoreBtn = $('.deplabel_more');
-
     $(deplabelMoreBtn).click(function () {
         $(this).next('.deplabels-morebox').slideToggle();
     })
-
     $(document).click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.dashtable__body .dashtable__departmants').length) {
@@ -338,8 +319,7 @@ $(document).ready(function () {
         }
     });
 
-    // drop dashboard course
-
+    // drop dashboard course (ph2-hifi-author-main.html)
     $('.dashtab-section_hifiauthor .dashtable__row').click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.dashtable__departmants').length && !$target.closest('.editcourse-btn').length) {
@@ -350,7 +330,6 @@ $(document).ready(function () {
     });
 
     // check all - EDITED
-
     $('.dashtable_curriculum .checkall').change(function () {
         if ($(this).is(':checked')) {
             $(this).parents('.dashtable__header').siblings('.dashtable__body').find('.dashtable__checkblock input:not(:disabled)').prop('checked', true);
@@ -363,7 +342,7 @@ $(document).ready(function () {
         }
     });
 
-    // ph2-addcourse-choosetype.html - add checkbox (test)
+    // Add checkbox (ph2-addcourse-choosetype.html)
     let inputAddCourse = $('.courseinpfield input'),
         buttonAddCourse = $('.courseinpfield button'),
         linkAddCourse = $('.addnewcoursetype-btn');
@@ -371,14 +350,12 @@ $(document).ready(function () {
     $(buttonAddCourse).click(function () {
         $("#mydiv").append(`<div class="addcoursesection__checkwrap"><input type="checkbox" id="${inputAddCourse.val()}"><label for="${inputAddCourse.val()}">${inputAddCourse.val()}</label></div >`);
     });
-
     // clear input
     $(linkAddCourse).click(function () {
         inputAddCourse.val('');
     });
 
-    // choose type - disable btn
-
+    // choose type - disable btn (ph2-addcourse-choosetype.html)
     function inputsCheck() {
         if ($('.addcoursesection__radiobox input').is(':checked') && $('.addcoursesection__checkswrap input').is(':checked')) {
             $('.addcoursesection__continue').removeClass('disable');
@@ -386,7 +363,6 @@ $(document).ready(function () {
             $('.addcoursesection__continue').addClass('disable');
         }
     }
-
     $(document).on('change', '.contchoosetype input', function () {
         inputsCheck();
     });
@@ -397,7 +373,7 @@ $(document).ready(function () {
         $(this).next('.file-upload').find('.noFile').text(filename.replace("C:\\fakepath\\", ""));
     });
 
-    // -----Course Settings / remove green box
+    // Course Settings / remove green box (ph2-addcourse-addinformation.html)
     $('.coursesetting-label button').click(function () {
         $(this).parents('.coursesetting-label').removeClass('show');
     });
@@ -413,7 +389,7 @@ $(document).ready(function () {
         });
     }
 
-    // input mask
+    // input mask (ph2-addcourse-addinformation-workshop.html)
     if ($('body *').is('.inputmask')) {
         $("#start-hour").inputmask("99:99");
         $("#end-hour").inputmask("99:99");
@@ -435,11 +411,9 @@ $(document).ready(function () {
             $(main).removeClass('show');
         }
     });
-
     $(main).click(function () {
         $('.main-input .subinputs').addClass('show');
     });
-
     $(document).click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.main-input').length) {
@@ -447,9 +421,7 @@ $(document).ready(function () {
         }
     });
 
-
-
-    // text editor
+    // text editor (ph2-addcourse-addcurriculum-filltabs.html)
     if ($('body *').is('#editor')) {
         $("#editor").trumbowyg({
             semantic: false,
@@ -481,26 +453,19 @@ $(document).ready(function () {
         });
     }
 
-    // drag & drop
+    // drag & drop 
     if ($('body *').is('.viewaddings-section')) {
         var instance = $(".my-container").dad({
             draggable: ".viewaddings-section",
         });
     }
-
     // remove drug row
     const deleteBtn = $('.dragitem .delete');
     $(deleteBtn).click(function () {
         $(this).parents('.dragitem').remove();
     });
 
-    // back btn - publish page
-    // $(".acpublish__header .back").click(function (event) {
-    //     event.preventDefault();
-    //     history.back(1);
-    // });
-
-    // "option" - hover - remove border
+    // "option btn" - hover - remove <li> border
     let optionLink = $('.optdropdown ul li');
     $(optionLink).mouseover(function () {
         $(this).prev().addClass('bordernone');
@@ -516,13 +481,10 @@ $(document).ready(function () {
 
     // ph2-addcourse-addcurriculum-filltabs.html - create/delete new quiz (test)
     const parentQ = $('.quizsection__answers');
-
     $(document).on('click', '.qwbtns .removeqw', function () {
         $(this).parents('.quizsection__answerrow').remove();
     });
-
     var i = 0;
-
     $(document).on('click', '.qwbtns .addqw', function () {
         let nameValue = $(this).parents('.quizsection__answerrow').find('input').attr("name");
 
@@ -559,7 +521,7 @@ $(document).ready(function () {
         i++;
     });
 
-    // change checkbox to radio
+    // change checkbox to radio (ph2-addcourse-addcurriculum-filltabs.html)
     let selectQ = $('.quizsection__type select');
     $(document).on('change', '.quizsection__type select', function () {
         $('.quizsection__answerrow .checkblock input').prop("checked", false);
@@ -571,15 +533,7 @@ $(document).ready(function () {
         }
     });
 
-
-    // Add curriculum - edit topic name
-    $('.sect-breadcrumbs__editbtn').click(function (e) {
-        e.preventDefault();
-        $(this).parents('.sect-breadcrumbs').find('.topicname').attr('contenteditable', true);
-        $('.topicname').focus();
-    });
-
-    // ph2-addcourse-addcurriculum.html ---
+    // ph2-addcourse-addcurriculum.html
     // drag & drop
     if ($('body *').is('.my-containerr')) {
         var instance = $(".my-containerr").dad({
@@ -632,29 +586,72 @@ $(document).ready(function () {
         });
 
     }
-    // edit text
 
-    $(document).on('click', '.addcurric__main-title .edit', function (e) {
+    // edit text (ph2-addcourse-addcurriculum.html)
+    $.fn.focusEnd = function () {
+        $(this).focus();
+        var tmp = $('<a />').appendTo($(this)),
+            node = tmp.get(0),
+            range = null,
+            sel = null;
+
+        if (document.selection) {
+            range = document.body.createTextRange();
+            range.moveToElementText(node);
+            range.select();
+        } else if (window.getSelection) {
+            range = document.createRange();
+            range.selectNode(node);
+            sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+        tmp.remove();
+        return this;
+    }
+
+    $('.addcurric__main-title .edit').click(function (e) {
         e.preventDefault();
-        $(this).parents('.addcurric__main-title').find('p').attr('contenteditable', true);
-        $(this).parents('.addcurric__main-title').find('p').focus();
-    });
+        $('.addcurric__main-title p a').attr('contenteditable', false);
+        $(this).parents('.addcurric__main-title').find('a').attr('contenteditable', true);
+
+        $(this).prev().find('a').focusEnd();
+    })
 
     $(document).click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.addcurric__main-title p').length && !$target.closest('.addcurric__main-title a').length) {
-            $('.addcurric__main-title p').attr('contenteditable', false);
+            $('.addcurric__main-title p a').attr('contenteditable', false);
         }
     });
 
-    // course settings - select
+    $(document).on("paste", ".addcurric__main-title p a", function (e) {
+        e.preventDefault();
+        var text = e.originalEvent.clipboardData.getData("text/plain");
+        document.execCommand("insertHTML", false, text);
+    });
+
+    // Add curriculum - edit topic name (ph2-addcourse-addcurriculum-filltabs.html)
+    $('.sect-breadcrumbs__editbtn').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.sect-breadcrumbs').find('.topicname').attr('contenteditable', true);
+        $(this).prev().find('.topicname').focusEnd();
+    });
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.topicname').length && !$target.closest('.sect-breadcrumbs__editbtn').length) {
+            $('.sect-breadcrumbs .topicname').attr('contenteditable', false);
+        }
+    });
+
+    // course settings - select (ph2-addcourse-addinformation.html)
     $(document).on('change', '.addcourse__select', function (e) {
         $('.coursesetting-label').addClass('show');
         var e = $(".addcourse__select :selected").text();
         $('.coursesetting-label span').text(e)
     });
 
-    // $('#mytabs a[href="#addfile"]').tab('show')
+    // links on tab links (ph2-addcourse-addcurriculum-viewadding-workshop.html)
     (function ($) {
         $(function () {
             var hash = window.location.hash;

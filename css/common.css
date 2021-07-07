@@ -7020,8 +7020,6 @@ label.addvid__title {
     width: calc(21% - 85px);
 }
 
-
-
 .dashtable__header .dropdown-item:focus,
 .dashtable__header .dropdown-item:hover {
     background-color: #fff;
@@ -7029,15 +7027,48 @@ label.addvid__title {
     font-size: 18px;
 }
 
+.addcurric__main-title p>a {
+    outline: none !important;
+    display: block;
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.addcurric__main-title p a[contenteditable=true] {
+    background-color: #fff;
+    padding: 6px 8px;
+    border: 1px solid #DEE5EF;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.addcurric__main-title p>a a {
+    padding: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+
+.addcurric__main-title .edit {
+    outline: none !important;
+    cursor: pointer;
+}
+
+.addcurric__main-title p {
+    max-width: calc(100% - 35px);
+}
 
 
-
-
-
-
-
-
-
+span {
+    outline: none !important;
+}
 
 /* 
 font-family: 'Inter', sans-serif;
