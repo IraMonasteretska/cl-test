@@ -347,6 +347,25 @@ $(document).ready(function () {
         buttonAddCourse = $('.courseinpfield button'),
         linkAddCourse = $('.addnewcoursetype-btn');
 
+
+    $(document).on('keyup change click', inputAddCourse, function () {
+
+        if ($(inputAddCourse).val() != '') {
+            $(buttonAddCourse).prop("disabled", false);
+            console.log('0000')
+        } else {
+            $(buttonAddCourse).prop("disabled", true);
+            console.log('111')
+        }
+    });
+
+    // .inftextmodal .courseinpfield button
+
+
+
+
+
+
     $(buttonAddCourse).click(function () {
         $("#mydiv").append(`<div class="addcoursesection__checkwrap"><input type="checkbox" id="${inputAddCourse.val()}"><label for="${inputAddCourse.val()}">${inputAddCourse.val()}</label></div >`);
     });
@@ -478,6 +497,9 @@ $(document).ready(function () {
     $(document).on('click', '.addcurric-currwrap .close-control button', function () {
         $(this).parents('.addcurric-currwrap').remove();
     });
+    $(document).on('click', '.addcurric-currwrap .close-controltopic button', function () {
+        $(this).parents('.addcurric__sub').remove();
+    });
 
     // ph2-addcourse-addcurriculum-filltabs.html - create/delete new quiz (test)
     const parentQ = $('.quizsection__answers');
@@ -540,6 +562,7 @@ $(document).ready(function () {
             draggable: ".addcurriculum__body",
         });
 
+        // sdsdsd
         // add new module
         const addNewNodule = $('.addcurriculum__body-addmodule .addlink');
 
@@ -566,24 +589,68 @@ $(document).ready(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="addcurric__sub">
-                        <div class="addcurric__main-title">
-                            <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Stages of Parkinson’s</a></p>
-                            <a href="#" class="edit"></a>
-                        </div>
-                        <div class="addcurric__main-controls">
-                            <div class="switch-control" data-toggle="tooltip"
-                                data-placement="top" title=""
-                                data-original-title="Learner can skip this Module">
-                                <input type="checkbox" id="${'sub' + i}" />
-                                <label for="${'sub' + i}"></label>
+                    <div class="addcurric__subs">
+                        <div class="addcurric__sub">
+                            <div class="addcurric__main-title">
+                                <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Stages of Parkinson’s</a></p>
+                                <a href="#" class="edit"></a>
+                            </div>
+                            <div class="addcurric__main-controls">
+                                <div class="switch-control" data-toggle="tooltip"
+                                    data-placement="top" title=""
+                                    data-original-title="Learner can skip this Module">
+                                    <input type="checkbox" id="${'sub' + i}" />
+                                    <label for="${'sub' + i}"></label>
+                                </div>
+                                <div class="close-controltopic">
+                                    <button></button>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="addcurric__sub">
+                        <a class="addnewtopic" href="#">Add new topic</a>
                     </div>
                 </div>
             </div>`);
             i++;
         });
+
+        // ADD new topic
+        var subTopicId = 0;
+        $(document).on('click', '.addnewtopic', function (e) {
+            e.preventDefault();
+            $(this).parent().siblings('.addcurric__subs').append(
+                `<div class="addcurric__sub">
+                    <div class="addcurric__main-title">
+                        <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Stages of Parkinson’s</a></p>
+                        <a href="#" class="edit"></a>
+                    </div>
+                    <div class="addcurric__main-controls">
+                        <div class="switch-control" data-toggle="tooltip"
+                            data-placement="top" title=""
+                            data-original-title="Learner can skip this Module">
+                            <input type="checkbox" id="${'subtopic' + subTopicId}" />
+                            <label for="${'subtopic' + subTopicId}"></label>
+                        </div>
+                        <div class="close-controltopic">
+                            <button></button>
+                        </div>
+                    </div>
+                </div>`
+            );
+
+
+
+
+            subTopicId++;
+        });
+
+
+
+
+
+
 
     }
 
@@ -610,13 +677,18 @@ $(document).ready(function () {
         return this;
     }
 
-    $('.addcurric__main-title .edit').click(function (e) {
+    $(document).on('click', '.addcurric__main-title .edit', function (e) {
         e.preventDefault();
+
         $('.addcurric__main-title p a').attr('contenteditable', false);
         $(this).parents('.addcurric__main-title').find('a').attr('contenteditable', true);
 
         $(this).prev().find('a').focusEnd();
     })
+
+
+
+
 
     $(document).click(function (event) {
         let $target = $(event.target);
@@ -625,11 +697,19 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+
     $(document).on("paste", ".addcurric__main-title p a", function (e) {
         e.preventDefault();
         var text = e.originalEvent.clipboardData.getData("text/plain");
         document.execCommand("insertHTML", false, text);
     });
+
+
+
+
 
     // Add curriculum - edit topic name (ph2-addcourse-addcurriculum-filltabs.html)
     $('.sect-breadcrumbs__editbtn').click(function (e) {
@@ -665,6 +745,37 @@ $(document).ready(function () {
             return false;
         });
     })(jQuery)
+
+
+
+    // delete row button 
+
+    function checkCountRow() {
+        if ($('.addcurric-currwrap').length > 1) {
+            console.log('test')
+            $('.addcurric__main-controls .close-control').addClass('removedis');
+        } else {
+            console.log('test2')
+            $('.addcurric__main-controls .close-control').removeClass('removedis');
+        }
+    }
+
+    $(document).on('click', '.addlink.add-child', function () {
+        checkCountRow()
+    });
+    $(document).on('click', '.addcurric__main-controls .close-control', function () {
+        checkCountRow()
+    });
+
+
+
+    // DRAG and drop
+
+
+
+
+
+
 
 });
 

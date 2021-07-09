@@ -4598,20 +4598,20 @@ button {
 }
 
 .dashtable.dashtable_curriculum .dashtable__name {
-    width: 32%;
+    width: 30%;
 }
 
 .dashtable.dashtable_curriculum .dashtable__instructor {
-    width: 19%;
+    width: 18%;
 }
 
 .dashtable.dashtable_curriculum .dashtable__createdate {
-    width: 16%;
+    width: 15%;
     padding-right: 10px;
 }
 
 .dashtable__type {
-    width: 12%;
+    width: 11%;
     padding-right: 10px;
 }
 
@@ -4710,7 +4710,7 @@ button {
 .flexalign {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .extendcourse-btn.rotatearrow {
@@ -5902,7 +5902,8 @@ textarea::-webkit-scrollbar-thumb {
     display: flex;
 }
 
-.addcurric__main-controls .close-control {
+.addcurric__main-controls .close-control,
+.addcurric__main-controls .close-controltopic {
     display: flex;
 }
 
@@ -5914,7 +5915,8 @@ textarea::-webkit-scrollbar-thumb {
     background: #fff;
 }
 
-.addcurric__main-controls .close-control button {
+.addcurric__main-controls .close-control button,
+.addcurric__main-controls .close-controltopic button {
     border: none;
     outline: none;
     padding: 0;
@@ -7017,7 +7019,7 @@ label.addvid__title {
 }
 
 .dashtable.dashtable_curriculum .dashtable__departmants {
-    width: calc(21% - 85px);
+    width: calc(26% - 120px);
 }
 
 .dashtable__header .dropdown-item:focus,
@@ -7069,6 +7071,77 @@ label.addvid__title {
 span {
     outline: none !important;
 }
+
+.addnewtopic {
+    position: relative;
+    color: #000;
+    font-size: 14px;
+    line-height: 130%;
+    padding-left: 24px;
+    display: inline-block;
+}
+
+.addnewtopic:hover {
+    color: #000;
+}
+
+.addnewtopic:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../img/add.svg') no-repeat center / 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.addcurric__subs .addcurric__sub .close-controltopic {
+    display: flex;
+}
+
+.addcurric__subs .addcurric__sub:only-child .close-controltopic {
+    display: none;
+}
+
+.addcurric__main-controls .close-control {
+    pointer-events: none;
+}
+
+.addcurric__main-controls .close-control.removedis {
+    pointer-events: initial;
+}
+
+.inftextmodal .courseinpfield button:disabled,
+.inftextmodal .courseinpfield button:disabled:hover {
+    background: #8C8C8C;
+}
+
+.draftcourse-btn.reviescourse {
+    background: #17BAB0;
+    width: 65px;
+}
+
+.dashtable__iconsbox {
+    width: 105px;
+}
+
+.dashtable__iconsbox .extendcourse-btn {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
 
 /* 
 font-family: 'Inter', sans-serif;
