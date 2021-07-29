@@ -2451,7 +2451,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
     padding-left: 45px;
     padding-right: 115px;
     font-size: 12px;
-    /* color: #8C8C8C; */
     color: #000;
     font-family: Avenir book;
     background-image: url('../img/search-ic.svg');
@@ -2489,8 +2488,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 .dashsearch__box button:hover {
     background: #364c74;
 }
-
-
 
 .dashaction {
     padding: 3px 15px;
@@ -3601,7 +3598,6 @@ button {
 
 .questionsection__bottsect .question__submit:disabled,
 .questionsection__bottsect .question__submit:disabled:hover {
-    /* pointer-events: none; */
     background: #BFBFBF;
     color: #fff;
     border-color: #BFBFBF;
@@ -3752,7 +3748,6 @@ button {
     left: 0;
     background-color: #000;
     background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.7) 100%);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4319,7 +4314,6 @@ button {
     -ms-transition: 0s !important;
     -o-transition: 0s !important;
     transition-delay: unset !important;
-
     z-index: 9999999;
 }
 
@@ -4444,8 +4438,10 @@ button {
 
 
 
-/* PHASE 2 */
 
+
+
+/* ========== PHASE 2 ========== */
 
 .orangebtn {
     background: #FF9334;
@@ -4571,7 +4567,6 @@ button {
     color: #000;
 }
 
-
 .dashtab-section .tab-content {
     padding-top: 20px;
 }
@@ -4683,7 +4678,6 @@ button {
     padding: 0;
     border: none;
     background-color: transparent;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -4752,7 +4746,6 @@ button {
 
 .dashtable_curriculum .dashtable__descrdetail .title,
 .dashtable_curriculum .dashtable__descrdetail .descr {
-    /* max-width: 460px; */
     max-width: 600px;
 }
 
@@ -4811,7 +4804,6 @@ button {
 
 .addcoursesection__nav a:hover {
     text-decoration: none;
-    /* background: #c4f0f2; */
 }
 
 .addcoursesection__content {
@@ -4911,6 +4903,7 @@ button {
     color: #000;
     padding-left: 25px;
     cursor: pointer;
+    word-break: break-all;
 }
 
 .addcoursesection__checkwrap label:before {
@@ -5071,7 +5064,6 @@ button {
 .inftextmodal .infotext {
     background: rgba(255, 98, 0, 0.05);
     padding: 14px 48px;
-
 }
 
 .inftextmodal .infotext p:before {
@@ -5084,7 +5076,6 @@ button {
     position: absolute;
     left: -33px;
     top: 0;
-
 }
 
 .inftextmodal .infotext p {
@@ -5631,10 +5622,6 @@ textarea::-webkit-scrollbar-thumb {
     font-size: 14px;
 }
 
-#maininput {
-    /* color: transparent; */
-}
-
 #maininput.show {
     color: #000;
 }
@@ -5804,7 +5791,6 @@ textarea::-webkit-scrollbar-thumb {
     width: 15px;
     height: 15px;
     background: url('../img/drag.svg') no-repeat center/100%;
-    position: initial;
     position: absolute;
     left: 0;
     top: 45%;
@@ -5853,7 +5839,6 @@ textarea::-webkit-scrollbar-thumb {
 .addcurric__sub .addcurric__main-title p {
     font-family: Avenir book;
 }
-
 
 .switch-control input[type=checkbox] {
     height: 0;
@@ -5943,7 +5928,6 @@ textarea::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-
 .addcurriculum__body-addmodule .addlink:before {
     content: '';
     display: inline-block;
@@ -6027,7 +6011,8 @@ textarea::-webkit-scrollbar-thumb {
     font-family: Avenir heavy;
 }
 
-.addcurric-currwrap {
+.addcurric-currwrap,
+.addcurric-currwrapsect {
     margin-bottom: 4px;
 }
 
@@ -6287,7 +6272,6 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .quizsection__topsect {
-    border-bottom: 1px solid #D8D8D8;
     padding: 30px 10px 14px 10px;
 }
 
@@ -6375,8 +6359,6 @@ textarea::-webkit-scrollbar-thumb {
     border: 1px solid #DEE5EF !important;
 }
 
-
-
 .quizsection__type .dropdown-item.active,
 .quizsection__type .dropdown-item:active {
     background-color: #269fa3;
@@ -6439,6 +6421,10 @@ textarea::-webkit-scrollbar-thumb {
     border-radius: 4px;
     margin: 0;
     cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .quizsection__answerrow .checkblock input:checked+label {
@@ -6535,7 +6521,7 @@ textarea::-webkit-scrollbar-thumb {
 .quizsection__sett-btns {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .quizsection__sett-btns a {
@@ -6560,14 +6546,16 @@ textarea::-webkit-scrollbar-thumb {
     color: #394A64;
 }
 
-.quizsection__sett-btns a.save {
+.quizsection__sett-btns a.save,
+.quizsection__sett-btns a.delete {
     font-size: 14px;
     color: #fff;
     background: #394A64;
     border: 1px solid #394A64;
 }
 
-.quizsection__sett-btns a.save:hover {
+.quizsection__sett-btns a.save:hover,
+.quizsection__sett-btns a.delete:hover {
     background: #435e86;
     border: 1px solid #435e86;
 }
@@ -6619,7 +6607,8 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .quizsection__bottsect {
-    padding: 20px 11px;
+    padding: 20px 14px;
+    border-top: 1px solid #D8D8D8;
 }
 
 .greenbtn.finishbtn {
@@ -6708,7 +6697,6 @@ textarea::-webkit-scrollbar-thumb {
     background: #fff;
     margin-bottom: 25px;
 }
-
 
 .dragitem__content textarea {
     width: 100%;
@@ -7067,7 +7055,6 @@ label.addvid__title {
     max-width: calc(100% - 35px);
 }
 
-
 span {
     outline: none !important;
 }
@@ -7134,6 +7121,239 @@ span {
 .dashtable__iconsbox .extendcourse-btn {
     margin-left: 10px;
 }
+
+.list-group-item {
+    position: initial;
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+/* 26.07 update*/
+
+.quizsection__wrapp {
+    display: none;
+}
+
+.quizsection__wrapp.show {
+    display: block;
+}
+
+.startquizbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 126px;
+    height: 32px;
+    background: #394A64;
+    border-radius: 10px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    margin-top: 36px;
+}
+
+.startquizbtn:hover {
+    opacity: .9;
+    text-decoration: none;
+}
+
+.startquizbtn span {
+    color: #fff;
+    font-size: 12px;
+    font-family: Avenir heavy;
+    position: relative;
+    display: inline-block;
+    padding-left: 25px;
+}
+
+.startquizbtn span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../img/add-white.svg') no-repeat center/100%;
+    top: 50%;
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -1px;
+}
+
+.startquizbtn.hide {
+    display: none;
+}
+
+.removeqw.disabled {
+    pointer-events: none;
+}
+
+.addcurric__subs .addcurric__sub:only-child .close-controltopic {
+    display: none;
+}
+
+.quizsection__answers .quizsection__answerrow:only-child .removeqw {
+    pointer-events: none;
+    display: none;
+}
+
+.quizsection__answers .quizsection__answerrow:only-child .qwbtns {
+    justify-content: center;
+}
+
+.quizsection__topsect.hide {
+    display: none;
+}
+
+.quizsection__sett-btns a.delete.disabled {
+    pointer-events: none;
+}
+
+.quizsection__topsectwrap .quizsection__topsect:only-child a.delete {
+    pointer-events: none;
+}
+
+.finalexam {
+    padding: 30px 0 10px 0;
+}
+
+.finalexam .addcurriculum__headtitle p {
+    padding: 0 30px;
+    margin-bottom: 26px;
+}
+
+.finalexam .addcurric__main-controls {
+    justify-content: flex-end;
+}
+
+.finalexam .dragitem {
+    margin-bottom: 0;
+}
+
+.addnewexam-btnsect {
+    padding: 11px 50px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.addnewexam-btnsect a,
+.addnewexam-btnsect button {
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 130%;
+    font-family: Avenir heavy;
+    color: #000;
+    padding-left: 27px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.addnewexam-btnsect a:before,
+.addnewexam-btnsect button:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../img/add.svg') no-repeat center/100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    -webkit-transform: translateY(-50%) rotate(0deg);
+    -moz-transform: translateY(-50%) rotate(0deg);
+    -ms-transform: translateY(-50%) rotate(0deg);
+    -o-transform: translateY(-50%) rotate(0deg);
+    margin-top: -1px;
+}
+
+.finalexam .addcurric__main-controls .close-control {
+    pointer-events: initial;
+}
+
+.finalexam .dragwrapfinexam .dragitem:only-child .close-control {
+    pointer-events: none;
+}
+
+.finalexam .quizsection__wrapp {
+    display: block;
+}
+
+.finalexam .quizsection__topsect {
+    padding: 30px 35px 20px 53px;
+}
+
+.finalexam .quizsection__topsect {
+    border-bottom: 5px solid #fff;
+}
+
+.finalexam .quizsection__topsect:last-child {
+    border-bottom: none;
+}
+
+.finalexam__addbtn {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.finalexam .quizsection__bottsect {
+    border: none;
+    background-color: #fff;
+    padding: 16px 50px;
+}
+
+.finalexam .quizsection__bottsect .finalexam__addbtn {
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 130%;
+    font-family: Avenir heavy;
+    color: #000;
+    padding-left: 27px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.finalexam .quizsection__bottsect .finalexam__addbtn:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/add.svg) no-repeat center/100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    -webkit-transform: translateY(-50%) rotate(0deg);
+    -moz-transform: translateY(-50%) rotate(0deg);
+    -ms-transform: translateY(-50%) rotate(0deg);
+    -o-transform: translateY(-50%) rotate(0deg);
+    margin-top: -1px;
+}
+
+.forminpwrap__inpfield .flexalign {
+    justify-content: flex-start;
+}
+
+
 
 
 

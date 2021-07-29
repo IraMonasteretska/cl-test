@@ -29,52 +29,50 @@ $(document).ready(function () {
             prevArrow: '<button type="button" class="slick-prev"></button>',
             nextArrow: '<button type="button" class="slick-next"></button>',
             infinite: false,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                    }
-                },
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 4,
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: false,
-                        variableWidth: true,
-                        slidesToShow: 3,
-
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        variableWidth: true,
-                        slidesToShow: 2,
-
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1.5,
-
-                    }
+            responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
                 }
-                ,
-                {
-                    breakpoint: 350,
-                    settings: {
-                        slidesToShow: 1,
-                        variableWidth: true,
-                    }
+            },
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 4,
                 }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    variableWidth: true,
+                    slidesToShow: 3,
+
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    variableWidth: true,
+                    slidesToShow: 2,
+
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1.5,
+
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 1,
+                    variableWidth: true,
+                }
+            }
             ]
         });
     }
@@ -82,7 +80,9 @@ $(document).ready(function () {
     // top top (homepage.html)
     $(function () {
         $('#up').click(function () {
-            $('body, html').animate({ scrollTop: 0 }, 1500);
+            $('body, html').animate({
+                scrollTop: 0
+            }, 1500);
         });
     });
 
@@ -126,6 +126,10 @@ $(document).ready(function () {
     });
 
     // tooltips
+    $(function () {
+        $('[data-toggle="tooltip1"]').tooltip()
+    });
+
     if ($('*').is('.addcurric__main')) {
         $('body').tooltip({
             selector: '[data-toggle=tooltip]',
@@ -250,7 +254,9 @@ if ($('*').is('video')) {
         ];
 
         // const player = new Plyr('#player', { controls });
-        const players = Plyr.setup('.video__controls', { controls });
+        const players = Plyr.setup('.video__controls', {
+            controls
+        });
 
         // Expose
         window.players = players;
@@ -278,7 +284,9 @@ if ($('*').is('video')) {
         ];
 
         // const player = new Plyr('#player', { controls });
-        const players1 = Plyr.setup('.video__nocontrols', { controls });
+        const players1 = Plyr.setup('.video__nocontrols', {
+            controls
+        });
 
         // Expose
         window.players1 = players1;
@@ -347,28 +355,18 @@ $(document).ready(function () {
         buttonAddCourse = $('.courseinpfield button'),
         linkAddCourse = $('.addnewcoursetype-btn');
 
-
     $(document).on('keyup change click', inputAddCourse, function () {
-
         if ($(inputAddCourse).val() != '') {
             $(buttonAddCourse).prop("disabled", false);
-            console.log('0000')
         } else {
             $(buttonAddCourse).prop("disabled", true);
-            console.log('111')
         }
     });
-
-    // .inftextmodal .courseinpfield button
-
-
-
-
-
 
     $(buttonAddCourse).click(function () {
         $("#mydiv").append(`<div class="addcoursesection__checkwrap"><input type="checkbox" id="${inputAddCourse.val()}"><label for="${inputAddCourse.val()}">${inputAddCourse.val()}</label></div >`);
     });
+
     // clear input
     $(linkAddCourse).click(function () {
         inputAddCourse.val('');
@@ -423,13 +421,13 @@ $(document).ready(function () {
         let valueEnd = $(end).val();
 
         $(main).val(`${valueStart}  -  ${valueEnd}`);
-
         if ($('.test').val() != '') {
             $(main).addClass('show');
         } else {
             $(main).removeClass('show');
         }
     });
+
     $(main).click(function () {
         $('.main-input .subinputs').addClass('show');
     });
@@ -477,7 +475,9 @@ $(document).ready(function () {
         var instance = $(".my-container").dad({
             draggable: ".viewaddings-section",
         });
+
     }
+
     // remove drug row
     const deleteBtn = $('.dragitem .delete');
     $(deleteBtn).click(function () {
@@ -502,30 +502,30 @@ $(document).ready(function () {
     });
 
     // ph2-addcourse-addcurriculum-filltabs.html - create/delete new quiz (test)
-    const parentQ = $('.quizsection__answers');
     $(document).on('click', '.qwbtns .removeqw', function () {
         $(this).parents('.quizsection__answerrow').remove();
     });
+
     var i = 0;
     $(document).on('click', '.qwbtns .addqw', function () {
         let nameValue = $(this).parents('.quizsection__answerrow').find('input').attr("name");
-
-        if ($(selectQ).val() == 0) {
-            $(parentQ).append(`<div class="quizsection__answerrow">
-            <div class="checkblock">
-                <input type="checkbox" id="${nameValue + i}" name="${nameValue}">
-                <label for="${nameValue + i}"></label>
-            </div>
-            <div class="qwtext">
-                <input type="text" placeholder="Type answer">
-            </div>
-            <div class="qwbtns">
-                <button class="addqw"></button>
-                <button class="removeqw"></button>
-            </div>
-        </div>`);
-        } else if ($(selectQ).val() == 1) {
-            $(parentQ).append(`<div class="quizsection__answerrow">
+        // let selectQ = $('.quizsection__type select');
+        if ($('.quizsection__type select').val() == 0) {
+            $(this).parents('.quizsection__topsect').find('.quizsection__answers').append(`<div class="quizsection__answerrow">
+                 <div class="checkblock">
+                    <input type="checkbox" id="${nameValue + i}" name="${nameValue}">
+                    <label for="${nameValue + i}"></label>
+                 </div>
+                 <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                 </div>
+                    <div class="qwbtns">
+                        <button class="addqw"></button>
+                        <button class="removeqw"></button>
+                    </div>
+                </div>`);
+        } else if ($('.quizsection__type select').val() == 1) {
+            $(this).parents('.quizsection__topsect').find('.quizsection__answers').append(`<div class="quizsection__answerrow">
             <div class="checkblock">
                 <input type="radio" id="${nameValue + i}" name="${nameValue}">
                 <label for="${nameValue + i}"></label>
@@ -539,19 +539,16 @@ $(document).ready(function () {
             </div>
         </div>`);
         }
-
         i++;
     });
 
     // change checkbox to radio (ph2-addcourse-addcurriculum-filltabs.html)
-    let selectQ = $('.quizsection__type select');
     $(document).on('change', '.quizsection__type select', function () {
-        $('.quizsection__answerrow .checkblock input').prop("checked", false);
-
-        if ($(selectQ).val() == 0) {
-            $('.quizsection__answerrow .checkblock input').attr('type', 'checkbox');
-        } else if ($(selectQ).val() == 1) {
-            $('.quizsection__answerrow .checkblock input').attr('type', 'radio');
+        $(this).parents('.quizsection__topsect').find('.quizsection__answerrow .checkblock input').prop("checked", false);
+        if ($(this).val() == 0) {
+            $(this).parents('.quizsection__topsect').find('.quizsection__answerrow .checkblock input').attr('type', 'checkbox');
+        } else if ($(this).val() == 1) {
+            $(this).parents('.quizsection__topsect').find('.quizsection__answerrow .checkblock input').attr('type', 'radio');
         }
     });
 
@@ -561,15 +558,11 @@ $(document).ready(function () {
         var instance = $(".my-containerr").dad({
             draggable: ".addcurriculum__body",
         });
-
-        // sdsdsd
         // add new module
         const addNewNodule = $('.addcurriculum__body-addmodule .addlink');
-
         var i = 0;
         $(addNewNodule).on("click", function (e) {
             e.preventDefault();
-
             $('.addcurriculum__body .dragwrap').append(`<div class="dragitem">
                 <div class="addcurric-currwrap">
                     <div class="addcurric__main">
@@ -639,19 +632,8 @@ $(document).ready(function () {
                     </div>
                 </div>`
             );
-
-
-
-
             subTopicId++;
         });
-
-
-
-
-
-
-
     }
 
     // edit text (ph2-addcourse-addcurriculum.html)
@@ -679,16 +661,10 @@ $(document).ready(function () {
 
     $(document).on('click', '.addcurric__main-title .edit', function (e) {
         e.preventDefault();
-
         $('.addcurric__main-title p a').attr('contenteditable', false);
         $(this).parents('.addcurric__main-title').find('a').attr('contenteditable', true);
-
         $(this).prev().find('a').focusEnd();
-    })
-
-
-
-
+    });
 
     $(document).click(function (event) {
         let $target = $(event.target);
@@ -697,19 +673,11 @@ $(document).ready(function () {
         }
     });
 
-
-
-
-
     $(document).on("paste", ".addcurric__main-title p a", function (e) {
         e.preventDefault();
         var text = e.originalEvent.clipboardData.getData("text/plain");
         document.execCommand("insertHTML", false, text);
     });
-
-
-
-
 
     // Add curriculum - edit topic name (ph2-addcourse-addcurriculum-filltabs.html)
     $('.sect-breadcrumbs__editbtn').click(function (e) {
@@ -738,7 +706,6 @@ $(document).ready(function () {
             $('.nav-tabs a[href="' + hash + '"]').tab('show');
         });
         let tabLink = $('.addcoursecont-body .nav-link').attr("href");
-
         $(".extra-tab").click(function (event) {
             $(`.nav-tabs a[href=${tabLink}]`).tab('show');
             document.location.href = $(this).attr('href');
@@ -746,16 +713,11 @@ $(document).ready(function () {
         });
     })(jQuery)
 
-
-
     // delete row button 
-
     function checkCountRow() {
         if ($('.addcurric-currwrap').length > 1) {
-            console.log('test')
             $('.addcurric__main-controls .close-control').addClass('removedis');
         } else {
-            console.log('test2')
             $('.addcurric__main-controls .close-control').removeClass('removedis');
         }
     }
@@ -769,14 +731,245 @@ $(document).ready(function () {
 
 
 
-    // DRAG and drop
 
 
 
+    // 26.07 update
+
+    // start quiz (ph2-addcourse-addcurriculum-filltabs.html)
+    $('.startquizbtn').click(function (e) {
+        e.preventDefault();
+        $(this).addClass('hide');
+        $('.quizsection__wrapp').addClass('show');
+    });
 
 
 
+    // VISUAL - NOT FOR FUNCTIONALITY
+
+    // add question - ph2-addcourse-addcurriculum-filltabs.html
+    const addQuestion = $('.quizsection__bottsect .darkbluebtn');
+
+    var i = 1;
+    $(addQuestion).on("click", function (e) {
+        e.preventDefault();
+        $('.quizsection__topsectwrap').append(`<div class="quizsection__topsect">
+        <div class="quizsection__qw">
+            <div class="quizsection__num">
+                q${i + 1}
+            </div>
+            <div class="quizsection__text">
+                <input type="text" placeholder="Type question">
+            </div>
+            <div class="quizsection__type">
+                <select class="selectpicker">
+                    <option value="0">Checkboxes</option>
+                    <option value="1">Radioboxes</option>
+                </select>
+            </div>
+        </div>
+        <div class="quizsection__answers">
+            <div class="quizsection__answerrow">
+                <div class="checkblock">
+                    <input type="checkbox" id="${'answ1' + i}" name="${'q1' + i}">
+                    <label for="${'answ1' + i}"></label>
+                </div>
+                <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                </div>
+                <div class="qwbtns">
+                    <button class="addqw"></button>
+                    <button class="removeqw"></button>
+                </div>
+            </div>
+            <div class="quizsection__answerrow">
+                <div class="checkblock">
+                    <input type="checkbox" id="${'answ2' + i}" name="${'q1' + i}">
+                    <label for="${'answ2' + i}"></label>
+                </div>
+                <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                </div>
+                <div class="qwbtns">
+                    <button class="addqw"></button>
+                    <button class="removeqw"></button>
+                </div>
+            </div>
+            <div class="quizsection__answerrow">
+                <div class="checkblock">
+                    <input type="checkbox" id="${'answ3' + i}" name="${'q1' + i}">
+                    <label for="${'answ3' + i}"></label>
+                </div>
+                <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                </div>
+                <div class="qwbtns">
+                    <button class="addqw"></button>
+                    <button class="removeqw"></button>
+                </div>
+            </div>
+        </div>
+        <div class="quizsection__sett">
+            <div class="quizsection__sett-switchbox">
+                <div class="addvideo__switchwrap">
+                    <div class="switch-control">
+                        <input type="checkbox" id="${'switchsett1' + i}" />
+                        <label for="${'switchsett1' + i}"></label>
+                    </div>
+                    <div class="addvideo__switchwrap-descr">
+                        <label for="${'switchsett1' + i}">Show currect
+                            answer</label>
+                    </div>
+                </div>
+                <div class="addvideo__switchwrap">
+                    <div class="switch-control">
+                        <input type="checkbox" id="${'switchsett2' + i}" />
+                        <label for="${'switchsett2' + i}"></label>
+                    </div>
+                    <div class="addvideo__switchwrap-descr">
+                        <label for="${'switchsett2' + i}">Shuffle answer</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quizsection__sett-btns">
+                <a href="#" class="delete">Delete</a>
+            </div>
+        </div>
+    </div>`);
+        i++;
+
+        // reinit select
+        $('select').selectpicker();
+    });
+
+    $(document).on('click', '.quizsection__sett-btns a.delete', function (e) {
+        e.preventDefault();
+
+        if ($('.quizsection__topsect').length > 1) {
+            $(this).parents('.quizsection__topsect').remove();
+        }
+    });
+
+    $(document).on('click', '.quizsection__sett-btns a.delete', function (e) {
+        for (var i = 0; i < $('.quizsection__topsect').length; i++) {
+            $($('.quizsection__topsect')[i]).find('.quizsection__num').text('Q' + (i + 1));
+        }
+    });
+
+    $('.quizsection__bottsect .darkbluebtn').click(function () {
+        for (var i = 0; i < $('.quizsection__topsect').length; i++) {
+            $($('.quizsection__topsect')[i]).find('.quizsection__num').text('Q' + (i + 1));
+        }
+    });
+
+
+
+    // Final Exam (add new button) / drag&drop - ph2-add-final-topic-step1.htm
+
+    const addExamBtn = $('.addnewexam-btnsect .addnewexbtn');
+
+    var i = 1;
+    $(addExamBtn).on("click", function (e) {
+        e.preventDefault();
+        $('.dragwrapfinexam').append(`
+            <div class="dragitem">
+                <div class="addcurric-currwrapsect">
+                    <div class="addcurric__main">
+                        <div class="addcurric__main-title">
+                            <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Exam Part ${i + 1}</a></p>
+                            <a href="#" class="edit"></a>
+                        </div>
+                        <div class="addcurric__main-controls">
+                            <div class="close-control">
+                                <button></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+        i++;
+    });
+
+
+    // drag&drop
+    if ($('body *').is('.finalexam')) {
+        var instance = $(".dragwrapfinexam").dad({
+            draggable: ".finalexam",
+        });
+    }
+
+    $(document).on('click', '.finalexam .close-control', function () {
+        $(this).parents('.dragitem').remove();
+    });
+
+
+    const addQuestionEx = $('.finalexam__addbtn');
+
+    var i = 1;
+    $(addQuestionEx).on("click", function (e) {
+        e.preventDefault();
+        $('.quizsection__topsectwrap').append(`<div class="quizsection__topsect">
+        <div class="quizsection__qw">
+            <div class="quizsection__num">
+                q${i + 1}
+            </div>
+            <div class="quizsection__text">
+                <input type="text" placeholder="Type question">
+            </div>
+            <div class="quizsection__type">
+                <select class="selectpicker">
+                    <option value="0">Checkboxes</option>
+                    <option value="1">Radioboxes</option>
+                </select>
+            </div>
+        </div>
+        <div class="quizsection__answers">
+            <div class="quizsection__answerrow">
+                <div class="checkblock">
+                    <input type="checkbox" id="${'answ1' + i}" name="${'q1' + i}">
+                    <label for="${'answ1' + i}"></label>
+                </div>
+                <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                </div>
+                <div class="qwbtns">
+                    <button class="addqw"></button>
+                    <button class="removeqw"></button>
+                </div>
+            </div>
+            <div class="quizsection__answerrow">
+                <div class="checkblock">
+                    <input type="checkbox" id="${'answ2' + i}" name="${'q1' + i}">
+                    <label for="${'answ2' + i}"></label>
+                </div>
+                <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                </div>
+                <div class="qwbtns">
+                    <button class="addqw"></button>
+                    <button class="removeqw"></button>
+                </div>
+            </div>
+            <div class="quizsection__answerrow">
+                <div class="checkblock">
+                    <input type="checkbox" id="${'answ3' + i}" name="${'q1' + i}">
+                    <label for="${'answ3' + i}"></label>
+                </div>
+                <div class="qwtext">
+                    <input type="text" placeholder="Type answer">
+                </div>
+                <div class="qwbtns">
+                    <button class="addqw"></button>
+                    <button class="removeqw"></button>
+                </div>
+            </div>
+        </div>
+    </div>`);
+        i++;
+
+        // reinit select
+        $('select').selectpicker();
+    });
 
 });
-
-
