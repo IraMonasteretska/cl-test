@@ -832,8 +832,8 @@ $(document).ready(function () {
             </div>
             <div class="quizsection__type">
                 <select class="selectpicker">
-                    <option value="0">Mutiple Choices</option>
-                    <option value="1">Radioboxes</option>
+                    <option value="0">Checkboxes</option>
+                    <option value="1">Mutiple Choices</option>
                 </select>
             </div>
         </div>
