@@ -4651,6 +4651,10 @@ button {
     line-height: 120%;
     font-family: Avenir heavy;
     cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .deplabels-morebox {
@@ -6361,9 +6365,32 @@ textarea::-webkit-scrollbar-thumb {
 
 .quizsection__type .dropdown-item.active,
 .quizsection__type .dropdown-item:active {
-    background-color: #269fa3;
+    /* background-color: #269fa3; */
     font-size: 14px;
+    color: #000;
 }
+
+.quizsection__type .dropdown-item {
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.quizsection__type .dropdown-item:hover {
+    background-color: #269fa3;
+    color: #fff;
+}
+
+.quizsection__answerrow input[type="radio"]+label {
+    border-radius: 50%;
+}
+
+
+
+
+
 
 .quizsection__type .dropdown-item {
     font-size: 14px;
@@ -6948,6 +6975,8 @@ label.addvid__title {
     color: #A4B0C0;
     font-size: 14px;
     line-height: 140%;
+
+
 }
 
 .dashtab-section.dashtab-section_hifiauthor .dashaction__labels button.deactivatebtn {
@@ -7025,6 +7054,17 @@ label.addvid__title {
 }
 
 .addcurric__main-title p a[contenteditable=true] {
+    background-color: #fff;
+    padding: 6px 8px;
+    border: 1px solid #DEE5EF;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.addcurric__main-title p span[contenteditable=true] {
     background-color: #fff;
     padding: 6px 8px;
     border: 1px solid #DEE5EF;

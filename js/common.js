@@ -567,7 +567,7 @@ $(document).ready(function () {
                 <div class="addcurric-currwrap">
                     <div class="addcurric__main">
                         <div class="addcurric__main-title">
-                            <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Understanding the Disease</a></p>
+                            <p><span>Understanding the Disease</span></p>
                             <a href="#" class="edit"></a>
                         </div>
                         <div class="addcurric__main-controls">
@@ -659,25 +659,94 @@ $(document).ready(function () {
         return this;
     }
 
-    $(document).on('click', '.addcurric__main-title .edit', function (e) {
+    $(document).on('click', '.addcurric__subs .addcurric__main-title .edit', function (e) {
         e.preventDefault();
-        $('.addcurric__main-title p a').attr('contenteditable', false);
-        $(this).parents('.addcurric__main-title').find('a').attr('contenteditable', true);
+        $('.addcurric__subs .addcurric__main-title p a').attr('contenteditable', false);
+        $(this).parents('.addcurric__subs .addcurric__main-title').find('a').attr('contenteditable', true);
         $(this).prev().find('a').focusEnd();
     });
 
+    // exam
+    $(document).on('click', '.dragwrapfinexam .addcurric__main-title .edit', function (e) {
+        e.preventDefault();
+        $('.dragwrapfinexam .addcurric__main-title p a').attr('contenteditable', false);
+        $(this).parents('.dragwrapfinexam .addcurric__main-title').find('a').attr('contenteditable', true);
+        $(this).prev().find('a').focusEnd();
+    });
     $(document).click(function (event) {
         let $target = $(event.target);
-        if (!$target.closest('.addcurric__main-title p').length && !$target.closest('.addcurric__main-title a').length) {
-            $('.addcurric__main-title p a').attr('contenteditable', false);
+        if (!$target.closest('.dragwrapfinexam .addcurric__main-title p').length && !$target.closest('.dragwrapfinexam .addcurric__main-title a').length) {
+            $('.dragwrapfinexam .addcurric__main-title p a').attr('contenteditable', false);
+        }
+    });
+    // ----
+
+
+
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.addcurric__subs .addcurric__main-title p').length && !$target.closest('.addcurric__subs .addcurric__main-title a').length) {
+            $('.addcurric__subs .addcurric__main-title p a').attr('contenteditable', false);
         }
     });
 
-    $(document).on("paste", ".addcurric__main-title p a", function (e) {
+    $(document).on("paste", ".addcurric__subs .addcurric__main-title p a", function (e) {
         e.preventDefault();
         var text = e.originalEvent.clipboardData.getData("text/plain");
         document.execCommand("insertHTML", false, text);
     });
+
+
+
+
+
+
+
+
+
+    $.fn.focusEnd1 = function () {
+        $(this).focus();
+        var tmp = $('<span />').appendTo($(this)),
+            node = tmp.get(0),
+            range = null,
+            sel = null;
+
+        if (document.selection) {
+            range = document.body.createTextRange();
+            range.moveToElementText(node);
+            range.select();
+        } else if (window.getSelection) {
+            range = document.createRange();
+            range.selectNode(node);
+            sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+        tmp.remove();
+        return this;
+    }
+
+    $(document).on('click', '.addcurric__main .addcurric__main-title .edit', function (e) {
+        e.preventDefault();
+        $('.addcurric__main .addcurric__main-title p span').attr('contenteditable', false);
+        $(this).parents('.addcurric__main-title').find('span').attr('contenteditable', true);
+        $(this).prev().find('span').focusEnd1();
+    });
+
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.addcurric__main .addcurric__main-title a').length && !$target.closest('.addcurric__main .addcurric__main-title p').length) {
+            $('.addcurric__main-title p span').attr('contenteditable', false);
+        }
+    });
+
+    $(document).on("paste", ".addcurric__main .addcurric__main-title p span", function (e) {
+        e.preventDefault();
+        var text = e.originalEvent.clipboardData.getData("text/plain");
+        document.execCommand("insertHTML", false, text);
+    });
+
+
 
     // Add curriculum - edit topic name (ph2-addcourse-addcurriculum-filltabs.html)
     $('.sect-breadcrumbs__editbtn').click(function (e) {
@@ -763,7 +832,7 @@ $(document).ready(function () {
             </div>
             <div class="quizsection__type">
                 <select class="selectpicker">
-                    <option value="0">Checkboxes</option>
+                    <option value="0">Mutiple Choices</option>
                     <option value="1">Radioboxes</option>
                 </select>
             </div>
@@ -919,7 +988,7 @@ $(document).ready(function () {
             </div>
             <div class="quizsection__type">
                 <select class="selectpicker">
-                    <option value="0">Checkboxes</option>
+                    <option value="0">Mutiple Choices</option>
                     <option value="1">Radioboxes</option>
                 </select>
             </div>
@@ -972,4 +1041,35 @@ $(document).ready(function () {
         $('select').selectpicker();
     });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+
+
