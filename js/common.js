@@ -466,7 +466,6 @@ $(document).ready(function () {
                 ["unorderedList", "orderedList"],
                 ['fullscreen'],
             ]
-
         });
     }
 
@@ -475,7 +474,6 @@ $(document).ready(function () {
         var instance = $(".my-container").dad({
             draggable: ".viewaddings-section",
         });
-
     }
 
     // remove drug row
@@ -509,7 +507,6 @@ $(document).ready(function () {
     var i = 0;
     $(document).on('click', '.qwbtns .addqw', function () {
         let nameValue = $(this).parents('.quizsection__answerrow').find('input').attr("name");
-        // let selectQ = $('.quizsection__type select');
         if ($('.quizsection__type select').val() == 0) {
             $(this).parents('.quizsection__topsect').find('.quizsection__answers').append(`<div class="quizsection__answerrow">
                  <div class="checkblock">
@@ -555,12 +552,17 @@ $(document).ready(function () {
     // ph2-addcourse-addcurriculum.html
     // drag & drop
     if ($('body *').is('.my-containerr')) {
-        var instance = $(".my-containerr").dad({
-            draggable: ".addcurriculum__body",
-        });
+
+        // var instance = $(".my-containerr").dad({
+        //     draggable: ".addcurriculum__body",
+        // });
+
+
+
         // add new module
         const addNewNodule = $('.addcurriculum__body-addmodule .addlink');
         var i = 0;
+        var iclone = 0;
         $(addNewNodule).on("click", function (e) {
             e.preventDefault();
             $('.addcurriculum__body .dragwrap').append(`<div class="dragitem">
@@ -582,10 +584,10 @@ $(document).ready(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="addcurric__subs">
+                    <div class="addcurric__subs clone${iclone + 1}">
                         <div class="addcurric__sub">
                             <div class="addcurric__main-title">
-                                <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Stages of Parkinson’s</a></p>
+                                <p><a href="ph2-preview-addings.html">Course Objective</a></p>
                                 <a href="#" class="edit"></a>
                             </div>
                             <div class="addcurric__main-controls">
@@ -607,6 +609,7 @@ $(document).ready(function () {
                 </div>
             </div>`);
             i++;
+            iclone++;
         });
 
         // ADD new topic
@@ -616,7 +619,7 @@ $(document).ready(function () {
             $(this).parent().siblings('.addcurric__subs').append(
                 `<div class="addcurric__sub">
                     <div class="addcurric__main-title">
-                        <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Stages of Parkinson’s</a></p>
+                        <p><a href="ph2-preview-addings.html">Course Objective</a></p>
                         <a href="#" class="edit"></a>
                     </div>
                     <div class="addcurric__main-controls">
@@ -695,12 +698,6 @@ $(document).ready(function () {
         var text = e.originalEvent.clipboardData.getData("text/plain");
         document.execCommand("insertHTML", false, text);
     });
-
-
-
-
-
-
 
 
 
@@ -800,9 +797,6 @@ $(document).ready(function () {
 
 
 
-
-
-
     // 26.07 update
 
     // start quiz (ph2-addcourse-addcurriculum-filltabs.html)
@@ -811,8 +805,6 @@ $(document).ready(function () {
         $(this).addClass('hide');
         $('.quizsection__wrapp').addClass('show');
     });
-
-
 
     // VISUAL - NOT FOR FUNCTIONALITY
 
@@ -831,7 +823,7 @@ $(document).ready(function () {
                 <input type="text" placeholder="Type question">
             </div>
             <div class="quizsection__type">
-                <select class="selectpicker">
+                <select class="selectpicker" title="Select Question Type">
                     <option value="0">Checkboxes</option>
                     <option value="1">Mutiple Choices</option>
                 </select>
@@ -935,38 +927,38 @@ $(document).ready(function () {
 
     // Final Exam (add new button) / drag&drop - ph2-add-final-topic-step1.htm
 
-    const addExamBtn = $('.addnewexam-btnsect .addnewexbtn');
+    // const addExamBtn = $('.addnewexam-btnsect .addnewexbtn');
 
-    var i = 1;
-    $(addExamBtn).on("click", function (e) {
-        e.preventDefault();
-        $('.dragwrapfinexam').append(`
-            <div class="dragitem">
-                <div class="addcurric-currwrapsect">
-                    <div class="addcurric__main">
-                        <div class="addcurric__main-title">
-                            <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Exam Part ${i + 1}</a></p>
-                            <a href="#" class="edit"></a>
-                        </div>
-                        <div class="addcurric__main-controls">
-                            <div class="close-control">
-                                <button></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `);
-        i++;
-    });
+    // var i = 1;
+    // $(addExamBtn).on("click", function (e) {
+    //     e.preventDefault();
+    //     $('.dragwrapfinexam').append(`
+    //         <div class="dragitem">
+    //             <div class="addcurric-currwrapsect">
+    //                 <div class="addcurric__main">
+    //                     <div class="addcurric__main-title">
+    //                         <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Exam Part ${i + 1}</a></p>
+    //                         <a href="#" class="edit"></a>
+    //                     </div>
+    //                     <div class="addcurric__main-controls">
+    //                         <div class="close-control">
+    //                             <button></button>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     `);
+    //     i++;
+    // });
 
 
     // drag&drop
-    if ($('body *').is('.finalexam')) {
-        var instance = $(".dragwrapfinexam").dad({
-            draggable: ".finalexam",
-        });
-    }
+    // if ($('body *').is('.finalexam')) {
+    //     var instance = $(".dragwrapfinexam").dad({
+    //         draggable: ".finalexam",
+    //     });
+    // }
 
     $(document).on('click', '.finalexam .close-control', function () {
         $(this).parents('.dragitem').remove();
@@ -974,8 +966,8 @@ $(document).ready(function () {
 
 
     const addQuestionEx = $('.finalexam__addbtn');
-
     var i = 1;
+
     $(addQuestionEx).on("click", function (e) {
         e.preventDefault();
         $('.quizsection__topsectwrap').append(`<div class="quizsection__topsect">
@@ -987,9 +979,9 @@ $(document).ready(function () {
                 <input type="text" placeholder="Type question">
             </div>
             <div class="quizsection__type">
-                <select class="selectpicker">
-                    <option value="0">Mutiple Choices</option>
-                    <option value="1">Radioboxes</option>
+                <select class="selectpicker" title="Select Question Type">
+                    <option value="0">Checkboxes</option>
+                    <option value="1">Mutiple Choices</option>
                 </select>
             </div>
         </div>
@@ -1034,8 +1026,28 @@ $(document).ready(function () {
                 </div>
             </div>
         </div>
+        <div class="quizsection__sett">
+            <div class="quizsection__sett-switchbox">
+                <div class="addvideo__switchwrap">
+                    <div class="switch-control">
+                        <input type="checkbox" id="${'switchsett2' + i}" />
+                        <label for="${'switchsett2' + i}"></label>
+                    </div>
+                    <div class="addvideo__switchwrap-descr">
+                        <label for="${'switchsett2' + i}">Shuffle answer</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quizsection__sett-btns">
+                <a href="#" class="delete">Delete</a>
+            </div>
+        </div>
     </div>`);
         i++;
+
+        for (var i = 0; i < $('.quizsection__topsect').length; i++) {
+            $($('.quizsection__topsect')[i]).find('.quizsection__num').text('Q' + (i + 1));
+        }
 
         // reinit select
         $('select').selectpicker();
@@ -1045,13 +1057,19 @@ $(document).ready(function () {
 
 
 
+    if ($('*').is('.addcurric__subs')) {
+        var droppable = $(".addcurric__subs.clone").dad({
+            draggable: ".addcurric__sub",
+        });
+        var idrag = 0;
+        $('.addcurriculum__body-addmodule .addlink').on('click', function () {
+            var droppable = $(`.addcurric__subs.clone${idrag + 1}`).dad({
+                draggable: ".addcurric__sub",
 
-
-
-
-
-
-
+            });
+            idrag++;
+        });
+    }
 
 
 
@@ -1069,7 +1087,3 @@ $(document).ready(function () {
 
 
 });
-
-
-
-

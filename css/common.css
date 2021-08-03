@@ -7394,6 +7394,159 @@ span {
 }
 
 
+/* update */
+.addcurriculum__footer .addfinaltest {
+    text-decoration: none;
+}
+
+.finalexam.finalexam__tests {
+    padding-top: 0;
+}
+
+.addcurriculum__headtitle ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.addcurriculum__headtitle ul li {
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: -0.01em;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 120%;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 30px;
+    position: relative;
+}
+
+.addcurriculum__headtitle ul li:last-child {
+    margin-right: 0;
+}
+
+.addcurriculum__headtitle ul li a {
+    color: #BFBFBF;
+}
+
+.addcurriculum__headtitle ul li:not(:last-child):after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    right: -23px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    background: url('../img/breadcrumbarrow.svg') no-repeat center / 100%;
+}
+
+.finalexam.finalexam__tests .quizsection__type {
+    width: 100%;
+    max-width: 240px;
+    flex: 0 0 240px;
+}
+
+.quizsection__topsectwrap .quizsection__topsect a.delete {
+    width: 80px;
+}
+
+.quizsection__topsectwrap .quizsection__topsect:only-child a.delete {
+    background: #8C8C8C;
+    border-color: #8C8C8C;
+}
+
+.finalexam.finalexam__tests .quizsection__bottsect {
+    background: #F6F9FD;
+    border-top: 1px solid #D8D8D8;
+}
+
+.finalexam.finalexam__tests .quizsection__bottsect .finalexam__addbtn {
+    width: 154px;
+    height: 32px;
+    color: #fff;
+    background: #394A64;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 0;
+    justify-content: center;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.finalexam.finalexam__tests .quizsection__bottsect .finalexam__addbtn:hover {
+    background: #435e86;
+}
+
+.finalexam.finalexam__tests .quizsection__bottsect .finalexam__addbtn:before {
+    background: url(../img/add-white.svg) no-repeat center/100%;
+    position: relative;
+    vertical-align: middle;
+    top: 0;
+    transform: none;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.finalexam.finalexam__tests .quizsection__finishbtn {
+    padding: 0 30px;
+}
+
+.finalexam .addcurric__main-title p {
+    font-family: Avenir book;
+}
+
+.quizsection .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    color: #000000;
+}
+
+.quizsection .bootstrap-select .dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+    color: #A4B0C0;
+}
+
+.addcurriculum__headbtns.ciewaddheadbtns.show,
+.coursesetting-label.show {
+    justify-content: flex-end;
+}
+
+.previewaddings-textsect {
+    padding: 30px;
+}
+
+.previewaddings-textsect p {
+    color: #5E6871;
+    font-size: 14px;
+    line-height: 140%;
+    font-family: Avenir book;
+}
+
+.dashtable__header .bootstrap-select .dropdown-toggle.bs-placeholder .filter-option-inner-inner {
+    color: #000;
+}
+
+.tooltip.bs-tooltip-right.fade.show .tooltip-inner {
+    font-size: 12px;
+    line-height: 130%;
+    width: 180px;
+    font-family: Avenir book;
+    padding: 12px 13px;
+}
+
+label.addvideo__switchwrap-descr {
+    cursor: pointer;
+}
+
 
 
 
