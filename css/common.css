@@ -3195,7 +3195,6 @@ input[type=password]::-webkit-credentials-auto-fill-button {
 
 .startcourse__stephead {
     padding: 0 33px 0 33px;
-
 }
 
 .startcourse__stephead .grtitle {
@@ -3996,7 +3995,6 @@ button {
 .darkwrapper.tourwrapper.aftersteps .tourstart__bottsect {
     padding: 20px 80px 23px;
 }
-
 
 .darkwrapper.tourwrapper.aftersteps .tourstart__bottsect a,
 .darkwrapper.tourwrapper.aftersteps .tourstart__bottsect button {
@@ -6365,7 +6363,6 @@ textarea::-webkit-scrollbar-thumb {
 
 .quizsection__type .dropdown-item.active,
 .quizsection__type .dropdown-item:active {
-    /* background-color: #269fa3; */
     font-size: 14px;
     color: #000;
 }
@@ -6386,11 +6383,6 @@ textarea::-webkit-scrollbar-thumb {
 .quizsection__answerrow input[type="radio"]+label {
     border-radius: 50%;
 }
-
-
-
-
-
 
 .quizsection__type .dropdown-item {
     font-size: 14px;
@@ -6962,7 +6954,6 @@ label.addvid__title {
     padding: 20px 0 12px;
 }
 
-
 .publish .startcourse__sbgroup .title img {
     margin-left: 7px;
 }
@@ -6975,8 +6966,6 @@ label.addvid__title {
     color: #A4B0C0;
     font-size: 14px;
     line-height: 140%;
-
-
 }
 
 .dashtab-section.dashtab-section_hifiauthor .dashaction__labels button.deactivatebtn {
@@ -7467,7 +7456,7 @@ span {
 }
 
 .finalexam.finalexam__tests .quizsection__bottsect .finalexam__addbtn {
-    width: 154px;
+    width: 160px;
     height: 32px;
     color: #fff;
     background: #394A64;
@@ -7535,17 +7524,79 @@ span {
     color: #000;
 }
 
-.tooltip.bs-tooltip-right.fade.show .tooltip-inner {
-    font-size: 12px;
+.tooltip.bs-tooltip-right.show .tooltip-inner {
+    font-size: 12px !important;
     line-height: 130%;
     width: 180px;
-    font-family: Avenir book;
-    padding: 12px 13px;
+    font-family: Avenir book !important;
+    padding: 12px 13px !important;
 }
 
 label.addvideo__switchwrap-descr {
     cursor: pointer;
 }
+
+.addcurric__main .addcurric__main-title p:before {
+    display: none;
+}
+
+.addcurric__main .addcurric__main-title p {
+    padding-left: 0;
+}
+
+.addcoursecont__tabnav .nav-tabs li {
+    margin-bottom: 1px;
+}
+
+.addcoursecont__tabnav .nav-tabs li a {
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.addcoursecont__tabnav .nav-tabs li a:hover {
+    /* font-family: Avenir heavy; */
+    color: #fff;
+    background: #FF9334;
+}
+
+.finalexam .addcurric__main .addcurric__main-title p:before {
+    display: inline-block;
+}
+
+.finalexam .addcurric__main .addcurric__main-title p {
+    padding-left: 20px;
+}
+
+.viewaddings-section .dragitem {
+    cursor: pointer;
+}
+
+.addcurric__subs .dragtest:only-child:after {
+    /* pointer-events: none; */
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.addcurric__sub {
+    position: relative;
+
+}
+
+.dragtest {
+    position: relative;
+}
+
+
+
 
 
 
