@@ -7557,7 +7557,6 @@ label.addvideo__switchwrap-descr {
 }
 
 .addcoursecont__tabnav .nav-tabs li a:hover {
-    /* font-family: Avenir heavy; */
     color: #fff;
     background: #FF9334;
 }
@@ -7574,33 +7573,19 @@ label.addvideo__switchwrap-descr {
     cursor: pointer;
 }
 
-.addcurric__subs .dragtest:only-child:after {
-    /* pointer-events: none; */
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+.addcurric__subs {
+    position: relative;
+}
+
+.sortable-ghost {
+    background: rgb(38 159 163 / 10%);
+    background-color: rgb(38 159 163 / 10%);
+}
+
+.sortable-ghost .addcurric__main {
     background: transparent;
+    background-color: transparent;
 }
-
-.addcurric__sub {
-    position: relative;
-
-}
-
-.dragtest {
-    position: relative;
-}
-
-
-
-
-
-
-
 
 
 

@@ -398,7 +398,6 @@ $(document).ready(function () {
     // datepicker
     if ($('body *').is('.datepicker')) {
         $('.datepicker').datepicker({
-            // format: 'mm/dd/yyyy',
             autoclose: true,
             todayHighlight: true,
             container: '#coursedatepickcontainer',
@@ -469,13 +468,6 @@ $(document).ready(function () {
         });
     }
 
-    // drag & drop 
-    if ($('body *').is('.viewaddings-section')) {
-        var instance = $(".my-container").dad({
-            draggable: ".viewaddings-section",
-        });
-    }
-
     // remove drug row
     const deleteBtn = $('.dragitem .delete');
     $(deleteBtn).click(function () {
@@ -489,14 +481,6 @@ $(document).ready(function () {
     });
     $(optionLink).mouseleave(function () {
         $(this).prev().removeClass('bordernone');
-    });
-
-    // ph2-addcourse-addcurriculum.html - delete row
-    $(document).on('click', '.addcurric-currwrap .close-control button', function () {
-        $(this).parents('.addcurric-currwrap').remove();
-    });
-    $(document).on('click', '.addcurric-currwrap .close-controltopic button', function () {
-        $(this).parents('.addcurric__sub').remove();
     });
 
     // ph2-addcourse-addcurriculum-filltabs.html - create/delete new quiz (test)
@@ -550,15 +534,7 @@ $(document).ready(function () {
     });
 
     // ph2-addcourse-addcurriculum.html
-    // drag & drop
     if ($('body *').is('.my-containerr')) {
-
-        // var instance = $(".my-containerr").dad({
-        //     draggable: ".addcurriculum__body",
-        // });
-
-
-
         // add new module
         const addNewNodule = $('.addcurriculum__body-addmodule .addlink');
         var i = 0;
@@ -584,8 +560,8 @@ $(document).ready(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="addcurric__subs clone${iclone + 1}">
-                        <div class="addcurric__sub">
+                    <div class="addcurric__subs">
+                        <div class="addcurric__sub static">
                             <div class="addcurric__main-title">
                                 <p><a href="ph2-preview-addings.html">Course Objective</a></p>
                                 <a href="#" class="edit"></a>
@@ -683,8 +659,6 @@ $(document).ready(function () {
         }
     });
     // ----
-
-
 
     $(document).click(function (event) {
         let $target = $(event.target);
@@ -794,7 +768,6 @@ $(document).ready(function () {
     $(document).on('click', '.addcurric__main-controls .close-control', function () {
         checkCountRow()
     });
-
 
 
     // 26.07 update
@@ -925,41 +898,6 @@ $(document).ready(function () {
 
 
 
-    // Final Exam (add new button) / drag&drop - ph2-add-final-topic-step1.htm
-
-    // const addExamBtn = $('.addnewexam-btnsect .addnewexbtn');
-
-    // var i = 1;
-    // $(addExamBtn).on("click", function (e) {
-    //     e.preventDefault();
-    //     $('.dragwrapfinexam').append(`
-    //         <div class="dragitem">
-    //             <div class="addcurric-currwrapsect">
-    //                 <div class="addcurric__main">
-    //                     <div class="addcurric__main-title">
-    //                         <p><a href="ph2-addcourse-addcurriculum-filltabs.html">Exam Part ${i + 1}</a></p>
-    //                         <a href="#" class="edit"></a>
-    //                     </div>
-    //                     <div class="addcurric__main-controls">
-    //                         <div class="close-control">
-    //                             <button></button>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     `);
-    //     i++;
-    // });
-
-
-    // drag&drop
-    // if ($('body *').is('.finalexam')) {
-    //     var instance = $(".dragwrapfinexam").dad({
-    //         draggable: ".finalexam",
-    //     });
-    // }
-
     $(document).on('click', '.finalexam .close-control', function () {
         $(this).parents('.dragitem').remove();
     });
@@ -1055,35 +993,125 @@ $(document).ready(function () {
 
 
 
+    // drag&drop ph2-addcourse-addcurriculum-viewadding.html
 
-
-    if ($('*').is('.addcurric__subs')) {
-        var droppable = $(".addcurric__subs.clone").dad({
-            draggable: ".addcurric__sub",
-        });
-        var idrag = 0;
-        $('.addcurriculum__body-addmodule .addlink').on('click', function () {
-            var droppable = $(`.addcurric__subs.clone${idrag + 1}`).dad({
-                draggable: ".addcurric__sub",
-
-            });
-            idrag++;
+    if ($('body *').is('#viewaddingdropwrap')) {
+        new Sortable(viewaddingdropwrap, {
+            animation: 150,
+            ghostClass: "sortable-ghost",
         });
     }
 
+    if ($('body *').is('#dragwrapfinexam')) {
+        new Sortable(dragwrapfinexam, {
+            animation: 150,
+            ghostClass: "sortable-ghost",
+        });
+    }
+
+    //ph2-addcourse-addcurriculum.html
+
+    var el = $(".addcurric__subs");
+    $(el).each(function (i, e) {
+        var sortable = Sortable.create(e, {
+            animation: 150,
+            draggable: '.addcurric__sub',
+            group: "addcurric__subs",
+            ghostClass: "sortable-ghost",
+            swapThreshold: 1,
+            direction: 'horizontal',
+            filter: ".static",
+
+            onEnd: function (/**Event*/evt) {
+                // var items = evt.to.children;    // Get target's children
+                if ($(evt.to).find('.addcurric__sub').is(':only-child')) {
+                    $(evt.to).find('.addcurric__sub').addClass('static');
+                } else {
+                    $(evt.to).find('.addcurric__sub').removeClass('static');
+                }
+
+                if ($(evt.from).find('.addcurric__sub').is(':only-child')) {
+                    $(evt.from).find('.addcurric__sub').addClass('static');
+                } else {
+                    $(evt.from).find('.addcurric__sub').removeClass('static');
+                }
+
+            }
+        });
+
+        $('.addnewtopic').on('click', function () {
+            $(this).parents('.addcurric-currwrap').find('.addcurric__sub').removeClass('static');
+        });
+
+        $(document).on('click', '.addcurric-currwrap .close-controltopic button', function () {
+
+            if ($(this).parents('.addcurric__subs').find('.addcurric__sub').length <= 2) {
+                $(this).parents('.addcurric__subs').find('.addcurric__sub').addClass('static');
+            } else {
+                $(this).parents('.addcurric__subs').find('.addcurric__sub').removeClass('static');
+            }
+
+            $(this).parents('.addcurric__sub').remove();
+
+        });
+
+    });
+
+    $(document).on('click', '.addcurriculum__body-addmodule .addlink', function () {
+        var el = $(".addcurric__subs");
+        $(el).each(function (i, e) {
+            var sortable = Sortable.create(e, {
+                animation: 150,
+                draggable: '.addcurric__sub',
+                group: "addcurric__subs",
+                ghostClass: "sortable-ghost",
+                swapThreshold: 1,
+                direction: 'horizontal',
+                filter: ".static",
 
 
+                onEnd: function (/**Event*/evt) {
+                    // var items = evt.to.children;    // Get target's children
+                    if ($(evt.to).find('.addcurric__sub').is(':only-child')) {
+                        $(evt.to).find('.addcurric__sub').addClass('static');
+                    } else {
+                        $(evt.to).find('.addcurric__sub').removeClass('static');
+                    }
+
+                    if ($(evt.from).find('.addcurric__sub').is(':only-child')) {
+                        $(evt.from).find('.addcurric__sub').addClass('static');
+                    } else {
+                        $(evt.from).find('.addcurric__sub').removeClass('static');
+                    }
+
+                }
+            });
+
+            $('.addnewtopic').on('click', function () {
+                $(this).parents('.addcurric-currwrap').find('.addcurric__sub').removeClass('static');
+            });
+
+            $(document).on('click', '.addcurric-currwrap .close-controltopic button', function () {
+
+                if ($(this).parents('.addcurric__subs').find('.addcurric__sub').length <= 2) {
+                    $(this).parents('.addcurric__subs').find('.addcurric__sub').addClass('static');
+                } else {
+                    $(this).parents('.addcurric__subs').find('.addcurric__sub').removeClass('static');
+                }
+
+                $(this).parents('.addcurric__sub').remove();
+
+            });
+
+        });
+
+    });
 
 
-
-
-
-
-
-
-
-
-
+    // // ph2-addcourse-addcurriculum.html - delete row
+    $(document).on('click', '.addcurric-currwrap .close-control button', function () {
+        $(this).parents('.addcurric-currwrap').remove();
+    });
 
 
 });
